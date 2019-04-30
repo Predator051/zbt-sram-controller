@@ -1,0 +1,1 @@
+-w -s "E:\My Desig\zbt_sram_controller (an183)\library.cfg"  -j "E:\My Desig\zbt_sram_controller (an183)\projlib.cfg"  -d "E:\My Desig\zbt_sram_controller (an183)\compile\"  -work an183 -dbg -e 100 "E:\My Desig\zbt_sram_controller (an183)\compile\top.vhd" 

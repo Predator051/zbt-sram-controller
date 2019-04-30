@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>DRC Report File - idt71v3556.bde</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Sccss  {color:'#009600';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+.Sccss1 {color:'#009600';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\ActivH71\\Flows\Res\default.bmp">
+<FONT FACE="Serif">
+<tt>
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>DRC Report File - idt71v3556.bde</H2>
+Created on Mon 2019-04-08 at 15:37:59
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>Checking file 'C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller\Controller\src\idt71v3556.bde'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=186');">Inout terminal(s) and source(s) connected to net 'DQD3'. </SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=132');">Inout terminal(s) and load(s) connected to net 'DQA0'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=131');">Inout terminal(s) and load(s) connected to net 'DQA1'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=130');">Inout terminal(s) and load(s) connected to net 'DQA2'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=129');">Inout terminal(s) and load(s) connected to net 'DQA3'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=127');">Inout terminal(s) and load(s) connected to net 'DQB0'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=126');">Inout terminal(s) and load(s) connected to net 'DQB1'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=124');">Inout terminal(s) and load(s) connected to net 'DQB2'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=125');">Inout terminal(s) and load(s) connected to net 'DQB3'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=134');">Inout terminal(s) and load(s) connected to net 'DQC0'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=135');">Inout terminal(s) and load(s) connected to net 'DQC1'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=136');">Inout terminal(s) and load(s) connected to net 'DQC2'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=137');">Inout terminal(s) and load(s) connected to net 'DQC3'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=139');">Inout terminal(s) and load(s) connected to net 'DQD0'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=140');">Inout terminal(s) and load(s) connected to net 'DQD1'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=141');">Inout terminal(s) and load(s) connected to net 'DQD2'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=186');">Inout terminal(s) and load(s) connected to net 'DQD3'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=123');">Net 'A0_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=120');">Net 'A10_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=118');">Net 'A11_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=116');">Net 'A12_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=114');">Net 'A13_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=112');">Net 'A14_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=109');">Net 'A1_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=107');">Net 'A2_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=106');">Net 'A3_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=104');">Net 'A4_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=102');">Net 'A5_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=100');">Net 'A6_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=98');">Net 'A7_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=101');">Net 'A8_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=110');">Net 'A9_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=122');">Net 'DQA0_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=119');">Net 'DQA1_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=115');">Net 'DQA2_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=103');">Net 'DQB0_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=99');">Net 'DQB1_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=117');">Net 'DQB2_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=121');">Net 'DQC0_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=113');">Net 'DQC1_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=97');">Net 'DQC2_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=105');">Net 'DQD0_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=108');">Net 'DQD1_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller\\Controller\\src\\idt71v3556.bde','','-errorid=111');">Net 'DQD2_ipd' is without load.</SPAN><BR>
+<SPAN class=Warn1>idt71v3556.bde - 0 error(s), 44 warning(s)</SPAN><BR>
+<SPAN class=Info1>DRC process completed in 1 second(s).</SPAN><BR>
+</tt>
+</FONT>
+       
+        >
+</BODY>
+</HTML>

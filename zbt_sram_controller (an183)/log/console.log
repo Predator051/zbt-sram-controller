@@ -1,0 +1,97 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom $DSN/src/addr_ctrl_out.vhd $DSN/src/data_inout.vhd $DSN/src/idt71v3556.vhd $DSN/src/main.vhd $DSN/src/pipe_delay.vhd $DSN/src/pipe_stage.vhd $DSN/src/pll1.vhd $DSN/src/top.vhd $DSN/src/zbt_ctrl_top.vhd $DSN/src/addr_ctrl_out.bde $DSN/src/data_inout.bde $DSN/src/main.bde $DSN/src/pipe_stage.bde $DSN/src/pll1.bde $DSN/src/top.bde $DSN/src/zbt_ctrl_top.bde $DSN/src/work/conversions.vhd $DSN/src/work/gen_utils.vhd
+# Compile...
+# File: E:\My Desig\zbt_sram_controller (an183)\src\addr_ctrl_out.vhd
+# Compile Entity "addr_ctrl_out"
+# Compile Architecture "RTL" of Entity "addr_ctrl_out"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\data_inout.vhd
+# Compile Entity "data_inout"
+# Compile Architecture "RTL" of Entity "data_inout"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\idt71v3556.vhd
+# Compile Entity "idt71v3556"
+# Compile Architecture "rtl" of Entity "idt71v3556"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\main.vhd
+# Compile Entity "main"
+# Compile Architecture "RTL" of Entity "main"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\pipe_delay.vhd
+# Compile Entity "pipe_delay"
+# Compile Architecture "RTL" of Entity "pipe_delay"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\pipe_stage.vhd
+# Compile Entity "pipe_stage"
+# Compile Architecture "RTL" of Entity "pipe_stage"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\PLL1.vhd
+# Compile Entity "PLL1"
+# Compile Architecture "SYN" of Entity "pll1"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\top.vhd
+# Compile Entity "top"
+# Compile Architecture "RTL" of Entity "top"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\zbt_ctrl_top.vhd
+# Compile Entity "zbt_ctrl_top"
+# Compile Architecture "RTL" of Entity "zbt_ctrl_top"
+# File: .\addr_ctrl_out.vhd
+# Compile Entity "addr_ctrl_out"
+# Compile Architecture "RTL" of Entity "addr_ctrl_out"
+# File: .\data_inout.vhd
+# Compile Entity "data_inout"
+# Compile Architecture "RTL" of Entity "data_inout"
+# File: .\main.vhd
+# Compile Entity "main"
+# Compile Architecture "RTL" of Entity "main"
+# File: .\pipe_stage.vhd
+# Compile Entity "pipe_stage"
+# Compile Architecture "RTL" of Entity "pipe_stage"
+# File: .\pll1.vhd
+# Compile Entity "pll1"
+# Compile Architecture "SYN" of Entity "pll1"
+# File: .\top.vhd
+# Compile Entity "top"
+# Compile Architecture "RTL" of Entity "top"
+# File: .\zbt_ctrl_top.vhd
+# Compile Entity "zbt_ctrl_top"
+# Compile Architecture "RTL" of Entity "zbt_ctrl_top"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\work\conversions.vhd
+# Compile Package "conversions"
+# Compile Package Body "conversions"
+# File: E:\My Desig\zbt_sram_controller (an183)\src\work\gen_utils.vhd
+# Compile Package "gen_utils"
+# Compile Package Body "gen_utils"
+# Compile success 0 Errors 0 Warnings  Analysis time :  2.0 [s]
+asim -advdataflow  top rtl
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: Entity 'zbt_ctrl_top' instantiated in the architecture 'rtl' was compiled after the compilation of this architecture.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom $DSN/src/top.bde
+# Compile...
+# File: .\top.vhd
+# Compile Entity "top"
+# Compile Architecture "RTL" of Entity "top"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -advdataflow  top rtl
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5930 kB (elbread=2057 elab2=3553 kernel=319 sdf=0)
+#  12:19, 30 апреля 2019 г.
+#  Simulation has been initialized
+#  Selected Top-Level: top (rtl)
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# EXECUTION:: NOTE   : Stratix PLL locked to incoming clock
+# EXECUTION:: Time: 275 ns,  Iteration: 2,  Instance: /PLL1_inst/altpll_component/STRATIX_ALTPLL/M0,  Process: line__3797.
+# KERNEL: stopped at time: 300 ns
+#  Simulation has been stopped

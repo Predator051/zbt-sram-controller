@@ -1,0 +1,1 @@
+-w -s "C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller AN183\library.cfg"  -j "C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller AN183\Controller\projlib.cfg"  -d "C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller AN183\Controller\compile\"  -work Controller -dbg -e 100 "C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller AN183\Controller\compile\top.vhd" 

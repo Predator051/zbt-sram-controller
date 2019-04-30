@@ -1,0 +1,1962 @@
+SCHM0103
+
+HEADER
+{
+ FREEID 104
+ VARIABLES
+ {
+  #ARCHITECTURE="SYN"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #ENTITY="pll1"
+  #LANGUAGE="VHDL"
+  AUTHOR="ParazZzit"
+  COMPANY="admin"
+  CREATIONDATE="12.05.2016"
+  SOURCE=".\\src\\PLL1.vhd"
+ }
+ SYMBOL "altera_mf" "altpll" "altpll"
+ {
+  HEADER
+  {
+   VARIABLES
+   {
+    #DESCRIPTION=""
+    #GENERIC0="intended_device_family:STRING:=\"Stratix\""
+    #GENERIC1="operation_mode:STRING:=\"NORMAL\""
+    #GENERIC10="gate_lock_counter:INTEGER:=0"
+    #GENERIC100="c2_high:NATURAL:=1"
+    #GENERIC101="c3_high:NATURAL:=1"
+    #GENERIC102="c4_high:NATURAL:=1"
+    #GENERIC103="c5_high:NATURAL:=1"
+    #GENERIC104="l0_high:NATURAL:=1"
+    #GENERIC105="l1_high:NATURAL:=1"
+    #GENERIC106="g0_high:NATURAL:=1"
+    #GENERIC107="g1_high:NATURAL:=1"
+    #GENERIC108="g2_high:NATURAL:=1"
+    #GENERIC109="g3_high:NATURAL:=1"
+    #GENERIC11="lock_high:NATURAL:=1"
+    #GENERIC110="e0_high:NATURAL:=1"
+    #GENERIC111="e1_high:NATURAL:=1"
+    #GENERIC112="e2_high:NATURAL:=1"
+    #GENERIC113="e3_high:NATURAL:=1"
+    #GENERIC114="c0_low:NATURAL:=1"
+    #GENERIC115="c1_low:NATURAL:=1"
+    #GENERIC116="c2_low:NATURAL:=1"
+    #GENERIC117="c3_low:NATURAL:=1"
+    #GENERIC118="c4_low:NATURAL:=1"
+    #GENERIC119="c5_low:NATURAL:=1"
+    #GENERIC12="lock_low:NATURAL:=5"
+    #GENERIC120="l0_low:NATURAL:=1"
+    #GENERIC121="l1_low:NATURAL:=1"
+    #GENERIC122="g0_low:NATURAL:=1"
+    #GENERIC123="g1_low:NATURAL:=1"
+    #GENERIC124="g2_low:NATURAL:=1"
+    #GENERIC125="g3_low:NATURAL:=1"
+    #GENERIC126="e0_low:NATURAL:=1"
+    #GENERIC127="e1_low:NATURAL:=1"
+    #GENERIC128="e2_low:NATURAL:=1"
+    #GENERIC129="e3_low:NATURAL:=1"
+    #GENERIC13="valid_lock_multiplier:NATURAL:=1"
+    #GENERIC130="c0_initial:NATURAL:=1"
+    #GENERIC131="c1_initial:NATURAL:=1"
+    #GENERIC132="c2_initial:NATURAL:=1"
+    #GENERIC133="c3_initial:NATURAL:=1"
+    #GENERIC134="c4_initial:NATURAL:=1"
+    #GENERIC135="c5_initial:NATURAL:=1"
+    #GENERIC136="l0_initial:NATURAL:=1"
+    #GENERIC137="l1_initial:NATURAL:=1"
+    #GENERIC138="g0_initial:NATURAL:=1"
+    #GENERIC139="g1_initial:NATURAL:=1"
+    #GENERIC14="invalid_lock_multiplier:NATURAL:=5"
+    #GENERIC140="g2_initial:NATURAL:=1"
+    #GENERIC141="g3_initial:NATURAL:=1"
+    #GENERIC142="e0_initial:NATURAL:=1"
+    #GENERIC143="e1_initial:NATURAL:=1"
+    #GENERIC144="e2_initial:NATURAL:=1"
+    #GENERIC145="e3_initial:NATURAL:=1"
+    #GENERIC146="c0_mode:STRING:=\"bypass\""
+    #GENERIC147="c1_mode:STRING:=\"bypass\""
+    #GENERIC148="c2_mode:STRING:=\"bypass\""
+    #GENERIC149="c3_mode:STRING:=\"bypass\""
+    #GENERIC15="switch_over_type:STRING:=\"AUTO\""
+    #GENERIC150="c4_mode:STRING:=\"bypass\""
+    #GENERIC151="c5_mode:STRING:=\"bypass\""
+    #GENERIC152="l0_mode:STRING:=\"bypass\""
+    #GENERIC153="l1_mode:STRING:=\"bypass\""
+    #GENERIC154="g0_mode:STRING:=\"bypass\""
+    #GENERIC155="g1_mode:STRING:=\"bypass\""
+    #GENERIC156="g2_mode:STRING:=\"bypass\""
+    #GENERIC157="g3_mode:STRING:=\"bypass\""
+    #GENERIC158="e0_mode:STRING:=\"bypass\""
+    #GENERIC159="e1_mode:STRING:=\"bypass\""
+    #GENERIC16="switch_over_on_lossclk:STRING:=\"OFF\""
+    #GENERIC160="e2_mode:STRING:=\"bypass\""
+    #GENERIC161="e3_mode:STRING:=\"bypass\""
+    #GENERIC162="c0_ph:NATURAL:=0"
+    #GENERIC163="c1_ph:NATURAL:=0"
+    #GENERIC164="c2_ph:NATURAL:=0"
+    #GENERIC165="c3_ph:NATURAL:=0"
+    #GENERIC166="c4_ph:NATURAL:=0"
+    #GENERIC167="c5_ph:NATURAL:=0"
+    #GENERIC168="l0_ph:NATURAL:=0"
+    #GENERIC169="l1_ph:NATURAL:=0"
+    #GENERIC17="switch_over_on_gated_lock:STRING:=\"OFF\""
+    #GENERIC170="g0_ph:NATURAL:=0"
+    #GENERIC171="g1_ph:NATURAL:=0"
+    #GENERIC172="g2_ph:NATURAL:=0"
+    #GENERIC173="g3_ph:NATURAL:=0"
+    #GENERIC174="e0_ph:NATURAL:=0"
+    #GENERIC175="e1_ph:NATURAL:=0"
+    #GENERIC176="e2_ph:NATURAL:=0"
+    #GENERIC177="e3_ph:NATURAL:=0"
+    #GENERIC178="m_ph:NATURAL:=0"
+    #GENERIC179="l0_time_delay:NATURAL:=0"
+    #GENERIC18="enable_switch_over_counter:STRING:=\"OFF\""
+    #GENERIC180="l1_time_delay:NATURAL:=0"
+    #GENERIC181="g0_time_delay:NATURAL:=0"
+    #GENERIC182="g1_time_delay:NATURAL:=0"
+    #GENERIC183="g2_time_delay:NATURAL:=0"
+    #GENERIC184="g3_time_delay:NATURAL:=0"
+    #GENERIC185="e0_time_delay:NATURAL:=0"
+    #GENERIC186="e1_time_delay:NATURAL:=0"
+    #GENERIC187="e2_time_delay:NATURAL:=0"
+    #GENERIC188="e3_time_delay:NATURAL:=0"
+    #GENERIC189="m_time_delay:NATURAL:=0"
+    #GENERIC19="switch_over_counter:NATURAL:=0"
+    #GENERIC190="n_time_delay:NATURAL:=0"
+    #GENERIC191="c1_use_casc_in:STRING:=\"off\""
+    #GENERIC192="c2_use_casc_in:STRING:=\"off\""
+    #GENERIC193="c3_use_casc_in:STRING:=\"off\""
+    #GENERIC194="c4_use_casc_in:STRING:=\"off\""
+    #GENERIC195="c5_use_casc_in:STRING:=\"off\""
+    #GENERIC196="extclk3_counter:STRING:=\"e3\""
+    #GENERIC197="extclk2_counter:STRING:=\"e2\""
+    #GENERIC198="extclk1_counter:STRING:=\"e1\""
+    #GENERIC199="extclk0_counter:STRING:=\"e0\""
+    #GENERIC2="pll_type:STRING:=\"AUTO\""
+    #GENERIC20="feedback_source:STRING:=\"EXTCLK0\""
+    #GENERIC200="clk5_counter:STRING:=\"l1\""
+    #GENERIC201="clk4_counter:STRING:=\"l0\""
+    #GENERIC202="clk3_counter:STRING:=\"g3\""
+    #GENERIC203="clk2_counter:STRING:=\"g2\""
+    #GENERIC204="clk1_counter:STRING:=\"g1\""
+    #GENERIC205="clk0_counter:STRING:=\"g0\""
+    #GENERIC206="enable0_counter:STRING:=\"l0\""
+    #GENERIC207="enable1_counter:STRING:=\"l0\""
+    #GENERIC208="charge_pump_current:NATURAL:=2"
+    #GENERIC209="loop_filter_r:STRING:=\" 1.000000\""
+    #GENERIC21="bandwidth:NATURAL:=0"
+    #GENERIC210="loop_filter_c:NATURAL:=5"
+    #GENERIC211="vco_post_scale:NATURAL:=0"
+    #GENERIC212="m_test_source:INTEGER:=5"
+    #GENERIC213="c0_test_source:INTEGER:=5"
+    #GENERIC214="c1_test_source:INTEGER:=5"
+    #GENERIC215="c2_test_source:INTEGER:=5"
+    #GENERIC216="c3_test_source:INTEGER:=5"
+    #GENERIC217="c4_test_source:INTEGER:=5"
+    #GENERIC218="c5_test_source:INTEGER:=5"
+    #GENERIC219="lpm_type:STRING:=\"altpll\""
+    #GENERIC22="bandwidth_type:STRING:=\"UNUSED\""
+    #GENERIC220="port_clkena0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC221="port_clkena1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC222="port_clkena2:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC223="port_clkena3:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC224="port_clkena4:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC225="port_clkena5:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC226="port_extclkena0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC227="port_extclkena1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC228="port_extclkena2:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC229="port_extclkena3:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC23="lpm_hint:STRING:=\"UNUSED\""
+    #GENERIC230="port_extclk0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC231="port_extclk1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC232="port_extclk2:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC233="port_extclk3:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC234="port_clk0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC235="port_clk1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC236="port_clk2:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC237="port_clk3:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC238="port_clk4:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC239="port_clk5:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC24="spread_frequency:NATURAL:=0"
+    #GENERIC240="port_scandata:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC241="port_scandataout:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC242="port_scandone:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC243="port_sclkout1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC244="port_sclkout0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC245="port_clkbad0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC246="port_clkbad1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC247="port_activeclock:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC248="port_clkloss:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC249="port_inclk1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC25="down_spread:STRING:=\"0.0\""
+    #GENERIC250="port_inclk0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC251="port_fbin:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC252="port_pllena:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC253="port_clkswitch:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC254="port_areset:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC255="port_pfdena:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC256="port_scanclk:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC257="port_scanaclr:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC258="port_scanread:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC259="port_scanwrite:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC26="self_reset_on_gated_loss_lock:STRING:=\"OFF\""
+    #GENERIC260="port_enable0:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC261="port_enable1:STRING:=\"PORT_CONNECTIVITY\""
+    #GENERIC27="simulation_type:STRING:=\"functional\""
+    #GENERIC28="source_is_pll:STRING:=\"off\""
+    #GENERIC29="skip_vco:STRING:=\"off\""
+    #GENERIC3="qualify_conf_done:STRING:=\"OFF\""
+    #GENERIC30="clk5_multiply_by:POSITIVE:=1"
+    #GENERIC31="clk4_multiply_by:POSITIVE:=1"
+    #GENERIC32="clk3_multiply_by:POSITIVE:=1"
+    #GENERIC33="clk2_multiply_by:POSITIVE:=1"
+    #GENERIC34="clk1_multiply_by:POSITIVE:=1"
+    #GENERIC35="clk0_multiply_by:POSITIVE:=1"
+    #GENERIC36="clk5_divide_by:POSITIVE:=1"
+    #GENERIC37="clk4_divide_by:POSITIVE:=1"
+    #GENERIC38="clk3_divide_by:POSITIVE:=1"
+    #GENERIC39="clk2_divide_by:POSITIVE:=1"
+    #GENERIC4="compensate_clock:STRING:=\"CLK0\""
+    #GENERIC40="clk1_divide_by:POSITIVE:=1"
+    #GENERIC41="clk0_divide_by:POSITIVE:=1"
+    #GENERIC42="clk5_phase_shift:STRING:=\"0\""
+    #GENERIC43="clk4_phase_shift:STRING:=\"0\""
+    #GENERIC44="clk3_phase_shift:STRING:=\"0\""
+    #GENERIC45="clk2_phase_shift:STRING:=\"0\""
+    #GENERIC46="clk1_phase_shift:STRING:=\"0\""
+    #GENERIC47="clk0_phase_shift:STRING:=\"0\""
+    #GENERIC48="clk5_time_delay:STRING:=\"0\""
+    #GENERIC49="clk4_time_delay:STRING:=\"0\""
+    #GENERIC5="scan_chain:STRING:=\"LONG\""
+    #GENERIC50="clk3_time_delay:STRING:=\"0\""
+    #GENERIC51="clk2_time_delay:STRING:=\"0\""
+    #GENERIC52="clk1_time_delay:STRING:=\"0\""
+    #GENERIC53="clk0_time_delay:STRING:=\"0\""
+    #GENERIC54="clk5_duty_cycle:NATURAL:=50"
+    #GENERIC55="clk4_duty_cycle:NATURAL:=50"
+    #GENERIC56="clk3_duty_cycle:NATURAL:=50"
+    #GENERIC57="clk2_duty_cycle:NATURAL:=50"
+    #GENERIC58="clk1_duty_cycle:NATURAL:=50"
+    #GENERIC59="clk0_duty_cycle:NATURAL:=50"
+    #GENERIC6="primary_clock:STRING:=\"inclk0\""
+    #GENERIC60="clk2_output_frequency:NATURAL:=0"
+    #GENERIC61="clk1_output_frequency:NATURAL:=0"
+    #GENERIC62="clk0_output_frequency:NATURAL:=0"
+    #GENERIC63="extclk3_multiply_by:POSITIVE:=1"
+    #GENERIC64="extclk2_multiply_by:POSITIVE:=1"
+    #GENERIC65="extclk1_multiply_by:POSITIVE:=1"
+    #GENERIC66="extclk0_multiply_by:POSITIVE:=1"
+    #GENERIC67="extclk3_divide_by:POSITIVE:=1"
+    #GENERIC68="extclk2_divide_by:POSITIVE:=1"
+    #GENERIC69="extclk1_divide_by:POSITIVE:=1"
+    #GENERIC7="inclk0_input_frequency:POSITIVE"
+    #GENERIC70="extclk0_divide_by:POSITIVE:=1"
+    #GENERIC71="extclk3_phase_shift:STRING:=\"0\""
+    #GENERIC72="extclk2_phase_shift:STRING:=\"0\""
+    #GENERIC73="extclk1_phase_shift:STRING:=\"0\""
+    #GENERIC74="extclk0_phase_shift:STRING:=\"0\""
+    #GENERIC75="extclk3_time_delay:STRING:=\"0\""
+    #GENERIC76="extclk2_time_delay:STRING:=\"0\""
+    #GENERIC77="extclk1_time_delay:STRING:=\"0\""
+    #GENERIC78="extclk0_time_delay:STRING:=\"0\""
+    #GENERIC79="extclk3_duty_cycle:NATURAL:=50"
+    #GENERIC8="inclk1_input_frequency:NATURAL:=0"
+    #GENERIC80="extclk2_duty_cycle:NATURAL:=50"
+    #GENERIC81="extclk1_duty_cycle:NATURAL:=50"
+    #GENERIC82="extclk0_duty_cycle:NATURAL:=50"
+    #GENERIC83="vco_multiply_by:INTEGER:=0"
+    #GENERIC84="vco_divide_by:INTEGER:=0"
+    #GENERIC85="sclkout0_phase_shift:STRING:=\"0\""
+    #GENERIC86="sclkout1_phase_shift:STRING:=\"0\""
+    #GENERIC87="vco_min:NATURAL:=0"
+    #GENERIC88="vco_max:NATURAL:=0"
+    #GENERIC89="vco_center:NATURAL:=0"
+    #GENERIC9="gate_lock_signal:STRING:=\"NO\""
+    #GENERIC90="pfd_min:NATURAL:=0"
+    #GENERIC91="pfd_max:NATURAL:=0"
+    #GENERIC92="m_initial:NATURAL:=1"
+    #GENERIC93="m:NATURAL:=0"
+    #GENERIC94="n:NATURAL:=1"
+    #GENERIC95="m2:NATURAL:=1"
+    #GENERIC96="n2:NATURAL:=1"
+    #GENERIC97="ss:NATURAL:=0"
+    #GENERIC98="c0_high:NATURAL:=1"
+    #GENERIC99="c1_high:NATURAL:=1"
+    #HDL_ENTRIES=
+"library STD,IEEE;\n"+
+"use STD.STANDARD.all,ieee.std_logic_1164.all;"
+    #LANGUAGE="VHDL"
+    #MODIFIED="1462711988"
+   }
+  }
+  PAGE "" 
+  {
+   PAGEHEADER
+   {
+    RECT (0,0,260,600)
+    FREEID 54
+   }
+   
+   BODY
+   {
+    RECT  1, -1, 0
+    {
+     VARIABLES
+     {
+      #OUTLINE_FILLING="1"
+     }
+     AREA (20,0,240,600)
+    }
+    TEXT  3, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,26,25,58)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 2
+    }
+    TEXT  5, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,26,235,58)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 4
+    }
+    TEXT  7, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,66,25,98)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 6
+    }
+    TEXT  9, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,66,235,98)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 8
+    }
+    TEXT  11, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,106,25,138)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 10
+    }
+    TEXT  13, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,106,235,138)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 12
+    }
+    TEXT  15, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,146,25,178)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 14
+    }
+    TEXT  17, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,146,235,178)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 16
+    }
+    TEXT  19, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,186,25,218)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 18
+    }
+    TEXT  21, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,186,235,218)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 20
+    }
+    TEXT  23, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,226,25,258)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 22
+    }
+    TEXT  25, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,226,235,258)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 24
+    }
+    TEXT  27, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,266,25,298)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 26
+    }
+    TEXT  29, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,266,235,298)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 28
+    }
+    TEXT  31, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,306,25,338)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 30
+    }
+    TEXT  33, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,306,235,338)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 32
+    }
+    TEXT  35, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,346,25,378)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 34
+    }
+    TEXT  37, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,346,235,378)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 36
+    }
+    TEXT  39, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,386,25,418)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 38
+    }
+    TEXT  41, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,386,235,418)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 40
+    }
+    TEXT  43, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,426,25,458)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 42
+    }
+    TEXT  45, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,426,235,458)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 44
+    }
+    TEXT  47, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,466,25,498)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 46
+    }
+    TEXT  49, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (235,466,235,498)
+     ALIGN 6
+     MARGINS (1,1)
+     PARENT 48
+    }
+    TEXT  51, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,506,25,538)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 50
+    }
+    TEXT  53, 0, 0
+    {
+     TEXT "$#NAME"
+     RECT (25,546,25,578)
+     ALIGN 4
+     MARGINS (1,1)
+     PARENT 52
+    }
+    PIN  2, 0, 0
+    {
+     COORD (0,40)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="areset"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  4, 0, 0
+    {
+     COORD (260,40)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="activeclock"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  6, 0, 0
+    {
+     COORD (0,80)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #DOWNTO="1"
+      #INITIAL_VALUE="(others => '1')"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="clkena(5:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  8, 0, 0
+    {
+     COORD (260,80)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #DOWNTO="1"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="clk(5:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  10, 0, 0
+    {
+     COORD (0,120)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="clkswitch"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  12, 0, 0
+    {
+     COORD (260,120)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #DOWNTO="1"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="clkbad(1:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  14, 0, 0
+    {
+     COORD (0,160)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="comparator"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  16, 0, 0
+    {
+     COORD (260,160)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="clkloss"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  18, 0, 0
+    {
+     COORD (0,200)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #DOWNTO="1"
+      #INITIAL_VALUE="(others => '1')"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="extclkena(3:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  20, 0, 0
+    {
+     COORD (260,200)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="enable0"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  22, 0, 0
+    {
+     COORD (0,240)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'1'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="fbin"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  24, 0, 0
+    {
+     COORD (260,240)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="enable1"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  26, 0, 0
+    {
+     COORD (0,280)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #DOWNTO="1"
+      #INITIAL_VALUE="(others => '0')"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="inclk(1:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  28, 0, 0
+    {
+     COORD (260,280)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #DOWNTO="1"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="extclk(3:0)"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  30, 0, 0
+    {
+     COORD (0,320)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'1'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="pfdena"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  32, 0, 0
+    {
+     COORD (260,320)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="locked"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  34, 0, 0
+    {
+     COORD (0,360)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'1'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="pllena"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  36, 0, 0
+    {
+     COORD (260,360)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scandataout"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  38, 0, 0
+    {
+     COORD (0,400)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scanaclr"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  40, 0, 0
+    {
+     COORD (260,400)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scandone"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  42, 0, 0
+    {
+     COORD (0,440)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scanclk"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  44, 0, 0
+    {
+     COORD (260,440)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="sclkout0"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  46, 0, 0
+    {
+     COORD (0,480)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scandata"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  48, 0, 0
+    {
+     COORD (260,480)
+     VARIABLES
+     {
+      #DIRECTION="OUT"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="sclkout1"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (-20,0), (0,0) )
+     }
+    }
+    PIN  50, 0, 0
+    {
+     COORD (0,520)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scanread"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+    PIN  52, 0, 0
+    {
+     COORD (0,560)
+     VARIABLES
+     {
+      #DIRECTION="IN"
+      #INITIAL_VALUE="'0'"
+      #LENGTH="20"
+      #MDA_RECORD_TOKEN="OTHER"
+      #NAME="scanwrite"
+      #NUMBER="0"
+     }
+     LINE  2, 0, 0
+     {
+      POINTS ( (0,0), (20,0) )
+     }
+    }
+   }
+  }
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  PAGESIZE (3152,1520)
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"library ieee;\n"+
+"        use ieee.std_logic_1164.all;\n"+
+"library altera_mf;\n"+
+"        use altera_mf.altera_mf_components.all;"
+   RECT (220,260,620,505)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  SIGNALASSIGN  2, 0, 0
+  {
+   LABEL "Statement_1"
+   TEXT "sub_wire1 <= sub_wire0(0);"
+   RECT (220,578,620,651)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  INSTANCE  3, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="altpll"
+    #GENERIC0="bandwidth:NATURAL:="
+    #GENERIC1="bandwidth_type:STRING:=\"AUTO\""
+    #GENERIC10="c1_low:NATURAL:="
+    #GENERIC100="e2_mode:STRING:="
+    #GENERIC101="e2_ph:NATURAL:="
+    #GENERIC102="e2_time_delay:NATURAL:="
+    #GENERIC103="e3_high:NATURAL:="
+    #GENERIC104="e3_initial:NATURAL:="
+    #GENERIC105="e3_low:NATURAL:="
+    #GENERIC106="e3_mode:STRING:="
+    #GENERIC107="e3_ph:NATURAL:="
+    #GENERIC108="e3_time_delay:NATURAL:="
+    #GENERIC109="enable0_counter:STRING:="
+    #GENERIC11="c1_mode:STRING:="
+    #GENERIC110="enable1_counter:STRING:="
+    #GENERIC111="enable_switch_over_counter:STRING:="
+    #GENERIC112="extclk0_counter:STRING:="
+    #GENERIC113="extclk0_divide_by:POSITIVE:="
+    #GENERIC114="extclk0_duty_cycle:NATURAL:="
+    #GENERIC115="extclk0_multiply_by:POSITIVE:="
+    #GENERIC116="extclk0_phase_shift:STRING:="
+    #GENERIC117="extclk0_time_delay:STRING:="
+    #GENERIC118="extclk1_counter:STRING:="
+    #GENERIC119="extclk1_divide_by:POSITIVE:="
+    #GENERIC12="c1_ph:NATURAL:="
+    #GENERIC120="extclk1_duty_cycle:NATURAL:="
+    #GENERIC121="extclk1_multiply_by:POSITIVE:="
+    #GENERIC122="extclk1_phase_shift:STRING:="
+    #GENERIC123="extclk1_time_delay:STRING:="
+    #GENERIC124="extclk2_counter:STRING:="
+    #GENERIC125="extclk2_divide_by:POSITIVE:="
+    #GENERIC126="extclk2_duty_cycle:NATURAL:="
+    #GENERIC127="extclk2_multiply_by:POSITIVE:="
+    #GENERIC128="extclk2_phase_shift:STRING:="
+    #GENERIC129="extclk2_time_delay:STRING:="
+    #GENERIC13="c1_test_source:INTEGER:="
+    #GENERIC130="extclk3_counter:STRING:="
+    #GENERIC131="extclk3_divide_by:POSITIVE:="
+    #GENERIC132="extclk3_duty_cycle:NATURAL:="
+    #GENERIC133="extclk3_multiply_by:POSITIVE:="
+    #GENERIC134="extclk3_phase_shift:STRING:="
+    #GENERIC135="extclk3_time_delay:STRING:="
+    #GENERIC136="feedback_source:STRING:="
+    #GENERIC137="g0_high:NATURAL:="
+    #GENERIC138="g0_initial:NATURAL:="
+    #GENERIC139="g0_low:NATURAL:="
+    #GENERIC14="c1_use_casc_in:STRING:="
+    #GENERIC140="g0_mode:STRING:="
+    #GENERIC141="g0_ph:NATURAL:="
+    #GENERIC142="g0_time_delay:NATURAL:="
+    #GENERIC143="g1_high:NATURAL:="
+    #GENERIC144="g1_initial:NATURAL:="
+    #GENERIC145="g1_low:NATURAL:="
+    #GENERIC146="g1_mode:STRING:="
+    #GENERIC147="g1_ph:NATURAL:="
+    #GENERIC148="g1_time_delay:NATURAL:="
+    #GENERIC149="g2_high:NATURAL:="
+    #GENERIC15="c2_high:NATURAL:="
+    #GENERIC150="g2_initial:NATURAL:="
+    #GENERIC151="g2_low:NATURAL:="
+    #GENERIC152="g2_mode:STRING:="
+    #GENERIC153="g2_ph:NATURAL:="
+    #GENERIC154="g2_time_delay:NATURAL:="
+    #GENERIC155="g3_high:NATURAL:="
+    #GENERIC156="g3_initial:NATURAL:="
+    #GENERIC157="g3_low:NATURAL:="
+    #GENERIC158="g3_mode:STRING:="
+    #GENERIC159="g3_ph:NATURAL:="
+    #GENERIC16="c2_initial:NATURAL:="
+    #GENERIC160="g3_time_delay:NATURAL:="
+    #GENERIC161="gate_lock_counter:INTEGER:="
+    #GENERIC162="gate_lock_signal:STRING:=\"NO\""
+    #GENERIC163="inclk0_input_frequency:POSITIVE:=30303"
+    #GENERIC164="inclk1_input_frequency:NATURAL:="
+    #GENERIC165="intended_device_family:STRING:=\"Stratix\""
+    #GENERIC166="invalid_lock_multiplier:NATURAL:=5"
+    #GENERIC167="l0_high:NATURAL:="
+    #GENERIC168="l0_initial:NATURAL:="
+    #GENERIC169="l0_low:NATURAL:="
+    #GENERIC17="c2_low:NATURAL:="
+    #GENERIC170="l0_mode:STRING:="
+    #GENERIC171="l0_ph:NATURAL:="
+    #GENERIC172="l0_time_delay:NATURAL:="
+    #GENERIC173="l1_high:NATURAL:="
+    #GENERIC174="l1_initial:NATURAL:="
+    #GENERIC175="l1_low:NATURAL:="
+    #GENERIC176="l1_mode:STRING:="
+    #GENERIC177="l1_ph:NATURAL:="
+    #GENERIC178="l1_time_delay:NATURAL:="
+    #GENERIC179="lock_high:NATURAL:=1"
+    #GENERIC18="c2_mode:STRING:="
+    #GENERIC180="lock_low:NATURAL:=5"
+    #GENERIC181="loop_filter_c:NATURAL:="
+    #GENERIC182="loop_filter_r:STRING:="
+    #GENERIC183="lpm_hint:STRING:="
+    #GENERIC184="lpm_type:STRING:=\"altpll\""
+    #GENERIC185="m:NATURAL:="
+    #GENERIC186="m2:NATURAL:="
+    #GENERIC187="m_initial:NATURAL:="
+    #GENERIC188="m_ph:NATURAL:="
+    #GENERIC189="m_test_source:INTEGER:="
+    #GENERIC19="c2_ph:NATURAL:="
+    #GENERIC190="m_time_delay:NATURAL:="
+    #GENERIC191="n:NATURAL:="
+    #GENERIC192="n2:NATURAL:="
+    #GENERIC193="n_time_delay:NATURAL:="
+    #GENERIC194="operation_mode:STRING:=\"NORMAL\""
+    #GENERIC195="pfd_max:NATURAL:="
+    #GENERIC196="pfd_min:NATURAL:="
+    #GENERIC197="pll_type:STRING:=\"ENHANCED\""
+    #GENERIC198="port_activeclock:STRING:="
+    #GENERIC199="port_areset:STRING:="
+    #GENERIC2="c0_high:NATURAL:="
+    #GENERIC20="c2_test_source:INTEGER:="
+    #GENERIC200="port_clk0:STRING:="
+    #GENERIC201="port_clk1:STRING:="
+    #GENERIC202="port_clk2:STRING:="
+    #GENERIC203="port_clk3:STRING:="
+    #GENERIC204="port_clk4:STRING:="
+    #GENERIC205="port_clk5:STRING:="
+    #GENERIC206="port_clkbad0:STRING:="
+    #GENERIC207="port_clkbad1:STRING:="
+    #GENERIC208="port_clkena0:STRING:="
+    #GENERIC209="port_clkena1:STRING:="
+    #GENERIC21="c2_use_casc_in:STRING:="
+    #GENERIC210="port_clkena2:STRING:="
+    #GENERIC211="port_clkena3:STRING:="
+    #GENERIC212="port_clkena4:STRING:="
+    #GENERIC213="port_clkena5:STRING:="
+    #GENERIC214="port_clkloss:STRING:="
+    #GENERIC215="port_clkswitch:STRING:="
+    #GENERIC216="port_enable0:STRING:="
+    #GENERIC217="port_enable1:STRING:="
+    #GENERIC218="port_extclk0:STRING:="
+    #GENERIC219="port_extclk1:STRING:="
+    #GENERIC22="c3_high:NATURAL:="
+    #GENERIC220="port_extclk2:STRING:="
+    #GENERIC221="port_extclk3:STRING:="
+    #GENERIC222="port_extclkena0:STRING:="
+    #GENERIC223="port_extclkena1:STRING:="
+    #GENERIC224="port_extclkena2:STRING:="
+    #GENERIC225="port_extclkena3:STRING:="
+    #GENERIC226="port_fbin:STRING:="
+    #GENERIC227="port_inclk0:STRING:="
+    #GENERIC228="port_inclk1:STRING:="
+    #GENERIC229="port_pfdena:STRING:="
+    #GENERIC23="c3_initial:NATURAL:="
+    #GENERIC230="port_pllena:STRING:="
+    #GENERIC231="port_scanaclr:STRING:="
+    #GENERIC232="port_scanclk:STRING:="
+    #GENERIC233="port_scandata:STRING:="
+    #GENERIC234="port_scandataout:STRING:="
+    #GENERIC235="port_scandone:STRING:="
+    #GENERIC236="port_scanread:STRING:="
+    #GENERIC237="port_scanwrite:STRING:="
+    #GENERIC238="port_sclkout0:STRING:="
+    #GENERIC239="port_sclkout1:STRING:="
+    #GENERIC24="c3_low:NATURAL:="
+    #GENERIC240="primary_clock:STRING:="
+    #GENERIC241="qualify_conf_done:STRING:="
+    #GENERIC242="scan_chain:STRING:="
+    #GENERIC243="sclkout0_phase_shift:STRING:="
+    #GENERIC244="sclkout1_phase_shift:STRING:="
+    #GENERIC245="self_reset_on_gated_loss_lock:STRING:="
+    #GENERIC246="simulation_type:STRING:="
+    #GENERIC247="skip_vco:STRING:="
+    #GENERIC248="source_is_pll:STRING:="
+    #GENERIC249="spread_frequency:NATURAL:=0"
+    #GENERIC25="c3_mode:STRING:="
+    #GENERIC250="ss:NATURAL:="
+    #GENERIC251="switch_over_counter:NATURAL:="
+    #GENERIC252="switch_over_on_gated_lock:STRING:="
+    #GENERIC253="switch_over_on_lossclk:STRING:="
+    #GENERIC254="switch_over_type:STRING:="
+    #GENERIC255="valid_lock_multiplier:NATURAL:=1"
+    #GENERIC256="vco_center:NATURAL:="
+    #GENERIC257="vco_divide_by:INTEGER:="
+    #GENERIC258="vco_max:NATURAL:="
+    #GENERIC259="vco_min:NATURAL:="
+    #GENERIC26="c3_ph:NATURAL:="
+    #GENERIC260="vco_multiply_by:INTEGER:="
+    #GENERIC261="vco_post_scale:NATURAL:="
+    #GENERIC27="c3_test_source:INTEGER:="
+    #GENERIC28="c3_use_casc_in:STRING:="
+    #GENERIC29="c4_high:NATURAL:="
+    #GENERIC3="c0_initial:NATURAL:="
+    #GENERIC30="c4_initial:NATURAL:="
+    #GENERIC31="c4_low:NATURAL:="
+    #GENERIC32="c4_mode:STRING:="
+    #GENERIC33="c4_ph:NATURAL:="
+    #GENERIC34="c4_test_source:INTEGER:="
+    #GENERIC35="c4_use_casc_in:STRING:="
+    #GENERIC36="c5_high:NATURAL:="
+    #GENERIC37="c5_initial:NATURAL:="
+    #GENERIC38="c5_low:NATURAL:="
+    #GENERIC39="c5_mode:STRING:="
+    #GENERIC4="c0_low:NATURAL:="
+    #GENERIC40="c5_ph:NATURAL:="
+    #GENERIC41="c5_test_source:INTEGER:="
+    #GENERIC42="c5_use_casc_in:STRING:="
+    #GENERIC43="charge_pump_current:NATURAL:="
+    #GENERIC44="clk0_counter:STRING:="
+    #GENERIC45="clk0_divide_by:POSITIVE:=1"
+    #GENERIC46="clk0_duty_cycle:NATURAL:=50"
+    #GENERIC47="clk0_multiply_by:POSITIVE:=6"
+    #GENERIC48="clk0_output_frequency:NATURAL:="
+    #GENERIC49="clk0_phase_shift:STRING:=\"300\""
+    #GENERIC5="c0_mode:STRING:="
+    #GENERIC50="clk0_time_delay:STRING:=\"0\""
+    #GENERIC51="clk1_counter:STRING:="
+    #GENERIC52="clk1_divide_by:POSITIVE:="
+    #GENERIC53="clk1_duty_cycle:NATURAL:="
+    #GENERIC54="clk1_multiply_by:POSITIVE:="
+    #GENERIC55="clk1_output_frequency:NATURAL:="
+    #GENERIC56="clk1_phase_shift:STRING:="
+    #GENERIC57="clk1_time_delay:STRING:="
+    #GENERIC58="clk2_counter:STRING:="
+    #GENERIC59="clk2_divide_by:POSITIVE:="
+    #GENERIC6="c0_ph:NATURAL:="
+    #GENERIC60="clk2_duty_cycle:NATURAL:="
+    #GENERIC61="clk2_multiply_by:POSITIVE:="
+    #GENERIC62="clk2_output_frequency:NATURAL:="
+    #GENERIC63="clk2_phase_shift:STRING:="
+    #GENERIC64="clk2_time_delay:STRING:="
+    #GENERIC65="clk3_counter:STRING:="
+    #GENERIC66="clk3_divide_by:POSITIVE:="
+    #GENERIC67="clk3_duty_cycle:NATURAL:="
+    #GENERIC68="clk3_multiply_by:POSITIVE:="
+    #GENERIC69="clk3_phase_shift:STRING:="
+    #GENERIC7="c0_test_source:INTEGER:="
+    #GENERIC70="clk3_time_delay:STRING:="
+    #GENERIC71="clk4_counter:STRING:="
+    #GENERIC72="clk4_divide_by:POSITIVE:="
+    #GENERIC73="clk4_duty_cycle:NATURAL:="
+    #GENERIC74="clk4_multiply_by:POSITIVE:="
+    #GENERIC75="clk4_phase_shift:STRING:="
+    #GENERIC76="clk4_time_delay:STRING:="
+    #GENERIC77="clk5_counter:STRING:="
+    #GENERIC78="clk5_divide_by:POSITIVE:="
+    #GENERIC79="clk5_duty_cycle:NATURAL:="
+    #GENERIC8="c1_high:NATURAL:="
+    #GENERIC80="clk5_multiply_by:POSITIVE:="
+    #GENERIC81="clk5_phase_shift:STRING:="
+    #GENERIC82="clk5_time_delay:STRING:="
+    #GENERIC83="compensate_clock:STRING:=\"CLK0\""
+    #GENERIC84="down_spread:STRING:="
+    #GENERIC85="e0_high:NATURAL:="
+    #GENERIC86="e0_initial:NATURAL:="
+    #GENERIC87="e0_low:NATURAL:="
+    #GENERIC88="e0_mode:STRING:="
+    #GENERIC89="e0_ph:NATURAL:="
+    #GENERIC9="c1_initial:NATURAL:="
+    #GENERIC90="e0_time_delay:NATURAL:="
+    #GENERIC91="e1_high:NATURAL:="
+    #GENERIC92="e1_initial:NATURAL:="
+    #GENERIC93="e1_low:NATURAL:="
+    #GENERIC94="e1_mode:STRING:="
+    #GENERIC95="e1_ph:NATURAL:="
+    #GENERIC96="e1_time_delay:NATURAL:="
+    #GENERIC97="e2_high:NATURAL:="
+    #GENERIC98="e2_initial:NATURAL:="
+    #GENERIC99="e2_low:NATURAL:="
+    #LIBRARY="altera_mf"
+    #REFERENCE="altpll_component"
+    #SYMBOL="altpll"
+   }
+   COORD (2320,300)
+   VERTEXES ( (8,30), (32,38), (6,42), (26,46), (18,54) )
+   PINPROP 0,"#PIN_STATE","2"
+   PINPROP 0,"#PORTVALUE","1"
+  }
+  INSTANCE  4, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #LIBRARY="#terminals"
+    #REFERENCE="c0"
+    #SYMBOL="Output"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (2680,240)
+   VERTEXES ( (2,34) )
+  }
+  INSTANCE  5, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Output"
+    #LIBRARY="#terminals"
+    #REFERENCE="locked"
+    #SYMBOL="Output"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (2680,620)
+   VERTEXES ( (2,39) )
+  }
+  SIGNALASSIGN  6, 0, 0
+  {
+   LABEL "block_101"
+   TEXT "sub_wire3 <= To_stdlogicvector(sub_wire3_bv);"
+   RECT (1300,360,1701,460)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  82, 90 )
+  }
+  SIGNALASSIGN  7, 0, 0
+  {
+   LABEL "block_107"
+   TEXT "sub_wire4 <= sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire5(0 downto 0);"
+   RECT (1820,360,2221,460)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  43, 66, 74 )
+  }
+  SIGNALASSIGN  8, 0, 0
+  {
+   LABEL "block_109"
+   TEXT "sub_wire7 <= sub_wire3(0 downto 0) & sub_wire6;"
+   RECT (1820,700,2221,800)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  50, 70, 78 )
+  }
+  SIGNALASSIGN  9, 0, 0
+  {
+   LABEL "block_110"
+   TEXT "sub_wire8 <= sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire3(0 downto 0) & sub_wire3(0 downto 0);"
+   RECT (1820,540,2221,640)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  58, 86 )
+  }
+  SIGNALASSIGN  10, 0, 0
+  {
+   LABEL "block_100"
+   TEXT "sub_wire3_bv(0 downto 0) <= \"0\";"
+   RECT (800,360,1201,460)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  91 )
+  }
+  SIGNALASSIGN  11, 0, 0
+  {
+   LABEL "block_103"
+   TEXT "sub_wire5 <= not (To_stdlogicvector(sub_wire5_bv));"
+   RECT (1300,540,1701,640)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  62, 94 )
+  }
+  SIGNALASSIGN  12, 0, 0
+  {
+   LABEL "block_102"
+   TEXT "sub_wire5_bv(0 downto 0) <= \"0\";"
+   RECT (800,540,1201,640)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  95 )
+  }
+  INSTANCE  13, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'0'"
+    #LIBRARY="#terminals"
+    #REFERENCE="inclk0"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (800,740)
+   VERTEXES ( (2,71) )
+  }
+  TEXT  14, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2320,300,2320,300)
+   ALIGN 8
+   PARENT 3
+  }
+  TEXT  15, 0, 0
+  {
+   TEXT "$#COMPONENT"
+   RECT (2320,900,2320,900)
+   PARENT 3
+  }
+  TEXT  16, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2732,240,2732,240)
+   ALIGN 4
+   PARENT 4
+  }
+  TEXT  17, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (2732,620,2732,620)
+   ALIGN 4
+   PARENT 5
+  }
+  TEXT  18, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (748,740,748,740)
+   ALIGN 6
+   PARENT 13
+  }
+  NET BUS  19, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire0(5:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  NET WIRE  20, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  21, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  22, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire3_bv(0:0)"
+    #VHDL_TYPE="BIT_VECTOR"
+   }
+  }
+  NET BUS  23, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire4(5:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  NET BUS  24, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire5(0:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  NET BUS  25, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire5_bv(0:0)"
+    #VHDL_TYPE="BIT_VECTOR"
+   }
+  }
+  NET WIRE  26, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  27, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire7(1:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  NET BUS  28, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire8(3:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  NET BUS  29, 0, 0
+  {
+   VARIABLES
+   {
+    #NAME="sub_wire3(0:0)"
+    #VHDL_TYPE="std_logic_vector"
+   }
+  }
+  VTX  30, 0, 0
+  {
+   COORD (2580,380)
+  }
+  VTX  31, 0, 0
+  {
+   COORD (2660,380)
+  }
+  BUS  32, 0, 0
+  {
+   NET 19
+   VTX 30, 31
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  33, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2620,380,2620,380)
+   ALIGN 9
+   PARENT 32
+  }
+  VTX  34, 0, 0
+  {
+   COORD (2680,240)
+  }
+  VTX  35, 0, 0
+  {
+   COORD (2660,240)
+  }
+  WIRE  36, 0, 0
+  {
+   NET 20
+   VTX 34, 35
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  37, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2670,240,2670,240)
+   ALIGN 9
+   PARENT 36
+  }
+  VTX  38, 0, 0
+  {
+   COORD (2580,620)
+  }
+  VTX  39, 0, 0
+  {
+   COORD (2680,620)
+  }
+  WIRE  40, 0, 0
+  {
+   NET 21
+   VTX 38, 39
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  41, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2630,620,2630,620)
+   ALIGN 9
+   PARENT 40
+  }
+  VTX  42, 0, 0
+  {
+   COORD (2320,380)
+  }
+  VTX  43, 0, 0
+  {
+   COORD (2221,380)
+  }
+  BUS  44, 0, 0
+  {
+   NET 23
+   VTX 42, 43
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  45, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2270,380,2270,380)
+   ALIGN 9
+   PARENT 44
+  }
+  VTX  46, 0, 0
+  {
+   COORD (2320,580)
+  }
+  VTX  47, 0, 0
+  {
+   COORD (2300,580)
+  }
+  BUS  48, 0, 0
+  {
+   NET 27
+   VTX 46, 47
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  49, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2310,580,2310,580)
+   ALIGN 9
+   PARENT 48
+  }
+  VTX  50, 0, 0
+  {
+   COORD (2221,720)
+  }
+  VTX  51, 0, 0
+  {
+   COORD (2300,720)
+  }
+  BUS  52, 0, 0
+  {
+   NET 27
+   VTX 50, 51
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  53, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2260,720,2260,720)
+   ALIGN 9
+   PARENT 52
+  }
+  VTX  54, 0, 0
+  {
+   COORD (2320,500)
+  }
+  VTX  55, 0, 0
+  {
+   COORD (2300,500)
+  }
+  BUS  56, 0, 0
+  {
+   NET 28
+   VTX 54, 55
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  57, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2310,500,2310,500)
+   ALIGN 9
+   PARENT 56
+  }
+  VTX  58, 0, 0
+  {
+   COORD (2221,560)
+  }
+  VTX  59, 0, 0
+  {
+   COORD (2300,560)
+  }
+  BUS  60, 0, 0
+  {
+   NET 28
+   VTX 58, 59
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  61, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2260,560,2260,560)
+   ALIGN 9
+   PARENT 60
+  }
+  VTX  62, 0, 0
+  {
+   COORD (1701,560)
+  }
+  VTX  63, 0, 0
+  {
+   COORD (1780,560)
+  }
+  BUS  64, 0, 0
+  {
+   NET 24
+   VTX 62, 63
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  65, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1740,560,1740,560)
+   ALIGN 9
+   PARENT 64
+  }
+  VTX  66, 0, 0
+  {
+   COORD (1820,400)
+  }
+  VTX  67, 0, 0
+  {
+   COORD (1780,400)
+  }
+  BUS  68, 0, 0
+  {
+   NET 24
+   VTX 66, 67
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  69, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1800,400,1800,400)
+   ALIGN 9
+   PARENT 68
+  }
+  VTX  70, 0, 0
+  {
+   COORD (1820,740)
+  }
+  VTX  71, 0, 0
+  {
+   COORD (800,740)
+  }
+  WIRE  72, 0, 0
+  {
+   NET 26
+   VTX 70, 71
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  73, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1310,740,1310,740)
+   ALIGN 9
+   PARENT 72
+  }
+  VTX  74, 0, 0
+  {
+   COORD (1820,380)
+  }
+  VTX  75, 0, 0
+  {
+   COORD (1800,380)
+  }
+  BUS  76, 0, 0
+  {
+   NET 29
+   VTX 74, 75
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  77, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1810,380,1810,380)
+   ALIGN 9
+   PARENT 76
+  }
+  VTX  78, 0, 0
+  {
+   COORD (1820,720)
+  }
+  VTX  79, 0, 0
+  {
+   COORD (1800,720)
+  }
+  BUS  80, 0, 0
+  {
+   NET 29
+   VTX 78, 79
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  81, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1810,720,1810,720)
+   ALIGN 9
+   PARENT 80
+  }
+  VTX  82, 0, 0
+  {
+   COORD (1701,380)
+  }
+  VTX  83, 0, 0
+  {
+   COORD (1800,380)
+  }
+  BUS  84, 0, 0
+  {
+   NET 29
+   VTX 82, 83
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  85, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1750,380,1750,380)
+   ALIGN 9
+   PARENT 84
+  }
+  VTX  86, 0, 0
+  {
+   COORD (1820,560)
+  }
+  VTX  87, 0, 0
+  {
+   COORD (1800,560)
+  }
+  BUS  88, 0, 0
+  {
+   NET 29
+   VTX 86, 87
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  89, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1810,560,1810,560)
+   ALIGN 9
+   PARENT 88
+  }
+  VTX  90, 0, 0
+  {
+   COORD (1300,380)
+  }
+  VTX  91, 0, 0
+  {
+   COORD (1201,380)
+  }
+  BUS  92, 0, 0
+  {
+   NET 22
+   VTX 90, 91
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  93, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1250,380,1250,380)
+   ALIGN 9
+   PARENT 92
+  }
+  VTX  94, 0, 0
+  {
+   COORD (1300,560)
+  }
+  VTX  95, 0, 0
+  {
+   COORD (1201,560)
+  }
+  BUS  96, 0, 0
+  {
+   NET 25
+   VTX 94, 95
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  97, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1250,560,1250,560)
+   ALIGN 9
+   PARENT 96
+  }
+  BUS  98, 0, 0
+  {
+   NET 24
+   VTX 67, 63
+  }
+  BUS  99, 0, 0
+  {
+   NET 27
+   VTX 47, 51
+  }
+  BUS  100, 0, 0
+  {
+   NET 28
+   VTX 55, 59
+  }
+  BUS  101, 0, 0
+  {
+   NET 29
+   VTX 75, 83
+  }
+  BUS  102, 0, 0
+  {
+   NET 29
+   VTX 83, 87
+  }
+  BUS  103, 0, 0
+  {
+   NET 29
+   VTX 87, 79
+  }
+ }
+ 
+}
+

@@ -1,0 +1,14 @@
+[Version]
+Version=7.1
+[Designs]
+an183=an183.adf
+[Settings]
+Active=an183
+[Expand]
+an183=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

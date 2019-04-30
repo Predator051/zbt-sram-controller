@@ -1,0 +1,19 @@
+2757
+~E 1 "./compile/addr_ctrl_out.vhd" 24 addr_ctrl_out
+~A 1 "./compile/addr_ctrl_out.vhd" 43 rtl
+~E 1 "./compile/data_inout.vhd" 24 data_inout
+~A 1 "./compile/data_inout.vhd" 39 rtl
+~E 1 "./compile/pipe_stage.vhd" 24 pipe_stage
+~A 1 "./compile/pipe_stage.vhd" 48 rtl
+~E 1 "./compile/main.vhd" 30 main
+~A 1 "./compile/main.vhd" 54 rtl
+~E 1 "./src/idt71v3556.vhd" 34 idt71v3556
+~A 1 "./src/idt71v3556.vhd" 210 rtl
+~E 1 "./src/pipe_delay.vhd" 46 pipe_delay
+~A 1 "./src/pipe_delay.vhd" 76 rtl
+~E 1 "./compile/top.vhd" 30 top
+~A 1 "./compile/top.vhd" 54 rtl
+~E 1 "./src/PLL1.vhd" 43 pll1
+~A 1 "./compile/pll1.vhd" 37 syn
+~E 1 "./compile/zbt_ctrl_top.vhd" 24 zbt_ctrl_top
+~A 1 "./compile/zbt_ctrl_top.vhd" 48 rtl

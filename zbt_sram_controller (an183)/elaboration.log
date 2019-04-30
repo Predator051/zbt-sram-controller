@@ -1,0 +1,39 @@
+elbread.dll ver. 1.0.5.375 Tue Apr 30 12:19:39 2019
+
+
+--------------------------------------------
+Entity            | Architecture | Library
+--------------------------------------------
+top               | rtl          | an183
+pll1              | syn          | an183
+idt71v3556        | rtl          | an183
+zbt_ctrl_top      | rtl          | an183
+altpll            | behavior     | altera_mf
+mf_stratix_pll    | vital_pll    | altera_mf
+mf_m_cntr         | behave       | altera_mf
+mf_n_cntr         | behave       | altera_mf
+stx_scale_cntr    | behave       | altera_mf
+dffp              | behave       | altera_mf
+mf_stratixii_pll  | vital_pll    | altera_mf
+mf_mn_cntr        | behave       | altera_mf
+arm_scale_cntr    | behave       | altera_mf
+addr_ctrl_out     | rtl          | an183
+data_inout        | rtl          | an183
+pipe_delay        | rtl          | an183
+pipe_stage        | rtl          | an183
+--------------------------------------------
+
+-----------------------------------
+Package                 | Library
+-----------------------------------
+standard                | std
+std_logic_1164          | ieee
+textio                  | std
+vital_timing            | ieee
+vital_primitives        | ieee
+conversions             | an183
+altera_mf_components    | altera_mf
+altera_device_families  | altera_mf
+mf_pllpack              | altera_mf
+gen_utils               | an183
+-----------------------------------

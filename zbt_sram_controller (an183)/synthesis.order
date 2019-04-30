@@ -1,0 +1,16 @@
+i<>.\src\addr_ctrl_out.vhd
+i<>.\src\data_inout.vhd
+i<>.\src\idt71v3556.vhd
+i<>.\src\main.vhd
+i<>.\src\pipe_delay.vhd
+i<>.\src\pipe_stage.vhd
+i<>.\src\PLL1.vhd
+i<>.\src\top.vhd
+i<>.\src\zbt_ctrl_top.vhd
+i<>.\src\addr_ctrl_out.bde
+i<>.\src\data_inout.bde
+i<>.\src\main.bde
+i<>.\src\pipe_stage.bde
+i<>.\src\pll1.bde
+i<>.\src\top.bde
+i<>.\src\zbt_ctrl_top.bde
