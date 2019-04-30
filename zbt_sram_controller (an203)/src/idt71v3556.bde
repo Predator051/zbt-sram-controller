@@ -1,0 +1,9100 @@
+SCHM0103
+
+HEADER
+{
+ FREEID 1233
+ VARIABLES
+ {
+  #ARCHITECTURE="rtl"
+  #BLOCKTABLE_FILE="#HDL2DIAGRAM.bde"
+  #ENTITY="idt71v3556"
+  #LANGUAGE="VHDL"
+  AUTHOR="ParazZzit"
+  COMPANY="admin"
+  CREATIONDATE="12.05.2016"
+  SOURCE=".\\src\\idt71v3556.vhd"
+ }
+}
+
+PAGE ""
+{
+ PAGEHEADER
+ {
+  PAGESIZE (4342,4571)
+  MARGINS (200,200,200,200)
+  RECT (0,0,0,0)
+ }
+ 
+ BODY
+ {
+  VHDLDESIGNUNITHDR  1, 0, 0
+  {
+   LABEL "Design Unit Header"
+   TEXT 
+"library zaz;\n"+
+"        use zaz.gen_utils.all;\n"+
+"        use zaz.conversions.all;\n"+
+"library ieee;\n"+
+"        use ieee.std_logic_1164.all;\n"+
+"        use ieee.vital_timing.all;\n"+
+"        use ieee.vital_primitives.all;\n"+
+"        use zaz.conversions.all;"
+   RECT (220,260,620,637)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  ENTITYDECLARATION  2, 0, 0
+  {
+   LABEL "Entity Declaration"
+   TEXT "attribute VITAL_LEVEL0 of idt71v3556 : entity is TRUE;"
+   RECT (220,637,620,783)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  ARCHITECTUREDECLARATIONS  3, 0, 0
+  {
+   LABEL "Architecture Declaration"
+   TEXT 
+"attribute VITAL_LEVEL0 of rtl : architecture is TRUE;\n"+
+"constant partID : STRING := \"idt71v3156\";\n"+
+""
+   RECT (220,783,620,995)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  GENERIC  4, 0, 0
+  {
+   LABEL "Generics"
+   TEXT 
+"InstancePath:STRING:=DefaultInstancePath;\n"+
+"MsgOn:BOOLEAN:=DefaultMsgOn;\n"+
+"SeverityMode:SEVERITY_LEVEL:=WARNING;\n"+
+"thold_A0_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_ADV_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_BWANeg_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_CE2_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_CLKENNeg_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_DQA0_CLK:VitalDelayType:=UnitDelay;\n"+
+"thold_R_CLK:VitalDelayType:=UnitDelay;\n"+
+"TimingChecksOn:BOOLEAN:=DefaultTimingChecks;\n"+
+"TimingModel:STRING:=DefaultTimingModel;\n"+
+"tipd_A0:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A1:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A10:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A11:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A12:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A13:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A14:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A15:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A16:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A3:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A4:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A5:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A6:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A7:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A8:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_A9:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_ADV:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_BWANeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_BWBNeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_BWCNeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_BWDNeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_CE1Neg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_CE2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_CE2Neg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_CLK:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_CLKENNeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA0:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA1:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA3:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA4:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA5:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA6:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA7:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQA8:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB0:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB1:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB3:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB4:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB5:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB6:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB7:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQB8:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC0:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC1:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC3:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC4:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC5:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC6:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC7:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQC8:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD0:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD1:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD2:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD3:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD4:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD5:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD6:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD7:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_DQD8:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_LBONeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_OENeg:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tipd_R:VitalDelayType01:=VitalZeroDelay01;\n"+
+"tpd_CLK_DQA0:VitalDelayType01Z:=UnitDelay01Z;\n"+
+"tpd_OENeg_DQA0:VitalDelayType01Z:=UnitDelay01Z;\n"+
+"tperiod_CLK_posedge:VitalDelayType:=UnitDelay;\n"+
+"tpw_CLK_negedge:VitalDelayType:=UnitDelay;\n"+
+"tpw_CLK_posedge:VitalDelayType:=UnitDelay;\n"+
+"tsetup_A0_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_ADV_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_BWANeg_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_CE2_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_CLKENNeg_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_DQA0_CLK:VitalDelayType:=UnitDelay;\n"+
+"tsetup_R_CLK:VitalDelayType:=UnitDelay;\n"+
+"XOn:BOOLEAN:=DefaultXon"
+   RECT (220,1068,620,1395)
+   MARGINS (20,20)
+   MULTILINE
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+  }
+  SIGNALASSIGN  5, 0, 0
+  {
+   LABEL "WireDelay"
+   TEXT 
+"WireDelay: block is\n"+
+"                       begin\n"+
+"                         w_1 : VitalWireDelay(A0_ipd,A0,tipd_A0);\n"+
+"                         w_2 : VitalWireDelay(A1_ipd,A1,tipd_A1);\n"+
+"                         w_3 : VitalWireDelay(A2_ipd,A2,tipd_A2);\n"+
+"                         w_4 : VitalWireDelay(A3_ipd,A3,tipd_A3);\n"+
+"                         w_5 : VitalWireDelay(A4_ipd,A4,tipd_A4);\n"+
+"                         w_6 : VitalWireDelay(A5_ipd,A5,tipd_A5);\n"+
+"                         w_7 : VitalWireDelay(A6_ipd,A6,tipd_A6);\n"+
+"                         w_8 : VitalWireDelay(A7_ipd,A7,tipd_A7);\n"+
+"                         w_9 : VitalWireDelay(A8_ipd,A8,tipd_A8);\n"+
+"                         w_10 : VitalWireDelay(A9_ipd,A9,tipd_A9);\n"+
+"                         w_11 : VitalWireDelay(A10_ipd,A10,tipd_A10);\n"+
+"                         w_12 : VitalWireDelay(A11_ipd,A11,tipd_A11);\n"+
+"                         w_13 : VitalWireDelay(A12_ipd,A12,tipd_A12);\n"+
+"                         w_14 : VitalWireDelay(A13_ipd,A13,tipd_A13);\n"+
+"                         w_15 : VitalWireDelay(A14_ipd,A14,tipd_A14);\n"+
+"                         w_16 : VitalWireDelay(A15_ipd,A15,tipd_A15);\n"+
+"                         w_17 : VitalWireDelay(A16_ipd,A16,tipd_A16);\n"+
+"                         w_21 : VitalWireDelay(DQA0_ipd,DQA0,tipd_DQA0);\n"+
+"                         w_22 : VitalWireDelay(DQA1_ipd,DQA1,tipd_DQA1);\n"+
+"                         w_23 : VitalWireDelay(DQA2_ipd,DQA2,tipd_DQA2);\n"+
+"                         w_24 : VitalWireDelay(DQA3_ipd,DQA3,tipd_DQA3);\n"+
+"                         w_25 : VitalWireDelay(DQA4_ipd,DQA4,tipd_DQA4);\n"+
+"                         w_26 : VitalWireDelay(DQA5_ipd,DQA5,tipd_DQA5);\n"+
+"                         w_27 : VitalWireDelay(DQA6_ipd,DQA6,tipd_DQA6);\n"+
+"                         w_28 : VitalWireDelay(DQA7_ipd,DQA7,tipd_DQA7);\n"+
+"                         w_29 : VitalWireDelay(DQA8_ipd,DQA8,tipd_DQA8);\n"+
+"                         w_31 : VitalWireDelay(DQB0_ipd,DQB0,tipd_DQB0);\n"+
+"                         w_32 : VitalWireDelay(DQB1_ipd,DQB1,tipd_DQB1);\n"+
+"                         w_33 : VitalWireDelay(DQB2_ipd,DQB2,tipd_DQB2);\n"+
+"                         w_34 : VitalWireDelay(DQB3_ipd,DQB3,tipd_DQB3);\n"+
+"                         w_35 : VitalWireDelay(DQB4_ipd,DQB4,tipd_DQB4);\n"+
+"                         w_36 : VitalWireDelay(DQB5_ipd,DQB5,tipd_DQB5);\n"+
+"                         w_37 : VitalWireDelay(DQB6_ipd,DQB6,tipd_DQB6);\n"+
+"                         w_38 : VitalWireDelay(DQB7_ipd,DQB7,tipd_DQB7);\n"+
+"                         w_39 : VitalWireDelay(DQB8_ipd,DQB8,tipd_DQB8);\n"+
+"                         w_41 : VitalWireDelay(DQC0_ipd,DQC0,tipd_DQC0);\n"+
+"                         w_42 : VitalWireDelay(DQC1_ipd,DQC1,tipd_DQC1);\n"+
+"                         w_43 : VitalWireDelay(DQC2_ipd,DQC2,tipd_DQC2);\n"+
+"                         w_44 : VitalWireDelay(DQC3_ipd,DQC3,tipd_DQC3);\n"+
+"                         w_45 : VitalWireDelay(DQC4_ipd,DQC4,tipd_DQC4);\n"+
+"                         w_46 : VitalWireDelay(DQC5_ipd,DQC5,tipd_DQC5);\n"+
+"                         w_47 : VitalWireDelay(DQC6_ipd,DQC6,tipd_DQC6);\n"+
+"                         w_48 : VitalWireDelay(DQC7_ipd,DQC7,tipd_DQC7);\n"+
+"                         w_49 : VitalWireDelay(DQC8_ipd,DQC8,tipd_DQC8);\n"+
+"                         w_51 : VitalWireDelay(DQD0_ipd,DQD0,tipd_DQD0);\n"+
+"                         w_52 : VitalWireDelay(DQD1_ipd,DQD1,tipd_DQD1);\n"+
+"                         w_53 : VitalWireDelay(DQD2_ipd,DQD2,tipd_DQD2);\n"+
+"                         w_54 : VitalWireDelay(DQD3_ipd,DQD3,tipd_DQD3);\n"+
+"                         w_55 : VitalWireDelay(DQD4_ipd,DQD4,tipd_DQD4);\n"+
+"                         w_56 : VitalWireDelay(DQD5_ipd,DQD5,tipd_DQD5);\n"+
+"                         w_57 : VitalWireDelay(DQD6_ipd,DQD6,tipd_DQD6);\n"+
+"                         w_58 : VitalWireDelay(DQD7_ipd,DQD7,tipd_DQD7);\n"+
+"                         w_59 : VitalWireDelay(DQD8_ipd,DQD8,tipd_DQD8);\n"+
+"                         w_61 : VitalWireDelay(ADV_ipd,ADV,tipd_ADV);\n"+
+"                         w_62 : VitalWireDelay(R_ipd,R,tipd_R);\n"+
+"                         w_63 : VitalWireDelay(CLKENNeg_ipd,CLKENNeg,tipd_CLKENNeg);\n"+
+"                         w_64 : VitalWireDelay(BWDNeg_ipd,BWDNeg,tipd_BWDNeg);\n"+
+"                         w_65 : VitalWireDelay(BWCNeg_ipd,BWCNeg,tipd_BWCNeg);\n"+
+"                         w_66 : VitalWireDelay(BWBNeg_ipd,BWBNeg,tipd_BWBNeg);\n"+
+"                         w_67 : VitalWireDelay(BWANeg_ipd,BWANeg,tipd_BWANeg);\n"+
+"                         w_68 : VitalWireDelay(CE1Neg_ipd,CE1Neg,tipd_CE1Neg);\n"+
+"                         w_69 : VitalWireDelay(CE2Neg_ipd,CE2Neg,tipd_CE2Neg);\n"+
+"                         w_70 : VitalWireDelay(CE2_ipd,CE2,tipd_CE2);\n"+
+"                         w_71 : VitalWireDelay(CLK_ipd,CLK,tipd_CLK);\n"+
+"                         w_72 : VitalWireDelay(LBONeg_ipd,LBONeg,tipd_LBONeg);\n"+
+"                         w_73 : VitalWireDelay(OENeg_ipd,OENeg,tipd_OENeg);\n"+
+"                       end block WireDelay;\n"+
+"                      "
+   RECT (2020,2340,2421,3700)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  419, 423, 427, 431, 435, 439, 443, 447, 451, 455, 459, 463, 467, 471, 475, 479, 484, 488, 492, 495, 499, 504, 507, 512, 519, 523, 527, 531, 535, 539, 543, 547, 551, 555, 559, 563, 567, 571, 575, 579, 583, 587, 591, 595, 599, 603, 607, 611, 615, 619, 623, 627, 631, 635, 639, 643, 647, 651, 663, 671, 675, 687, 695, 703, 711, 719, 723, 727, 731, 735, 739, 743, 755, 759, 763, 771, 775, 783, 787, 791, 795, 799, 803, 807, 811, 815, 819, 823, 827, 831, 835, 839, 843, 847, 851, 855, 859, 863, 867, 871, 875, 879, 883, 887, 891, 895, 899, 903, 907, 911, 915, 919, 931, 939, 943, 955, 963, 967, 979, 983, 995, 999, 1007, 1019, 1023, 1035, 1043, 1047, 1059, 1067, 1071, 1083 )
+  }
+  INSTANCE  6, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A0"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2360)
+   VERTEXES ( (2,724) )
+  }
+  INSTANCE  7, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A1"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2440)
+   VERTEXES ( (2,923) )
+  }
+  INSTANCE  8, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A10"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2400)
+   VERTEXES ( (2,728) )
+  }
+  INSTANCE  9, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A11"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2520)
+   VERTEXES ( (2,947) )
+  }
+  INSTANCE  10, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A12"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2600)
+   VERTEXES ( (2,971) )
+  }
+  INSTANCE  11, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A13"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2680)
+   VERTEXES ( (2,927) )
+  }
+  INSTANCE  12, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A14"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2480)
+   VERTEXES ( (2,732) )
+  }
+  INSTANCE  13, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A15"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2740)
+   VERTEXES ( (2,987) )
+  }
+  INSTANCE  14, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A16"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2800)
+   VERTEXES ( (2,1003) )
+  }
+  SIGNALASSIGN  15, 0, 0
+  {
+   LABEL "Behavior"
+   TEXT 
+"Behavior: block is\n"+
+"                         port (BWDNIn : IN std_ulogic := 'U';\n"+
+"                               BWCNIn : IN std_ulogic := 'U';\n"+
+"                               BWBNIn : IN std_ulogic := 'U';\n"+
+"                               BWANIn : IN std_ulogic := 'U';\n"+
+"                               DatDIn : IN std_logic_vector(8 downto 0);\n"+
+"                               DatCIn : IN std_logic_vector(8 downto 0);\n"+
+"                               DatBIn : IN std_logic_vector(8 downto 0);\n"+
+"                               DatAIn : IN std_logic_vector(8 downto 0);\n"+
+"                               DataOut : OUT std_logic_vector(35 downto 0) := (others => 'Z');\n"+
+"                               CLKIn : IN std_ulogic := 'U';\n"+
+"                               CKENIn : IN std_ulogic := 'U';\n"+
+"                               AddressIn : IN std_logic_vector(16 downto 0);\n"+
+"                               OENegIn : IN std_ulogic := 'U';\n"+
+"                               RIn : IN std_ulogic := 'U';\n"+
+"                               ADVIn : IN std_ulogic := 'U';\n"+
+"                               CE2In : IN std_ulogic := 'U';\n"+
+"                               LBONegIn : IN std_ulogic := '1';\n"+
+"                               CE1NegIn : IN std_ulogic := 'U';\n"+
+"                               CE2NegIn : IN std_ulogic := 'U');\n"+
+"                         port map (BWDNIn => BWDNeg_ipd,\n"+
+"                                   BWCNIn => BWCNeg_ipd,\n"+
+"                                   BWBNIn => BWBNeg_ipd,\n"+
+"                                   BWANIn => BWANeg_ipd,\n"+
+"                                   CLKIn => CLK_ipd,\n"+
+"                                   CKENIn => CLKENNeg_ipd,\n"+
+"                                   OENegIn => OENeg_ipd,\n"+
+"                                   RIn => R_ipd,\n"+
+"                                   ADVIn => ADV_ipd,\n"+
+"                                   CE2In => CE2_ipd,\n"+
+"                                   LBONegIn => LBONeg_ipd,\n"+
+"                                   CE1NegIn => CE1Neg_ipd,\n"+
+"                                   CE2NegIn => CE2Neg_ipd,\n"+
+"                                   DataOut(0) => DQA0,\n"+
+"                                   DataOut(1) => DQA1,\n"+
+"                                   DataOut(2) => DQA2,\n"+
+"                                   DataOut(3) => DQA3,\n"+
+"                                   DataOut(4) => DQA4,\n"+
+"                                   DataOut(5) => DQA5,\n"+
+"                                   DataOut(6) => DQA6,\n"+
+"                                   DataOut(7) => DQA7,\n"+
+"                                   DataOut(8) => DQA8,\n"+
+"                                   DataOut(9) => DQB0,\n"+
+"                                   DataOut(10) => DQB1,\n"+
+"                                   DataOut(11) => DQB2,\n"+
+"                                   DataOut(12) => DQB3,\n"+
+"                                   DataOut(13) => DQB4,\n"+
+"                                   DataOut(14) => DQB5,\n"+
+"                                   DataOut(15) => DQB6,\n"+
+"                                   DataOut(16) => DQB7,\n"+
+"                                   DataOut(17) => DQB8,\n"+
+"                                   DataOut(18) => DQC0,\n"+
+"                                   DataOut(19) => DQC1,\n"+
+"                                   DataOut(20) => DQC2,\n"+
+"                                   DataOut(21) => DQC3,\n"+
+"                                   DataOut(22) => DQC4,\n"+
+"                                   DataOut(23) => DQC5,\n"+
+"                                   DataOut(24) => DQC6,\n"+
+"                                   DataOut(25) => DQC7,\n"+
+"                                   DataOut(26) => DQC8,\n"+
+"                                   DataOut(27) => DQD0,\n"+
+"                                   DataOut(28) => DQD1,\n"+
+"                                   DataOut(29) => DQD2,\n"+
+"                                   DataOut(30) => DQD3,\n"+
+"                                   DataOut(31) => DQD4,\n"+
+"                                   DataOut(32) => DQD5,\n"+
+"                                   DataOut(33) => DQD6,\n"+
+"                                   DataOut(34) => DQD7,\n"+
+"                                   DataOut(35) => DQD8,\n"+
+"                                   DatAIn(0) => DQA0_ipd,\n"+
+"                                   DatAIn(1) => DQA1_ipd,\n"+
+"                                   DatAIn(2) => DQA2_ipd,\n"+
+"                                   DatAIn(3) => DQA3_ipd,\n"+
+"                                   DatAIn(4) => DQA4_ipd,\n"+
+"                                   DatAIn(5) => DQA5_ipd,\n"+
+"                                   DatAIn(6) => DQA6_ipd,\n"+
+"                                   DatAIn(7) => DQA7_ipd,\n"+
+"                                   DatAIn(8) => DQA8_ipd,\n"+
+"                                   DatBIn(0) => DQB0_ipd,\n"+
+"                                   DatBIn(1) => DQB1_ipd,\n"+
+"                                   DatBIn(2) => DQB2_ipd,\n"+
+"                                   DatBIn(3) => DQB3_ipd,\n"+
+"                                   DatBIn(4) => DQB4_ipd,\n"+
+"                                   DatBIn(5) => DQB5_ipd,\n"+
+"                                   DatBIn(6) => DQB6_ipd,\n"+
+"                                   DatBIn(7) => DQB7_ipd,\n"+
+"                                   DatBIn(8) => DQB8_ipd,\n"+
+"                                   DatCIn(0) => DQC0_ipd,\n"+
+"                                   DatCIn(1) => DQC1_ipd,\n"+
+"                                   DatCIn(2) => DQC2_ipd,\n"+
+"                                   DatCIn(3) => DQC3_ipd,\n"+
+"                                   DatCIn(4) => DQC4_ipd,\n"+
+"                                   DatCIn(5) => DQC5_ipd,\n"+
+"                                   DatCIn(6) => DQC6_ipd,\n"+
+"                                   DatCIn(7) => DQC7_ipd,\n"+
+"                                   DatCIn(8) => DQC8_ipd,\n"+
+"                                   DatDIn(0) => DQD0_ipd,\n"+
+"                                   DatDIn(1) => DQD1_ipd,\n"+
+"                                   DatDIn(2) => DQD2_ipd,\n"+
+"                                   DatDIn(3) => DQD3_ipd,\n"+
+"                                   DatDIn(4) => DQD4_ipd,\n"+
+"                                   DatDIn(5) => DQD5_ipd,\n"+
+"                                   DatDIn(6) => DQD6_ipd,\n"+
+"                                   DatDIn(7) => DQD7_ipd,\n"+
+"                                   DatDIn(8) => DQD8_ipd,\n"+
+"                                   AddressIn(0) => A0_ipd,\n"+
+"                                   AddressIn(1) => A1_ipd,\n"+
+"                                   AddressIn(2) => A2_ipd,\n"+
+"                                   AddressIn(3) => A3_ipd,\n"+
+"                                   AddressIn(4) => A4_ipd,\n"+
+"                                   AddressIn(5) => A5_ipd,\n"+
+"                                   AddressIn(6) => A6_ipd,\n"+
+"                                   AddressIn(7) => A7_ipd,\n"+
+"                                   AddressIn(8) => A8_ipd,\n"+
+"                                   AddressIn(9) => A9_ipd,\n"+
+"                                   AddressIn(10) => A10_ipd,\n"+
+"                                   AddressIn(11) => A11_ipd,\n"+
+"                                   AddressIn(12) => A12_ipd,\n"+
+"                                   AddressIn(13) => A13_ipd,\n"+
+"                                   AddressIn(14) => A14_ipd,\n"+
+"                                   AddressIn(15) => A15_ipd,\n"+
+"                                   AddressIn(16) => A16_ipd);\n"+
+"                         type mem_state is (desel, begin_rd, begin_wr, burst_rd, burst_wr);\n"+
+"                         signal state : mem_state;\n"+
+"                         type sequence is array (0 to 3) of INTEGER range - 3 to 3;\n"+
+"                         type seqtab is array (0 to 3) of sequence;\n"+
+"                         constant il0 : sequence := (0,1,2,3);\n"+
+"                         constant il1 : sequence := (0,- 1,2,1);\n"+
+"                         constant il2 : sequence := (0,1,- 2,- 1);\n"+
+"                         constant il3 : sequence := (0,- 1,- 2,- 3);\n"+
+"                         constant il : seqtab := (il0,il1,il2,il3);\n"+
+"                         constant ln0 : sequence := (0,1,2,3);\n"+
+"                         constant ln1 : sequence := (0,1,2,- 1);\n"+
+"                         constant ln2 : sequence := (0,1,- 2,- 1);\n"+
+"                         constant ln3 : sequence := (0,- 3,- 2,- 1);\n"+
+"                         constant ln : seqtab := (ln0,ln1,ln2,ln3);\n"+
+"                         signal Burst_Seq : seqtab;\n"+
+"                         signal D_zd : std_logic_vector(35 downto 0);\n"+
+"                       begin\n"+
+"                         Burst_Setup : process\n"+
+"                         begin\n"+
+"                           if (LBONegIn = '1') then\n"+
+"                              Burst_Seq <= il;\n"+
+"                           else \n"+
+"                              Burst_Seq <= ln;\n"+
+"                           end if;\n"+
+"                           wait;\n"+
+"                         end process;\n"+
+"                         Behavior : process (BWDNIn,BWCNIn,BWBNIn,BWANIn,DatDIn,DatCIn,DatBIn,DatAIn,CLKIn,CKENIn,AddressIn,RIn,OENegIn,ADVIn,CE2In,CE1NegIn,CE2NegIn)\n"+
+"                           type command_type is (ds, burst, read, write);\n"+
+"                           variable Tviol_BWDN_CLK : X01 := '0';\n"+
+"                           variable TD_BWDN_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_BWCN_CLK : X01 := '0';\n"+
+"                           variable TD_BWCN_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_BWBN_CLK : X01 := '0';\n"+
+"                           variable TD_BWBN_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_BWAN_CLK : X01 := '0';\n"+
+"                           variable TD_BWAN_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_CKENIn_CLK : X01 := '0';\n"+
+"                           variable TD_CKENIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_ADVIn_CLK : X01 := '0';\n"+
+"                           variable TD_ADVIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_CE1NegIn_CLK : X01 := '0';\n"+
+"                           variable TD_CE1NegIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_CE2NegIn_CLK : X01 := '0';\n"+
+"                           variable TD_CE2NegIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_CE2In_CLK : X01 := '0';\n"+
+"                           variable TD_CE2In_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_RIn_CLK : X01 := '0';\n"+
+"                           variable TD_RIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_DatDIn_CLK : X01 := '0';\n"+
+"                           variable TD_DatDIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_DatCIn_CLK : X01 := '0';\n"+
+"                           variable TD_DatCIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_DatBIn_CLK : X01 := '0';\n"+
+"                           variable TD_DatBIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_DatAIn_CLK : X01 := '0';\n"+
+"                           variable TD_DatAIn_CLK : VitalTimingDataType;\n"+
+"                           variable Tviol_AddressIn_CLK : X01 := '0';\n"+
+"                           variable TD_AddressIn_CLK : VitalTimingDataType;\n"+
+"                           variable Pviol_CLK : X01 := '0';\n"+
+"                           variable PD_CLK : VitalPeriodDataType := VitalPeriodDataInit;\n"+
+"                           type MemStore is array (0 to 64726) of INTEGER range - 2 to 511;\n"+
+"                           variable MemDataA : MemStore;\n"+
+"                           variable MemDataB : MemStore;\n"+
+"                           variable MemDataC : MemStore;\n"+
+"                           variable MemDataD : MemStore;\n"+
+"                           variable MemAddr : NATURAL range 0 to 64726;\n"+
+"                           variable MemAddr1 : NATURAL range 0 to 64726;\n"+
+"                           variable startaddr : NATURAL range 0 to 64726;\n"+
+"                           variable Burst_Cnt : NATURAL range 0 to 4 := 0;\n"+
+"                           variable memstart : NATURAL range 0 to 3 := 0;\n"+
+"                           variable offset : INTEGER range - 3 to 3 := 0;\n"+
+"                           variable command : command_type;\n"+
+"                           variable BWD1 : UX01;\n"+
+"                           variable BWC1 : UX01;\n"+
+"                           variable BWB1 : UX01;\n"+
+"                           variable BWA1 : UX01;\n"+
+"                           variable BWD2 : UX01;\n"+
+"                           variable BWC2 : UX01;\n"+
+"                           variable BWB2 : UX01;\n"+
+"                           variable BWA2 : UX01;\n"+
+"                           variable wr1 : BOOLEAN := false;\n"+
+"                           variable wr2 : BOOLEAN := false;\n"+
+"                           variable wr3 : BOOLEAN := false;\n"+
+"                           variable Violation : X01 := '0';\n"+
+"                           variable OBuf1 : std_logic_vector(35 downto 0) := (others => 'Z');\n"+
+"                           variable OBuf2 : std_logic_vector(35 downto 0) := (others => 'Z');\n"+
+"                         begin\n"+
+"                           if (TimingChecksOn) then\n"+
+"                              VitalSetupHoldCheck(TestSignal => BWDNIn,TestSignalName => \"BWD\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_BWANeg_CLK,SetupLow => tsetup_BWANeg_CLK,HoldHigh => thold_BWANeg_CLK,HoldLow => thold_BWANeg_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_BWDN_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_BWDN_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => BWCNIn,TestSignalName => \"BWC\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_BWANeg_CLK,SetupLow => tsetup_BWANeg_CLK,HoldHigh => thold_BWANeg_CLK,HoldLow => thold_BWANeg_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_BWCN_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_BWCN_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => BWBNIn,TestSignalName => \"BWB\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_BWANeg_CLK,SetupLow => tsetup_BWANeg_CLK,HoldHigh => thold_BWANeg_CLK,HoldLow => thold_BWANeg_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_BWBN_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_BWBN_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => BWANIn,TestSignalName => \"BWA\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_BWANeg_CLK,SetupLow => tsetup_BWANeg_CLK,HoldHigh => thold_BWANeg_CLK,HoldLow => thold_BWANeg_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_BWAN_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_BWAN_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => CKENIn,TestSignalName => \"CLKENNeg\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_CLKENNeg_CLK,SetupLow => tsetup_CLKENNeg_CLK,HoldHigh => thold_CLKENNeg_CLK,HoldLow => thold_CLKENNeg_CLK,CheckEnabled => TRUE,RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_CKENIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_CKENIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => ADVIn,TestSignalName => \"ADV\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_ADV_CLK,SetupLow => tsetup_ADV_CLK,HoldHigh => thold_ADV_CLK,HoldLow => thold_ADV_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_ADVIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_ADVIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => CE1NegIn,TestSignalName => \"CE1Neg\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_CE2_CLK,SetupLow => tsetup_CE2_CLK,HoldHigh => thold_CE2_CLK,HoldLow => thold_CE2_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_CE1NegIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_CE1NegIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => CE2NegIn,TestSignalName => \"CE2Neg\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_CE2_CLK,SetupLow => tsetup_CE2_CLK,HoldHigh => thold_CE2_CLK,HoldLow => thold_CE2_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_CE2NegIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_CE2NegIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => CE2In,TestSignalName => \"CE2\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_CE2_CLK,SetupLow => tsetup_CE2_CLK,HoldHigh => thold_CE2_CLK,HoldLow => thold_CE2_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_CE2In_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_CE2In_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => RIn,TestSignalName => \"R\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_R_CLK,SetupLow => tsetup_R_CLK,HoldHigh => thold_R_CLK,HoldLow => thold_R_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_RIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_RIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => AddressIn,TestSignalName => \"Address\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_A0_CLK,SetupLow => tsetup_A0_CLK,HoldHigh => thold_A0_CLK,HoldLow => thold_A0_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_AddressIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_AddressIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => DatDIn,TestSignalName => \"DatD\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_DQA0_CLK,SetupLow => tsetup_DQA0_CLK,HoldHigh => thold_DQA0_CLK,HoldLow => thold_DQA0_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_DatDIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_DatDIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => DatCIn,TestSignalName => \"DatC\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_DQA0_CLK,SetupLow => tsetup_DQA0_CLK,HoldHigh => thold_DQA0_CLK,HoldLow => thold_DQA0_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_DatCIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_DatCIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => DatBIn,TestSignalName => \"DatB\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_DQA0_CLK,SetupLow => tsetup_DQA0_CLK,HoldHigh => thold_DQA0_CLK,HoldLow => thold_DQA0_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_DatBIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_DatBIn_CLK);\n"+
+"                              VitalSetupHoldCheck(TestSignal => DatAIn,TestSignalName => \"DatA\",RefSignal => CLKIn,RefSignalName => \"CLK\",SetupHigh => tsetup_DQA0_CLK,SetupLow => tsetup_DQA0_CLK,HoldHigh => thold_DQA0_CLK,HoldLow => thold_DQA0_CLK,CheckEnabled => (CKENIn = '0'),RefTransition => '/',HeaderMsg => InstancePath & partID,TimingData => TD_DatAIn_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Tviol_DatAIn_CLK);\n"+
+"                              VitalPeriodPulseCheck(TestSignal => CLKIn,TestSignalName => \"CLK\",Period => tperiod_CLK_posedge,PulseWidthLow => tpw_CLK_negedge,PulseWidthHigh => tpw_CLK_posedge,PeriodData => PD_CLK,XOn => XOn,MsgOn => MsgOn,Violation => Pviol_CLK,HeaderMsg => InstancePath & partID,CheckEnabled => (CKENIn = '0'));\n"+
+"                              Violation := Pviol_CLK or Tviol_DatAIn_CLK or Tviol_DatBIn_CLK or Tviol_DatCIn_CLK or Tviol_DatDIn_CLK or Tviol_AddressIn_CLK or Tviol_RIn_CLK or Tviol_CE2In_CLK or Tviol_CE2NegIn_CLK or Tviol_CE1NegIn_CLK or Tviol_ADVIn_CLK or Tviol_CKENIn_CLK or Tviol_BWAN_CLK or Tviol_BWBN_CLK or Tviol_BWCN_CLK or Tviol_BWDN_CLK;\n"+
+"                              assert Violation = '0' report InstancePath & partID & \": simulation may be\" & \" inaccurate due to timing violations\" severity SeverityMode;\n"+
+"                           end if;\n"+
+"                           if (rising_edge(CLKIn) and CKENIn = '0') then\n"+
+"                              assert (not (Is_X(BWDNIn))) report InstancePath & partID & \": Unusable value for BWDN\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(BWCNIn))) report InstancePath & partID & \": Unusable value for BWCN\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(BWBNIn))) report InstancePath & partID & \": Unusable value for BWBN\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(BWANIn))) report InstancePath & partID & \": Unusable value for BWAN\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(RIn))) report InstancePath & partID & \": Unusable value for R\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(ADVIn))) report InstancePath & partID & \": Unusable value for ADV\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(CE2In))) report InstancePath & partID & \": Unusable value for CE2\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(CE1NegIn))) report InstancePath & partID & \": Unusable value for CE1Neg\" severity SeverityMode;\n"+
+"                              assert (not (Is_X(CE2NegIn))) report InstancePath & partID & \": Unusable value for CE2Neg\" severity SeverityMode;\n"+
+"                              if ((ADVIn = '0') and (CE1NegIn = '1' or CE2NegIn = '1' or CE2In = '0')) then\n"+
+"                                 command := ds;\n"+
+"                              elsif (CE1NegIn = '0' and CE2NegIn = '0' and CE2In = '1' and ADVIn = '0') then\n"+
+"                                 if (RIn = '1') then\n"+
+"                                    command := read;\n"+
+"                                 else \n"+
+"                                    command := write;\n"+
+"                                 end if;\n"+
+"                              elsif (ADVIn = '1') and (CE1NegIn = '0' and CE2NegIn = '0' and CE2In = '1') then\n"+
+"                                 command := burst;\n"+
+"                              else \n"+
+"                                 assert false report InstancePath & partID & \": Could not decode \" & \"command.\" severity SeverityMode;\n"+
+"                              end if;\n"+
+"                              wr3 := wr2;\n"+
+"                              wr2 := wr1;\n"+
+"                              wr1 := false;\n"+
+"                              if (wr3) then\n"+
+"                                 if (BWA2 = '0') then\n"+
+"                                    if Violation = 'X' then\n"+
+"                                       MemDataA(MemAddr1) := - 1;\n"+
+"                                    else \n"+
+"                                       MemDataA(MemAddr1) := to_nat(DatAIn);\n"+
+"                                    end if;\n"+
+"                                 end if;\n"+
+"                                 if (BWB2 = '0') then\n"+
+"                                    if Violation = 'X' then\n"+
+"                                       MemDataB(MemAddr1) := - 1;\n"+
+"                                    else \n"+
+"                                       MemDataB(MemAddr1) := to_nat(DatBIn);\n"+
+"                                    end if;\n"+
+"                                 end if;\n"+
+"                                 if (BWC2 = '0') then\n"+
+"                                    if Violation = 'X' then\n"+
+"                                       MemDataC(MemAddr1) := - 1;\n"+
+"                                    else \n"+
+"                                       MemDataC(MemAddr1) := to_nat(DatCIn);\n"+
+"                                    end if;\n"+
+"                                 end if;\n"+
+"                                 if (BWD2 = '0') then\n"+
+"                                    if Violation = 'X' then\n"+
+"                                       MemDataD(MemAddr1) := - 1;\n"+
+"                                    else \n"+
+"                                       MemDataD(MemAddr1) := to_nat(DatDIn);\n"+
+"                                    end if;\n"+
+"                                 end if;\n"+
+"                              end if;\n"+
+"                              MemAddr1 := MemAddr;\n"+
+"                              OBuf2 := OBuf1;\n"+
+"                              case state is \n"+
+"                                when desel => \n"+
+"                                   case command is \n"+
+"                                     when ds => \n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                     when read => \n"+
+"                                        state <= begin_rd;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                     when write => \n"+
+"                                        state <= begin_wr;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                     when burst => \n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                   end case;\n"+
+"                                when begin_rd => \n"+
+"                                   Burst_Cnt := 0;\n"+
+"                                   case command is \n"+
+"                                     when ds => \n"+
+"                                        state <= desel;\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                     when read => \n"+
+"                                        state <= begin_rd;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                     when write => \n"+
+"                                        state <= begin_wr;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                     when burst => \n"+
+"                                        state <= burst_rd;\n"+
+"                                        Burst_Cnt := Burst_Cnt + 1;\n"+
+"                                        if (Burst_Cnt = 4) then\n"+
+"                                           Burst_Cnt := 0;\n"+
+"                                        end if;\n"+
+"                                        offset := Burst_Seq(memstart)(Burst_Cnt);\n"+
+"                                        MemAddr := startaddr + offset;\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                   end case;\n"+
+"                                when begin_wr => \n"+
+"                                   BWA2 := BWA1;\n"+
+"                                   BWB2 := BWB1;\n"+
+"                                   BWC2 := BWC1;\n"+
+"                                   BWD2 := BWD1;\n"+
+"                                   Burst_Cnt := 0;\n"+
+"                                   case command is \n"+
+"                                     when ds => \n"+
+"                                        state <= desel;\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                     when read => \n"+
+"                                        state <= begin_rd;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                     when write => \n"+
+"                                        state <= begin_wr;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                     when burst => \n"+
+"                                        state <= burst_wr;\n"+
+"                                        Burst_Cnt := Burst_Cnt + 1;\n"+
+"                                        if (Burst_Cnt = 4) then\n"+
+"                                           Burst_Cnt := 0;\n"+
+"                                        end if;\n"+
+"                                        offset := Burst_Seq(memstart)(Burst_Cnt);\n"+
+"                                        MemAddr := startaddr + offset;\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                   end case;\n"+
+"                                when burst_rd => \n"+
+"                                   case command is \n"+
+"                                     when ds => \n"+
+"                                        state <= desel;\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                     when read => \n"+
+"                                        state <= begin_rd;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                     when write => \n"+
+"                                        state <= begin_wr;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                     when burst => \n"+
+"                                        Burst_Cnt := Burst_Cnt + 1;\n"+
+"                                        if (Burst_Cnt = 4) then\n"+
+"                                           Burst_Cnt := 0;\n"+
+"                                        end if;\n"+
+"                                        offset := Burst_Seq(memstart)(Burst_Cnt);\n"+
+"                                        MemAddr := startaddr + offset;\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                   end case;\n"+
+"                                when burst_wr => \n"+
+"                                   case command is \n"+
+"                                     when ds => \n"+
+"                                        state <= desel;\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                     when read => \n"+
+"                                        state <= begin_rd;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        if MemDataA(MemAddr) = - 2 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'U');\n"+
+"                                        elsif MemDataA(MemAddr) = - 1 then\n"+
+"                                           OBuf1(8 downto 0) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(8 downto 0) := to_slv(MemDataA(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataB(MemAddr) = - 2 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'U');\n"+
+"                                        elsif MemDataB(MemAddr) = - 1 then\n"+
+"                                           OBuf1(17 downto 9) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(17 downto 9) := to_slv(MemDataB(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataC(MemAddr) = - 2 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'U');\n"+
+"                                        elsif MemDataC(MemAddr) = - 1 then\n"+
+"                                           OBuf1(26 downto 18) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(26 downto 18) := to_slv(MemDataC(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                        if MemDataD(MemAddr) = - 2 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'U');\n"+
+"                                        elsif MemDataD(MemAddr) = - 1 then\n"+
+"                                           OBuf1(35 downto 27) := (others => 'X');\n"+
+"                                        else \n"+
+"                                           OBuf1(35 downto 27) := to_slv(MemDataD(MemAddr),9);\n"+
+"                                        end if;\n"+
+"                                     when write => \n"+
+"                                        state <= begin_wr;\n"+
+"                                        MemAddr := to_nat(AddressIn);\n"+
+"                                        startaddr := MemAddr;\n"+
+"                                        memstart := to_nat(AddressIn(1 downto 0));\n"+
+"                                        OBuf1 := (others => 'Z');\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                     when burst => \n"+
+"                                        Burst_Cnt := Burst_Cnt + 1;\n"+
+"                                        if (Burst_Cnt = 4) then\n"+
+"                                           Burst_Cnt := 0;\n"+
+"                                        end if;\n"+
+"                                        offset := Burst_Seq(memstart)(Burst_Cnt);\n"+
+"                                        MemAddr := startaddr + offset;\n"+
+"                                        BWA1 := BWANIn;\n"+
+"                                        BWB1 := BWBNIn;\n"+
+"                                        BWC1 := BWCNIn;\n"+
+"                                        BWD1 := BWDNIn;\n"+
+"                                        wr1 := TRUE;\n"+
+"                                   end case;\n"+
+"                              end case;\n"+
+"                              if (OENegIn = '0') then\n"+
+"                                 D_zd <= (others => 'Z'), OBuf2 after 1ns;\n"+
+"                              end if;\n"+
+"                           end if;\n"+
+"                           if (OENegIn = '1') then\n"+
+"                              D_zd <= (others => 'Z');\n"+
+"                           else \n"+
+"                              D_zd <= OBuf2;\n"+
+"                           end if;\n"+
+"                         end process;\n"+
+"                         DataOutBlk : for i in 35 downto 0 generate\n"+
+"                             DataOut_Delay : process (D_zd(i))\n"+
+"                               variable D_GlitchData : VitalGlitchDataArrayType(15 downto 0);\n"+
+"                             begin\n"+
+"                               VitalPathDelay01Z(OutSignal => DataOut(i),OutSignalName => \"Data\",OutTemp => D_zd(i),Mode => VitalTransport,GlitchData => D_GlitchData(i),Paths => (1 => (InputChangeTime => CLKIn'LAST_EVENT,PathDelay => tpd_CLK_DQA0,PathCondition => OENegIn = '0'),2 => (InputChangeTime => OENegIn'LAST_EVENT,PathDelay => tpd_OENeg_DQA0,PathCondition => TRUE)));\n"+
+"                             end process;\n"+
+"                         end generate DataOutBlk;\n"+
+"                       end block Behavior;\n"+
+"                      "
+   RECT (2660,2660,3061,3060)
+   MARGINS (20,20)
+   SYNTAXCOLORED
+   SHOWLABEL
+   SHOWTEXT
+   CORNER 10
+   VTX (  271, 483, 487, 491, 496, 500, 503, 508, 511, 515, 655, 659, 667, 679, 683, 691, 699, 707, 715 )
+  }
+  INSTANCE  16, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A2"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2860)
+   VERTEXES ( (2,951) )
+  }
+  INSTANCE  17, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A3"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2560)
+   VERTEXES ( (2,736) )
+  }
+  INSTANCE  18, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A4"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2920)
+   VERTEXES ( (2,1015) )
+  }
+  INSTANCE  19, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A5"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2980)
+   VERTEXES ( (2,1027) )
+  }
+  INSTANCE  20, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A6"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3040)
+   VERTEXES ( (2,975) )
+  }
+  INSTANCE  21, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A7"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,2640)
+   VERTEXES ( (2,740) )
+  }
+  INSTANCE  22, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A8"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3100)
+   VERTEXES ( (2,747) )
+  }
+  INSTANCE  23, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="A9"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3160)
+   VERTEXES ( (2,1031) )
+  }
+  INSTANCE  24, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="ADV"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3220)
+   VERTEXES ( (2,935) )
+  }
+  INSTANCE  25, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="BWANeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3280)
+   VERTEXES ( (2,1039) )
+  }
+  INSTANCE  26, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="BWBNeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3340)
+   VERTEXES ( (2,1051) )
+  }
+  INSTANCE  27, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="BWCNeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3400)
+   VERTEXES ( (2,991) )
+  }
+  INSTANCE  28, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="BWDNeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3460)
+   VERTEXES ( (2,1055) )
+  }
+  INSTANCE  29, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="CE1Neg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3520)
+   VERTEXES ( (2,1063) )
+  }
+  INSTANCE  30, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="CE2"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3580)
+   VERTEXES ( (2,1011) )
+  }
+  INSTANCE  31, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="CE2Neg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3640)
+   VERTEXES ( (2,1075) )
+  }
+  INSTANCE  32, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="CLK"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3700)
+   VERTEXES ( (2,1079) )
+  }
+  INSTANCE  33, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="CLKENNeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3760)
+   VERTEXES ( (2,959) )
+  }
+  INSTANCE  34, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA0"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,240)
+   VERTEXES ( (2,415) )
+  }
+  INSTANCE  35, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA1"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,300)
+   VERTEXES ( (2,411) )
+  }
+  INSTANCE  36, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA2"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,360)
+   VERTEXES ( (2,407) )
+  }
+  INSTANCE  37, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA3"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,420)
+   VERTEXES ( (2,403) )
+  }
+  INSTANCE  38, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA4"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,480)
+   VERTEXES ( (2,399) )
+  }
+  INSTANCE  39, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA5"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,540)
+   VERTEXES ( (2,395) )
+  }
+  INSTANCE  40, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA6"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,600)
+   VERTEXES ( (2,391) )
+  }
+  INSTANCE  41, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA7"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,660)
+   VERTEXES ( (2,387) )
+  }
+  INSTANCE  42, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQA8"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,720)
+   VERTEXES ( (2,383) )
+  }
+  INSTANCE  43, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB0"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,780)
+   VERTEXES ( (2,379) )
+  }
+  INSTANCE  44, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB1"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,840)
+   VERTEXES ( (2,375) )
+  }
+  INSTANCE  45, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB2"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,900)
+   VERTEXES ( (2,371) )
+  }
+  INSTANCE  46, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB3"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,960)
+   VERTEXES ( (2,367) )
+  }
+  INSTANCE  47, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB4"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1020)
+   VERTEXES ( (2,363) )
+  }
+  INSTANCE  48, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB5"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1080)
+   VERTEXES ( (2,359) )
+  }
+  INSTANCE  49, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB6"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1140)
+   VERTEXES ( (2,355) )
+  }
+  INSTANCE  50, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB7"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1200)
+   VERTEXES ( (2,351) )
+  }
+  INSTANCE  51, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQB8"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1260)
+   VERTEXES ( (2,347) )
+  }
+  INSTANCE  52, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC0"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1320)
+   VERTEXES ( (2,343) )
+  }
+  INSTANCE  53, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC1"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1380)
+   VERTEXES ( (2,339) )
+  }
+  INSTANCE  54, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC2"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1440)
+   VERTEXES ( (2,335) )
+  }
+  INSTANCE  55, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC3"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1500)
+   VERTEXES ( (2,331) )
+  }
+  INSTANCE  56, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC4"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1560)
+   VERTEXES ( (2,327) )
+  }
+  INSTANCE  57, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC5"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1620)
+   VERTEXES ( (2,323) )
+  }
+  INSTANCE  58, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC6"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1680)
+   VERTEXES ( (2,319) )
+  }
+  INSTANCE  59, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC7"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1740)
+   VERTEXES ( (2,315) )
+  }
+  INSTANCE  60, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQC8"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1800)
+   VERTEXES ( (2,311) )
+  }
+  INSTANCE  61, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD0"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1860)
+   VERTEXES ( (2,307) )
+  }
+  INSTANCE  62, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD1"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1920)
+   VERTEXES ( (2,303) )
+  }
+  INSTANCE  63, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD2"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,1980)
+   VERTEXES ( (2,299) )
+  }
+  INSTANCE  64, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD3"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2040)
+   VERTEXES ( (2,295) )
+  }
+  INSTANCE  65, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD4"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2100)
+   VERTEXES ( (2,291) )
+  }
+  INSTANCE  66, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD5"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2160)
+   VERTEXES ( (2,287) )
+  }
+  INSTANCE  67, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD6"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2220)
+   VERTEXES ( (2,283) )
+  }
+  INSTANCE  68, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD7"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2280)
+   VERTEXES ( (2,279) )
+  }
+  INSTANCE  69, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Bidirectional"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="DQD8"
+    #SYMBOL="Bidirectional"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (3860,2680)
+   VERTEXES ( (2,275) )
+  }
+  INSTANCE  70, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'1'"
+    #LIBRARY="#terminals"
+    #REFERENCE="LBONeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3820)
+   VERTEXES ( (2,751) )
+  }
+  INSTANCE  71, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="OENeg"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3880)
+   VERTEXES ( (2,767) )
+  }
+  INSTANCE  72, 0, 0
+  {
+   VARIABLES
+   {
+    #COMPONENT="Input"
+    #INITIAL_VALUE="'U'"
+    #LIBRARY="#terminals"
+    #REFERENCE="R"
+    #SYMBOL="Input"
+    #VHDL_TYPE="std_logic"
+   }
+   COORD (880,3940)
+   VERTEXES ( (2,779) )
+  }
+  TEXT  73, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2360,828,2360)
+   ALIGN 6
+   PARENT 6
+  }
+  TEXT  74, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2440,828,2440)
+   ALIGN 6
+   PARENT 7
+  }
+  TEXT  75, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2400,828,2400)
+   ALIGN 6
+   PARENT 8
+  }
+  TEXT  76, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2520,828,2520)
+   ALIGN 6
+   PARENT 9
+  }
+  TEXT  77, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2600,828,2600)
+   ALIGN 6
+   PARENT 10
+  }
+  TEXT  78, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2680,828,2680)
+   ALIGN 6
+   PARENT 11
+  }
+  TEXT  79, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2480,828,2480)
+   ALIGN 6
+   PARENT 12
+  }
+  TEXT  80, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2740,828,2740)
+   ALIGN 6
+   PARENT 13
+  }
+  TEXT  81, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2800,828,2800)
+   ALIGN 6
+   PARENT 14
+  }
+  TEXT  82, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2860,828,2860)
+   ALIGN 6
+   PARENT 16
+  }
+  TEXT  83, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2560,828,2560)
+   ALIGN 6
+   PARENT 17
+  }
+  TEXT  84, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2920,828,2920)
+   ALIGN 6
+   PARENT 18
+  }
+  TEXT  85, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2980,828,2980)
+   ALIGN 6
+   PARENT 19
+  }
+  TEXT  86, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3040,828,3040)
+   ALIGN 6
+   PARENT 20
+  }
+  TEXT  87, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,2640,828,2640)
+   ALIGN 6
+   PARENT 21
+  }
+  TEXT  88, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3100,828,3100)
+   ALIGN 6
+   PARENT 22
+  }
+  TEXT  89, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3160,828,3160)
+   ALIGN 6
+   PARENT 23
+  }
+  TEXT  90, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3220,828,3220)
+   ALIGN 6
+   PARENT 24
+  }
+  TEXT  91, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3280,828,3280)
+   ALIGN 6
+   PARENT 25
+  }
+  TEXT  92, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3340,828,3340)
+   ALIGN 6
+   PARENT 26
+  }
+  TEXT  93, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3400,828,3400)
+   ALIGN 6
+   PARENT 27
+  }
+  TEXT  94, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3460,828,3460)
+   ALIGN 6
+   PARENT 28
+  }
+  TEXT  95, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3520,828,3520)
+   ALIGN 6
+   PARENT 29
+  }
+  TEXT  96, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3580,828,3580)
+   ALIGN 6
+   PARENT 30
+  }
+  TEXT  97, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3640,828,3640)
+   ALIGN 6
+   PARENT 31
+  }
+  TEXT  98, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3700,828,3700)
+   ALIGN 6
+   PARENT 32
+  }
+  TEXT  99, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3760,828,3760)
+   ALIGN 6
+   PARENT 33
+  }
+  TEXT  100, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,240,3922,240)
+   ALIGN 4
+   PARENT 34
+  }
+  TEXT  101, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,300,3922,300)
+   ALIGN 4
+   PARENT 35
+  }
+  TEXT  102, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,360,3922,360)
+   ALIGN 4
+   PARENT 36
+  }
+  TEXT  103, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,420,3922,420)
+   ALIGN 4
+   PARENT 37
+  }
+  TEXT  104, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,480,3922,480)
+   ALIGN 4
+   PARENT 38
+  }
+  TEXT  105, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,540,3922,540)
+   ALIGN 4
+   PARENT 39
+  }
+  TEXT  106, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,600,3922,600)
+   ALIGN 4
+   PARENT 40
+  }
+  TEXT  107, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,660,3922,660)
+   ALIGN 4
+   PARENT 41
+  }
+  TEXT  108, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,720,3922,720)
+   ALIGN 4
+   PARENT 42
+  }
+  TEXT  109, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,780,3922,780)
+   ALIGN 4
+   PARENT 43
+  }
+  TEXT  110, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,840,3922,840)
+   ALIGN 4
+   PARENT 44
+  }
+  TEXT  111, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,900,3922,900)
+   ALIGN 4
+   PARENT 45
+  }
+  TEXT  112, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,960,3922,960)
+   ALIGN 4
+   PARENT 46
+  }
+  TEXT  113, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1020,3922,1020)
+   ALIGN 4
+   PARENT 47
+  }
+  TEXT  114, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1080,3922,1080)
+   ALIGN 4
+   PARENT 48
+  }
+  TEXT  115, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1140,3922,1140)
+   ALIGN 4
+   PARENT 49
+  }
+  TEXT  116, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1200,3922,1200)
+   ALIGN 4
+   PARENT 50
+  }
+  TEXT  117, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1260,3922,1260)
+   ALIGN 4
+   PARENT 51
+  }
+  TEXT  118, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1320,3922,1320)
+   ALIGN 4
+   PARENT 52
+  }
+  TEXT  119, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1380,3922,1380)
+   ALIGN 4
+   PARENT 53
+  }
+  TEXT  120, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1440,3922,1440)
+   ALIGN 4
+   PARENT 54
+  }
+  TEXT  121, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1500,3922,1500)
+   ALIGN 4
+   PARENT 55
+  }
+  TEXT  122, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1560,3922,1560)
+   ALIGN 4
+   PARENT 56
+  }
+  TEXT  123, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1620,3922,1620)
+   ALIGN 4
+   PARENT 57
+  }
+  TEXT  124, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1680,3922,1680)
+   ALIGN 4
+   PARENT 58
+  }
+  TEXT  125, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1740,3922,1740)
+   ALIGN 4
+   PARENT 59
+  }
+  TEXT  126, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1800,3922,1800)
+   ALIGN 4
+   PARENT 60
+  }
+  TEXT  127, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1860,3922,1860)
+   ALIGN 4
+   PARENT 61
+  }
+  TEXT  128, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1920,3922,1920)
+   ALIGN 4
+   PARENT 62
+  }
+  TEXT  129, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,1980,3922,1980)
+   ALIGN 4
+   PARENT 63
+  }
+  TEXT  130, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2040,3922,2040)
+   ALIGN 4
+   PARENT 64
+  }
+  TEXT  131, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2100,3922,2100)
+   ALIGN 4
+   PARENT 65
+  }
+  TEXT  132, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2160,3922,2160)
+   ALIGN 4
+   PARENT 66
+  }
+  TEXT  133, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2220,3922,2220)
+   ALIGN 4
+   PARENT 67
+  }
+  TEXT  134, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2280,3922,2280)
+   ALIGN 4
+   PARENT 68
+  }
+  TEXT  135, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (3922,2680,3922,2680)
+   ALIGN 4
+   PARENT 69
+  }
+  TEXT  136, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3820,828,3820)
+   ALIGN 6
+   PARENT 70
+  }
+  TEXT  137, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3880,828,3880)
+   ALIGN 6
+   PARENT 71
+  }
+  TEXT  138, 0, 0
+  {
+   TEXT "$#REFERENCE"
+   RECT (828,3940,828,3940)
+   ALIGN 6
+   PARENT 72
+  }
+  NET WIRE  139, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB6_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  140, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A6_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  141, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD3_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  142, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A7_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  143, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA6_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  144, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A8_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  145, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  146, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A9_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  147, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD1_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  148, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA5_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  149, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD0_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  150, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB7_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  151, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA4_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  152, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC7_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  153, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA3_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  154, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC6_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  155, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC5_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  156, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  157, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC4_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  158, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC3_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  159, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA1_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  160, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  161, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC0_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  162, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC1_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  163, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA0_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  164, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB3_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  165, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A0_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  166, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  167, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A10_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  168, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB1_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  169, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A11_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  170, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB4_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  171, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A12_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  172, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB0_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  173, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A13_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  174, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A14_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  175, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD7_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  176, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A5_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  177, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD4_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  178, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A4_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  179, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA7_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  180, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A3_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  181, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD5_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  182, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  183, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A1_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  184, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD6_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  185, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB5_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  186, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A15_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET BUS  187, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB8_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  188, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  189, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB7"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  190, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC0"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  191, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB5"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  192, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB8"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  193, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB4"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  194, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="R_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  195, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="R"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  196, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="OENeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  197, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="OENeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  198, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'1'"
+    #NAME="LBONeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  199, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'1'"
+    #NAME="LBONeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  200, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD8_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  201, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD7"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  202, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  203, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD5"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  204, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD4"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  205, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD3"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  206, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  207, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  208, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD0"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  209, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC8_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  210, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC8"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  211, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC7"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  212, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  213, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC5"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  214, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC4"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  215, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC3"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  216, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  217, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQC1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  218, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWCNeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  219, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWCNeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  220, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWBNeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  221, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWBNeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  222, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWANeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  223, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWANeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  224, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="ADV_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  225, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="ADV"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  226, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A9"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  227, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A8"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  228, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A7"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  229, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  230, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A5"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  231, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A4"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  232, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A3"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  233, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  234, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A16_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  235, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A16"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  236, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A15"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  237, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A14"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  238, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A13"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  239, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A12"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  240, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A11"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  241, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A10"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  242, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  243, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="A0"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  244, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB3"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  245, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  246, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  247, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQB0"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  248, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA8_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  249, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA8"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  250, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA7"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  251, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA6"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  252, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA5"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  253, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA4"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  254, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA3"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  255, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  256, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA1"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  257, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQA0"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  258, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CLKENNeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  259, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CLKENNeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  260, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CLK_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  261, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CLK"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  262, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE2Neg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  263, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE2Neg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  264, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE2_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  265, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE2"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  266, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE1Neg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  267, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="CE1Neg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET WIRE  268, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWDNeg_ipd"
+    #VHDL_TYPE="std_ulogic"
+   }
+  }
+  NET WIRE  269, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="BWDNeg"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  NET BUS  270, 0, 0
+  {
+   VARIABLES
+   {
+    #INITIAL_VALUE="'U'"
+    #NAME="DQD8"
+    #VHDL_TYPE="std_logic"
+   }
+  }
+  VTX  271, 0, 0
+  {
+   COORD (3061,2680)
+  }
+  VTX  272, 0, 0
+  {
+   COORD (3140,2680)
+  }
+  BUS  273, 0, 0
+  {
+   NET 270
+   VTX 271, 272
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  274, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3100,2680,3100,2680)
+   ALIGN 9
+   PARENT 273
+  }
+  VTX  275, 0, 0
+  {
+   COORD (3860,2680)
+  }
+  VTX  276, 0, 0
+  {
+   COORD (3140,2680)
+  }
+  BUS  277, 0, 0
+  {
+   NET 270
+   VTX 275, 276
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  278, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3500,2680,3500,2680)
+   ALIGN 9
+   PARENT 277
+  }
+  VTX  279, 0, 0
+  {
+   COORD (3860,2280)
+  }
+  VTX  280, 0, 0
+  {
+   COORD (3160,2280)
+  }
+  WIRE  281, 0, 0
+  {
+   NET 201
+   VTX 279, 280
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  282, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3510,2280,3510,2280)
+   ALIGN 9
+   PARENT 281
+  }
+  VTX  283, 0, 0
+  {
+   COORD (3860,2220)
+  }
+  VTX  284, 0, 0
+  {
+   COORD (3180,2220)
+  }
+  WIRE  285, 0, 0
+  {
+   NET 202
+   VTX 283, 284
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  286, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3520,2220,3520,2220)
+   ALIGN 9
+   PARENT 285
+  }
+  VTX  287, 0, 0
+  {
+   COORD (3860,2160)
+  }
+  VTX  288, 0, 0
+  {
+   COORD (3200,2160)
+  }
+  WIRE  289, 0, 0
+  {
+   NET 203
+   VTX 287, 288
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  290, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3530,2160,3530,2160)
+   ALIGN 9
+   PARENT 289
+  }
+  VTX  291, 0, 0
+  {
+   COORD (3860,2100)
+  }
+  VTX  292, 0, 0
+  {
+   COORD (3220,2100)
+  }
+  WIRE  293, 0, 0
+  {
+   NET 204
+   VTX 291, 292
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  294, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3540,2100,3540,2100)
+   ALIGN 9
+   PARENT 293
+  }
+  VTX  295, 0, 0
+  {
+   COORD (3860,2040)
+  }
+  VTX  296, 0, 0
+  {
+   COORD (3240,2040)
+  }
+  WIRE  297, 0, 0
+  {
+   NET 205
+   VTX 295, 296
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  298, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3550,2040,3550,2040)
+   ALIGN 9
+   PARENT 297
+  }
+  VTX  299, 0, 0
+  {
+   COORD (3860,1980)
+  }
+  VTX  300, 0, 0
+  {
+   COORD (3260,1980)
+  }
+  WIRE  301, 0, 0
+  {
+   NET 206
+   VTX 299, 300
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  302, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3560,1980,3560,1980)
+   ALIGN 9
+   PARENT 301
+  }
+  VTX  303, 0, 0
+  {
+   COORD (3860,1920)
+  }
+  VTX  304, 0, 0
+  {
+   COORD (3280,1920)
+  }
+  WIRE  305, 0, 0
+  {
+   NET 207
+   VTX 303, 304
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  306, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3570,1920,3570,1920)
+   ALIGN 9
+   PARENT 305
+  }
+  VTX  307, 0, 0
+  {
+   COORD (3860,1860)
+  }
+  VTX  308, 0, 0
+  {
+   COORD (3300,1860)
+  }
+  WIRE  309, 0, 0
+  {
+   NET 208
+   VTX 307, 308
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  310, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3580,1860,3580,1860)
+   ALIGN 9
+   PARENT 309
+  }
+  VTX  311, 0, 0
+  {
+   COORD (3860,1800)
+  }
+  VTX  312, 0, 0
+  {
+   COORD (3320,1800)
+  }
+  WIRE  313, 0, 0
+  {
+   NET 210
+   VTX 311, 312
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  314, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3590,1800,3590,1800)
+   ALIGN 9
+   PARENT 313
+  }
+  VTX  315, 0, 0
+  {
+   COORD (3860,1740)
+  }
+  VTX  316, 0, 0
+  {
+   COORD (3340,1740)
+  }
+  WIRE  317, 0, 0
+  {
+   NET 211
+   VTX 315, 316
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  318, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3600,1740,3600,1740)
+   ALIGN 9
+   PARENT 317
+  }
+  VTX  319, 0, 0
+  {
+   COORD (3860,1680)
+  }
+  VTX  320, 0, 0
+  {
+   COORD (3360,1680)
+  }
+  WIRE  321, 0, 0
+  {
+   NET 212
+   VTX 319, 320
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  322, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3610,1680,3610,1680)
+   ALIGN 9
+   PARENT 321
+  }
+  VTX  323, 0, 0
+  {
+   COORD (3860,1620)
+  }
+  VTX  324, 0, 0
+  {
+   COORD (3380,1620)
+  }
+  WIRE  325, 0, 0
+  {
+   NET 213
+   VTX 323, 324
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  326, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3620,1620,3620,1620)
+   ALIGN 9
+   PARENT 325
+  }
+  VTX  327, 0, 0
+  {
+   COORD (3860,1560)
+  }
+  VTX  328, 0, 0
+  {
+   COORD (3400,1560)
+  }
+  WIRE  329, 0, 0
+  {
+   NET 214
+   VTX 327, 328
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  330, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3630,1560,3630,1560)
+   ALIGN 9
+   PARENT 329
+  }
+  VTX  331, 0, 0
+  {
+   COORD (3860,1500)
+  }
+  VTX  332, 0, 0
+  {
+   COORD (3420,1500)
+  }
+  WIRE  333, 0, 0
+  {
+   NET 215
+   VTX 331, 332
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  334, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3640,1500,3640,1500)
+   ALIGN 9
+   PARENT 333
+  }
+  VTX  335, 0, 0
+  {
+   COORD (3860,1440)
+  }
+  VTX  336, 0, 0
+  {
+   COORD (3440,1440)
+  }
+  WIRE  337, 0, 0
+  {
+   NET 216
+   VTX 335, 336
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  338, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3650,1440,3650,1440)
+   ALIGN 9
+   PARENT 337
+  }
+  VTX  339, 0, 0
+  {
+   COORD (3860,1380)
+  }
+  VTX  340, 0, 0
+  {
+   COORD (3460,1380)
+  }
+  WIRE  341, 0, 0
+  {
+   NET 217
+   VTX 339, 340
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  342, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3660,1380,3660,1380)
+   ALIGN 9
+   PARENT 341
+  }
+  VTX  343, 0, 0
+  {
+   COORD (3860,1320)
+  }
+  VTX  344, 0, 0
+  {
+   COORD (3480,1320)
+  }
+  WIRE  345, 0, 0
+  {
+   NET 190
+   VTX 343, 344
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  346, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3670,1320,3670,1320)
+   ALIGN 9
+   PARENT 345
+  }
+  VTX  347, 0, 0
+  {
+   COORD (3860,1260)
+  }
+  VTX  348, 0, 0
+  {
+   COORD (3500,1260)
+  }
+  WIRE  349, 0, 0
+  {
+   NET 192
+   VTX 347, 348
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  350, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3680,1260,3680,1260)
+   ALIGN 9
+   PARENT 349
+  }
+  VTX  351, 0, 0
+  {
+   COORD (3860,1200)
+  }
+  VTX  352, 0, 0
+  {
+   COORD (3520,1200)
+  }
+  WIRE  353, 0, 0
+  {
+   NET 189
+   VTX 351, 352
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  354, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3690,1200,3690,1200)
+   ALIGN 9
+   PARENT 353
+  }
+  VTX  355, 0, 0
+  {
+   COORD (3860,1140)
+  }
+  VTX  356, 0, 0
+  {
+   COORD (3540,1140)
+  }
+  WIRE  357, 0, 0
+  {
+   NET 188
+   VTX 355, 356
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  358, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3700,1140,3700,1140)
+   ALIGN 9
+   PARENT 357
+  }
+  VTX  359, 0, 0
+  {
+   COORD (3860,1080)
+  }
+  VTX  360, 0, 0
+  {
+   COORD (3560,1080)
+  }
+  WIRE  361, 0, 0
+  {
+   NET 191
+   VTX 359, 360
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  362, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3710,1080,3710,1080)
+   ALIGN 9
+   PARENT 361
+  }
+  VTX  363, 0, 0
+  {
+   COORD (3860,1020)
+  }
+  VTX  364, 0, 0
+  {
+   COORD (3580,1020)
+  }
+  WIRE  365, 0, 0
+  {
+   NET 193
+   VTX 363, 364
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  366, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3720,1020,3720,1020)
+   ALIGN 9
+   PARENT 365
+  }
+  VTX  367, 0, 0
+  {
+   COORD (3860,960)
+  }
+  VTX  368, 0, 0
+  {
+   COORD (3600,960)
+  }
+  WIRE  369, 0, 0
+  {
+   NET 244
+   VTX 367, 368
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  370, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3730,960,3730,960)
+   ALIGN 9
+   PARENT 369
+  }
+  VTX  371, 0, 0
+  {
+   COORD (3860,900)
+  }
+  VTX  372, 0, 0
+  {
+   COORD (3620,900)
+  }
+  WIRE  373, 0, 0
+  {
+   NET 245
+   VTX 371, 372
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  374, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3740,900,3740,900)
+   ALIGN 9
+   PARENT 373
+  }
+  VTX  375, 0, 0
+  {
+   COORD (3860,840)
+  }
+  VTX  376, 0, 0
+  {
+   COORD (3640,840)
+  }
+  WIRE  377, 0, 0
+  {
+   NET 246
+   VTX 375, 376
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  378, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3750,840,3750,840)
+   ALIGN 9
+   PARENT 377
+  }
+  VTX  379, 0, 0
+  {
+   COORD (3860,780)
+  }
+  VTX  380, 0, 0
+  {
+   COORD (3660,780)
+  }
+  WIRE  381, 0, 0
+  {
+   NET 247
+   VTX 379, 380
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  382, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3760,780,3760,780)
+   ALIGN 9
+   PARENT 381
+  }
+  VTX  383, 0, 0
+  {
+   COORD (3860,720)
+  }
+  VTX  384, 0, 0
+  {
+   COORD (3680,720)
+  }
+  WIRE  385, 0, 0
+  {
+   NET 249
+   VTX 383, 384
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  386, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3770,720,3770,720)
+   ALIGN 9
+   PARENT 385
+  }
+  VTX  387, 0, 0
+  {
+   COORD (3860,660)
+  }
+  VTX  388, 0, 0
+  {
+   COORD (3700,660)
+  }
+  WIRE  389, 0, 0
+  {
+   NET 250
+   VTX 387, 388
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  390, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3780,660,3780,660)
+   ALIGN 9
+   PARENT 389
+  }
+  VTX  391, 0, 0
+  {
+   COORD (3860,600)
+  }
+  VTX  392, 0, 0
+  {
+   COORD (3720,600)
+  }
+  WIRE  393, 0, 0
+  {
+   NET 251
+   VTX 391, 392
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  394, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3790,600,3790,600)
+   ALIGN 9
+   PARENT 393
+  }
+  VTX  395, 0, 0
+  {
+   COORD (3860,540)
+  }
+  VTX  396, 0, 0
+  {
+   COORD (3740,540)
+  }
+  WIRE  397, 0, 0
+  {
+   NET 252
+   VTX 395, 396
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  398, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3800,540,3800,540)
+   ALIGN 9
+   PARENT 397
+  }
+  VTX  399, 0, 0
+  {
+   COORD (3860,480)
+  }
+  VTX  400, 0, 0
+  {
+   COORD (3760,480)
+  }
+  WIRE  401, 0, 0
+  {
+   NET 253
+   VTX 399, 400
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  402, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3810,480,3810,480)
+   ALIGN 9
+   PARENT 401
+  }
+  VTX  403, 0, 0
+  {
+   COORD (3860,420)
+  }
+  VTX  404, 0, 0
+  {
+   COORD (3780,420)
+  }
+  WIRE  405, 0, 0
+  {
+   NET 254
+   VTX 403, 404
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  406, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3820,420,3820,420)
+   ALIGN 9
+   PARENT 405
+  }
+  VTX  407, 0, 0
+  {
+   COORD (3860,360)
+  }
+  VTX  408, 0, 0
+  {
+   COORD (3800,360)
+  }
+  WIRE  409, 0, 0
+  {
+   NET 255
+   VTX 407, 408
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  410, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3830,360,3830,360)
+   ALIGN 9
+   PARENT 409
+  }
+  VTX  411, 0, 0
+  {
+   COORD (3860,300)
+  }
+  VTX  412, 0, 0
+  {
+   COORD (3820,300)
+  }
+  WIRE  413, 0, 0
+  {
+   NET 256
+   VTX 411, 412
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  414, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3840,300,3840,300)
+   ALIGN 9
+   PARENT 413
+  }
+  VTX  415, 0, 0
+  {
+   COORD (3860,240)
+  }
+  VTX  416, 0, 0
+  {
+   COORD (3840,240)
+  }
+  WIRE  417, 0, 0
+  {
+   NET 257
+   VTX 415, 416
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  418, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (3850,240,3850,240)
+   ALIGN 9
+   PARENT 417
+  }
+  VTX  419, 0, 0
+  {
+   COORD (2421,2360)
+  }
+  VTX  420, 0, 0
+  {
+   COORD (2500,2360)
+  }
+  WIRE  421, 0, 0
+  {
+   NET 165
+   VTX 419, 420
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  422, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2360,2460,2360)
+   ALIGN 9
+   PARENT 421
+  }
+  VTX  423, 0, 0
+  {
+   COORD (2421,2380)
+  }
+  VTX  424, 0, 0
+  {
+   COORD (2500,2380)
+  }
+  WIRE  425, 0, 0
+  {
+   NET 167
+   VTX 423, 424
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  426, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2380,2460,2380)
+   ALIGN 9
+   PARENT 425
+  }
+  VTX  427, 0, 0
+  {
+   COORD (2421,2400)
+  }
+  VTX  428, 0, 0
+  {
+   COORD (2500,2400)
+  }
+  WIRE  429, 0, 0
+  {
+   NET 169
+   VTX 427, 428
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  430, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2400,2460,2400)
+   ALIGN 9
+   PARENT 429
+  }
+  VTX  431, 0, 0
+  {
+   COORD (2421,2420)
+  }
+  VTX  432, 0, 0
+  {
+   COORD (2500,2420)
+  }
+  WIRE  433, 0, 0
+  {
+   NET 171
+   VTX 431, 432
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  434, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2420,2460,2420)
+   ALIGN 9
+   PARENT 433
+  }
+  VTX  435, 0, 0
+  {
+   COORD (2421,2440)
+  }
+  VTX  436, 0, 0
+  {
+   COORD (2500,2440)
+  }
+  WIRE  437, 0, 0
+  {
+   NET 173
+   VTX 435, 436
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  438, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2440,2460,2440)
+   ALIGN 9
+   PARENT 437
+  }
+  VTX  439, 0, 0
+  {
+   COORD (2421,2460)
+  }
+  VTX  440, 0, 0
+  {
+   COORD (2500,2460)
+  }
+  WIRE  441, 0, 0
+  {
+   NET 174
+   VTX 439, 440
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  442, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2460,2460,2460)
+   ALIGN 9
+   PARENT 441
+  }
+  VTX  443, 0, 0
+  {
+   COORD (2421,2480)
+  }
+  VTX  444, 0, 0
+  {
+   COORD (2500,2480)
+  }
+  WIRE  445, 0, 0
+  {
+   NET 186
+   VTX 443, 444
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  446, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2480,2460,2480)
+   ALIGN 9
+   PARENT 445
+  }
+  VTX  447, 0, 0
+  {
+   COORD (2421,2520)
+  }
+  VTX  448, 0, 0
+  {
+   COORD (2500,2520)
+  }
+  WIRE  449, 0, 0
+  {
+   NET 183
+   VTX 447, 448
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  450, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2520,2460,2520)
+   ALIGN 9
+   PARENT 449
+  }
+  VTX  451, 0, 0
+  {
+   COORD (2421,2540)
+  }
+  VTX  452, 0, 0
+  {
+   COORD (2500,2540)
+  }
+  WIRE  453, 0, 0
+  {
+   NET 182
+   VTX 451, 452
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  454, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2540,2460,2540)
+   ALIGN 9
+   PARENT 453
+  }
+  VTX  455, 0, 0
+  {
+   COORD (2421,2560)
+  }
+  VTX  456, 0, 0
+  {
+   COORD (2500,2560)
+  }
+  WIRE  457, 0, 0
+  {
+   NET 180
+   VTX 455, 456
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  458, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2560,2460,2560)
+   ALIGN 9
+   PARENT 457
+  }
+  VTX  459, 0, 0
+  {
+   COORD (2421,2580)
+  }
+  VTX  460, 0, 0
+  {
+   COORD (2500,2580)
+  }
+  WIRE  461, 0, 0
+  {
+   NET 178
+   VTX 459, 460
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  462, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2580,2460,2580)
+   ALIGN 9
+   PARENT 461
+  }
+  VTX  463, 0, 0
+  {
+   COORD (2421,2600)
+  }
+  VTX  464, 0, 0
+  {
+   COORD (2500,2600)
+  }
+  WIRE  465, 0, 0
+  {
+   NET 176
+   VTX 463, 464
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  466, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2600,2460,2600)
+   ALIGN 9
+   PARENT 465
+  }
+  VTX  467, 0, 0
+  {
+   COORD (2421,2620)
+  }
+  VTX  468, 0, 0
+  {
+   COORD (2500,2620)
+  }
+  WIRE  469, 0, 0
+  {
+   NET 140
+   VTX 467, 468
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  470, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2620,2460,2620)
+   ALIGN 9
+   PARENT 469
+  }
+  VTX  471, 0, 0
+  {
+   COORD (2421,2640)
+  }
+  VTX  472, 0, 0
+  {
+   COORD (2500,2640)
+  }
+  WIRE  473, 0, 0
+  {
+   NET 142
+   VTX 471, 472
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  474, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2640,2460,2640)
+   ALIGN 9
+   PARENT 473
+  }
+  VTX  475, 0, 0
+  {
+   COORD (2421,2660)
+  }
+  VTX  476, 0, 0
+  {
+   COORD (2500,2660)
+  }
+  WIRE  477, 0, 0
+  {
+   NET 144
+   VTX 475, 476
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  478, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2660,2460,2660)
+   ALIGN 9
+   PARENT 477
+  }
+  VTX  479, 0, 0
+  {
+   COORD (2421,2680)
+  }
+  VTX  480, 0, 0
+  {
+   COORD (2500,2680)
+  }
+  WIRE  481, 0, 0
+  {
+   NET 146
+   VTX 479, 480
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  482, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2680,2460,2680)
+   ALIGN 9
+   PARENT 481
+  }
+  VTX  483, 0, 0
+  {
+   COORD (2660,2700)
+  }
+  VTX  484, 0, 0
+  {
+   COORD (2421,2700)
+  }
+  WIRE  485, 0, 0
+  {
+   NET 224
+   VTX 483, 484
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  486, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2700,2540,2700)
+   ALIGN 9
+   PARENT 485
+  }
+  VTX  487, 0, 0
+  {
+   COORD (2660,2720)
+  }
+  VTX  488, 0, 0
+  {
+   COORD (2421,2720)
+  }
+  WIRE  489, 0, 0
+  {
+   NET 222
+   VTX 487, 488
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  490, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2720,2540,2720)
+   ALIGN 9
+   PARENT 489
+  }
+  VTX  491, 0, 0
+  {
+   COORD (2660,2740)
+  }
+  VTX  492, 0, 0
+  {
+   COORD (2421,2740)
+  }
+  WIRE  493, 0, 0
+  {
+   NET 220
+   VTX 491, 492
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  494, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2740,2540,2740)
+   ALIGN 9
+   PARENT 493
+  }
+  VTX  495, 0, 0
+  {
+   COORD (2421,2760)
+  }
+  VTX  496, 0, 0
+  {
+   COORD (2660,2760)
+  }
+  WIRE  497, 0, 0
+  {
+   NET 218
+   VTX 495, 496
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  498, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2760,2540,2760)
+   ALIGN 9
+   PARENT 497
+  }
+  VTX  499, 0, 0
+  {
+   COORD (2421,2780)
+  }
+  VTX  500, 0, 0
+  {
+   COORD (2660,2780)
+  }
+  WIRE  501, 0, 0
+  {
+   NET 268
+   VTX 499, 500
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  502, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2780,2540,2780)
+   ALIGN 9
+   PARENT 501
+  }
+  VTX  503, 0, 0
+  {
+   COORD (2660,2800)
+  }
+  VTX  504, 0, 0
+  {
+   COORD (2421,2800)
+  }
+  WIRE  505, 0, 0
+  {
+   NET 266
+   VTX 503, 504
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  506, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2800,2540,2800)
+   ALIGN 9
+   PARENT 505
+  }
+  VTX  507, 0, 0
+  {
+   COORD (2421,2820)
+  }
+  VTX  508, 0, 0
+  {
+   COORD (2660,2820)
+  }
+  WIRE  509, 0, 0
+  {
+   NET 264
+   VTX 507, 508
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  510, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2820,2540,2820)
+   ALIGN 9
+   PARENT 509
+  }
+  VTX  511, 0, 0
+  {
+   COORD (2660,2840)
+  }
+  VTX  512, 0, 0
+  {
+   COORD (2421,2840)
+  }
+  WIRE  513, 0, 0
+  {
+   NET 262
+   VTX 511, 512
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  514, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2540,2840,2540,2840)
+   ALIGN 9
+   PARENT 513
+  }
+  VTX  515, 0, 0
+  {
+   COORD (2660,2880)
+  }
+  VTX  516, 0, 0
+  {
+   COORD (2500,2880)
+  }
+  WIRE  517, 0, 0
+  {
+   NET 260
+   VTX 515, 516
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  518, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2580,2880,2580,2880)
+   ALIGN 9
+   PARENT 517
+  }
+  VTX  519, 0, 0
+  {
+   COORD (2421,2860)
+  }
+  VTX  520, 0, 0
+  {
+   COORD (2500,2860)
+  }
+  WIRE  521, 0, 0
+  {
+   NET 260
+   VTX 519, 520
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  522, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2860,2460,2860)
+   ALIGN 9
+   PARENT 521
+  }
+  VTX  523, 0, 0
+  {
+   COORD (2421,2900)
+  }
+  VTX  524, 0, 0
+  {
+   COORD (2500,2900)
+  }
+  WIRE  525, 0, 0
+  {
+   NET 163
+   VTX 523, 524
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  526, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2900,2460,2900)
+   ALIGN 9
+   PARENT 525
+  }
+  VTX  527, 0, 0
+  {
+   COORD (2421,2920)
+  }
+  VTX  528, 0, 0
+  {
+   COORD (2500,2920)
+  }
+  WIRE  529, 0, 0
+  {
+   NET 159
+   VTX 527, 528
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  530, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2920,2460,2920)
+   ALIGN 9
+   PARENT 529
+  }
+  VTX  531, 0, 0
+  {
+   COORD (2421,2940)
+  }
+  VTX  532, 0, 0
+  {
+   COORD (2500,2940)
+  }
+  WIRE  533, 0, 0
+  {
+   NET 156
+   VTX 531, 532
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  534, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2940,2460,2940)
+   ALIGN 9
+   PARENT 533
+  }
+  VTX  535, 0, 0
+  {
+   COORD (2421,2960)
+  }
+  VTX  536, 0, 0
+  {
+   COORD (2500,2960)
+  }
+  WIRE  537, 0, 0
+  {
+   NET 153
+   VTX 535, 536
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  538, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2960,2460,2960)
+   ALIGN 9
+   PARENT 537
+  }
+  VTX  539, 0, 0
+  {
+   COORD (2421,2980)
+  }
+  VTX  540, 0, 0
+  {
+   COORD (2500,2980)
+  }
+  WIRE  541, 0, 0
+  {
+   NET 151
+   VTX 539, 540
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  542, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,2980,2460,2980)
+   ALIGN 9
+   PARENT 541
+  }
+  VTX  543, 0, 0
+  {
+   COORD (2421,3000)
+  }
+  VTX  544, 0, 0
+  {
+   COORD (2500,3000)
+  }
+  WIRE  545, 0, 0
+  {
+   NET 148
+   VTX 543, 544
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  546, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3000,2460,3000)
+   ALIGN 9
+   PARENT 545
+  }
+  VTX  547, 0, 0
+  {
+   COORD (2421,3020)
+  }
+  VTX  548, 0, 0
+  {
+   COORD (2500,3020)
+  }
+  WIRE  549, 0, 0
+  {
+   NET 143
+   VTX 547, 548
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  550, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3020,2460,3020)
+   ALIGN 9
+   PARENT 549
+  }
+  VTX  551, 0, 0
+  {
+   COORD (2421,3040)
+  }
+  VTX  552, 0, 0
+  {
+   COORD (2500,3040)
+  }
+  WIRE  553, 0, 0
+  {
+   NET 179
+   VTX 551, 552
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  554, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3040,2460,3040)
+   ALIGN 9
+   PARENT 553
+  }
+  VTX  555, 0, 0
+  {
+   COORD (2421,3080)
+  }
+  VTX  556, 0, 0
+  {
+   COORD (2500,3080)
+  }
+  WIRE  557, 0, 0
+  {
+   NET 172
+   VTX 555, 556
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  558, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3080,2460,3080)
+   ALIGN 9
+   PARENT 557
+  }
+  VTX  559, 0, 0
+  {
+   COORD (2421,3100)
+  }
+  VTX  560, 0, 0
+  {
+   COORD (2500,3100)
+  }
+  WIRE  561, 0, 0
+  {
+   NET 168
+   VTX 559, 560
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  562, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3100,2460,3100)
+   ALIGN 9
+   PARENT 561
+  }
+  VTX  563, 0, 0
+  {
+   COORD (2421,3120)
+  }
+  VTX  564, 0, 0
+  {
+   COORD (2500,3120)
+  }
+  WIRE  565, 0, 0
+  {
+   NET 166
+   VTX 563, 564
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  566, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3120,2460,3120)
+   ALIGN 9
+   PARENT 565
+  }
+  VTX  567, 0, 0
+  {
+   COORD (2421,3140)
+  }
+  VTX  568, 0, 0
+  {
+   COORD (2500,3140)
+  }
+  WIRE  569, 0, 0
+  {
+   NET 164
+   VTX 567, 568
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  570, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3140,2460,3140)
+   ALIGN 9
+   PARENT 569
+  }
+  VTX  571, 0, 0
+  {
+   COORD (2421,3160)
+  }
+  VTX  572, 0, 0
+  {
+   COORD (2500,3160)
+  }
+  WIRE  573, 0, 0
+  {
+   NET 170
+   VTX 571, 572
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  574, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3160,2460,3160)
+   ALIGN 9
+   PARENT 573
+  }
+  VTX  575, 0, 0
+  {
+   COORD (2421,3180)
+  }
+  VTX  576, 0, 0
+  {
+   COORD (2500,3180)
+  }
+  WIRE  577, 0, 0
+  {
+   NET 185
+   VTX 575, 576
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  578, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3180,2460,3180)
+   ALIGN 9
+   PARENT 577
+  }
+  VTX  579, 0, 0
+  {
+   COORD (2421,3200)
+  }
+  VTX  580, 0, 0
+  {
+   COORD (2500,3200)
+  }
+  WIRE  581, 0, 0
+  {
+   NET 139
+   VTX 579, 580
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  582, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3200,2460,3200)
+   ALIGN 9
+   PARENT 581
+  }
+  VTX  583, 0, 0
+  {
+   COORD (2421,3220)
+  }
+  VTX  584, 0, 0
+  {
+   COORD (2500,3220)
+  }
+  WIRE  585, 0, 0
+  {
+   NET 150
+   VTX 583, 584
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  586, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3220,2460,3220)
+   ALIGN 9
+   PARENT 585
+  }
+  VTX  587, 0, 0
+  {
+   COORD (2421,3260)
+  }
+  VTX  588, 0, 0
+  {
+   COORD (2500,3260)
+  }
+  WIRE  589, 0, 0
+  {
+   NET 161
+   VTX 587, 588
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  590, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3260,2460,3260)
+   ALIGN 9
+   PARENT 589
+  }
+  VTX  591, 0, 0
+  {
+   COORD (2421,3280)
+  }
+  VTX  592, 0, 0
+  {
+   COORD (2500,3280)
+  }
+  WIRE  593, 0, 0
+  {
+   NET 162
+   VTX 591, 592
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  594, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3280,2460,3280)
+   ALIGN 9
+   PARENT 593
+  }
+  VTX  595, 0, 0
+  {
+   COORD (2421,3300)
+  }
+  VTX  596, 0, 0
+  {
+   COORD (2500,3300)
+  }
+  WIRE  597, 0, 0
+  {
+   NET 160
+   VTX 595, 596
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  598, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3300,2460,3300)
+   ALIGN 9
+   PARENT 597
+  }
+  VTX  599, 0, 0
+  {
+   COORD (2421,3320)
+  }
+  VTX  600, 0, 0
+  {
+   COORD (2500,3320)
+  }
+  WIRE  601, 0, 0
+  {
+   NET 158
+   VTX 599, 600
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  602, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3320,2460,3320)
+   ALIGN 9
+   PARENT 601
+  }
+  VTX  603, 0, 0
+  {
+   COORD (2421,3340)
+  }
+  VTX  604, 0, 0
+  {
+   COORD (2500,3340)
+  }
+  WIRE  605, 0, 0
+  {
+   NET 157
+   VTX 603, 604
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  606, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3340,2460,3340)
+   ALIGN 9
+   PARENT 605
+  }
+  VTX  607, 0, 0
+  {
+   COORD (2421,3360)
+  }
+  VTX  608, 0, 0
+  {
+   COORD (2500,3360)
+  }
+  WIRE  609, 0, 0
+  {
+   NET 155
+   VTX 607, 608
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  610, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3360,2460,3360)
+   ALIGN 9
+   PARENT 609
+  }
+  VTX  611, 0, 0
+  {
+   COORD (2421,3380)
+  }
+  VTX  612, 0, 0
+  {
+   COORD (2500,3380)
+  }
+  WIRE  613, 0, 0
+  {
+   NET 154
+   VTX 611, 612
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  614, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3380,2460,3380)
+   ALIGN 9
+   PARENT 613
+  }
+  VTX  615, 0, 0
+  {
+   COORD (2421,3400)
+  }
+  VTX  616, 0, 0
+  {
+   COORD (2500,3400)
+  }
+  WIRE  617, 0, 0
+  {
+   NET 152
+   VTX 615, 616
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  618, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3400,2460,3400)
+   ALIGN 9
+   PARENT 617
+  }
+  VTX  619, 0, 0
+  {
+   COORD (2421,3440)
+  }
+  VTX  620, 0, 0
+  {
+   COORD (2500,3440)
+  }
+  WIRE  621, 0, 0
+  {
+   NET 149
+   VTX 619, 620
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  622, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3440,2460,3440)
+   ALIGN 9
+   PARENT 621
+  }
+  VTX  623, 0, 0
+  {
+   COORD (2421,3460)
+  }
+  VTX  624, 0, 0
+  {
+   COORD (2500,3460)
+  }
+  WIRE  625, 0, 0
+  {
+   NET 147
+   VTX 623, 624
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  626, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3460,2460,3460)
+   ALIGN 9
+   PARENT 625
+  }
+  VTX  627, 0, 0
+  {
+   COORD (2421,3480)
+  }
+  VTX  628, 0, 0
+  {
+   COORD (2500,3480)
+  }
+  WIRE  629, 0, 0
+  {
+   NET 145
+   VTX 627, 628
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  630, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3480,2460,3480)
+   ALIGN 9
+   PARENT 629
+  }
+  VTX  631, 0, 0
+  {
+   COORD (2421,3500)
+  }
+  VTX  632, 0, 0
+  {
+   COORD (2500,3500)
+  }
+  WIRE  633, 0, 0
+  {
+   NET 141
+   VTX 631, 632
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  634, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3500,2460,3500)
+   ALIGN 9
+   PARENT 633
+  }
+  VTX  635, 0, 0
+  {
+   COORD (2421,3520)
+  }
+  VTX  636, 0, 0
+  {
+   COORD (2500,3520)
+  }
+  WIRE  637, 0, 0
+  {
+   NET 177
+   VTX 635, 636
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  638, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3520,2460,3520)
+   ALIGN 9
+   PARENT 637
+  }
+  VTX  639, 0, 0
+  {
+   COORD (2421,3540)
+  }
+  VTX  640, 0, 0
+  {
+   COORD (2500,3540)
+  }
+  WIRE  641, 0, 0
+  {
+   NET 181
+   VTX 639, 640
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  642, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3540,2460,3540)
+   ALIGN 9
+   PARENT 641
+  }
+  VTX  643, 0, 0
+  {
+   COORD (2421,3560)
+  }
+  VTX  644, 0, 0
+  {
+   COORD (2500,3560)
+  }
+  WIRE  645, 0, 0
+  {
+   NET 184
+   VTX 643, 644
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  646, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3560,2460,3560)
+   ALIGN 9
+   PARENT 645
+  }
+  VTX  647, 0, 0
+  {
+   COORD (2421,3580)
+  }
+  VTX  648, 0, 0
+  {
+   COORD (2500,3580)
+  }
+  WIRE  649, 0, 0
+  {
+   NET 175
+   VTX 647, 648
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  650, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2460,3580,2460,3580)
+   ALIGN 9
+   PARENT 649
+  }
+  VTX  651, 0, 0
+  {
+   COORD (2421,2500)
+  }
+  VTX  652, 0, 0
+  {
+   COORD (2520,2500)
+  }
+  BUS  653, 0, 0
+  {
+   NET 234
+   VTX 651, 652
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  654, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2470,2500,2470,2500)
+   ALIGN 9
+   PARENT 653
+  }
+  VTX  655, 0, 0
+  {
+   COORD (2660,2680)
+  }
+  VTX  656, 0, 0
+  {
+   COORD (2520,2680)
+  }
+  BUS  657, 0, 0
+  {
+   NET 234
+   VTX 655, 656
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  658, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2590,2680,2590,2680)
+   ALIGN 9
+   PARENT 657
+  }
+  VTX  659, 0, 0
+  {
+   COORD (2660,2860)
+  }
+  VTX  660, 0, 0
+  {
+   COORD (2520,2860)
+  }
+  WIRE  661, 0, 0
+  {
+   NET 258
+   VTX 659, 660
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  662, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2590,2860,2590,2860)
+   ALIGN 9
+   PARENT 661
+  }
+  VTX  663, 0, 0
+  {
+   COORD (2421,2880)
+  }
+  VTX  664, 0, 0
+  {
+   COORD (2520,2880)
+  }
+  WIRE  665, 0, 0
+  {
+   NET 258
+   VTX 663, 664
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  666, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2470,2880,2470,2880)
+   ALIGN 9
+   PARENT 665
+  }
+  VTX  667, 0, 0
+  {
+   COORD (2660,2900)
+  }
+  VTX  668, 0, 0
+  {
+   COORD (2520,2900)
+  }
+  BUS  669, 0, 0
+  {
+   NET 248
+   VTX 667, 668
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  670, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2590,2900,2590,2900)
+   ALIGN 9
+   PARENT 669
+  }
+  VTX  671, 0, 0
+  {
+   COORD (2421,3060)
+  }
+  VTX  672, 0, 0
+  {
+   COORD (2520,3060)
+  }
+  BUS  673, 0, 0
+  {
+   NET 248
+   VTX 671, 672
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  674, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2470,3060,2470,3060)
+   ALIGN 9
+   PARENT 673
+  }
+  VTX  675, 0, 0
+  {
+   COORD (2421,3240)
+  }
+  VTX  676, 0, 0
+  {
+   COORD (2540,3240)
+  }
+  BUS  677, 0, 0
+  {
+   NET 187
+   VTX 675, 676
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  678, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2480,3240,2480,3240)
+   ALIGN 9
+   PARENT 677
+  }
+  VTX  679, 0, 0
+  {
+   COORD (2660,2920)
+  }
+  VTX  680, 0, 0
+  {
+   COORD (2540,2920)
+  }
+  BUS  681, 0, 0
+  {
+   NET 187
+   VTX 679, 680
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  682, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2600,2920,2600,2920)
+   ALIGN 9
+   PARENT 681
+  }
+  VTX  683, 0, 0
+  {
+   COORD (2660,2940)
+  }
+  VTX  684, 0, 0
+  {
+   COORD (2560,2940)
+  }
+  BUS  685, 0, 0
+  {
+   NET 209
+   VTX 683, 684
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  686, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2610,2940,2610,2940)
+   ALIGN 9
+   PARENT 685
+  }
+  VTX  687, 0, 0
+  {
+   COORD (2421,3420)
+  }
+  VTX  688, 0, 0
+  {
+   COORD (2560,3420)
+  }
+  BUS  689, 0, 0
+  {
+   NET 209
+   VTX 687, 688
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  690, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2490,3420,2490,3420)
+   ALIGN 9
+   PARENT 689
+  }
+  VTX  691, 0, 0
+  {
+   COORD (2660,2960)
+  }
+  VTX  692, 0, 0
+  {
+   COORD (2580,2960)
+  }
+  BUS  693, 0, 0
+  {
+   NET 200
+   VTX 691, 692
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  694, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2620,2960,2620,2960)
+   ALIGN 9
+   PARENT 693
+  }
+  VTX  695, 0, 0
+  {
+   COORD (2421,3600)
+  }
+  VTX  696, 0, 0
+  {
+   COORD (2580,3600)
+  }
+  BUS  697, 0, 0
+  {
+   NET 200
+   VTX 695, 696
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  698, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2500,3600,2500,3600)
+   ALIGN 9
+   PARENT 697
+  }
+  VTX  699, 0, 0
+  {
+   COORD (2660,2980)
+  }
+  VTX  700, 0, 0
+  {
+   COORD (2600,2980)
+  }
+  WIRE  701, 0, 0
+  {
+   NET 198
+   VTX 699, 700
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  702, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2630,2980,2630,2980)
+   ALIGN 9
+   PARENT 701
+  }
+  VTX  703, 0, 0
+  {
+   COORD (2421,3620)
+  }
+  VTX  704, 0, 0
+  {
+   COORD (2600,3620)
+  }
+  WIRE  705, 0, 0
+  {
+   NET 198
+   VTX 703, 704
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  706, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2510,3620,2510,3620)
+   ALIGN 9
+   PARENT 705
+  }
+  VTX  707, 0, 0
+  {
+   COORD (2660,3000)
+  }
+  VTX  708, 0, 0
+  {
+   COORD (2620,3000)
+  }
+  WIRE  709, 0, 0
+  {
+   NET 196
+   VTX 707, 708
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  710, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2640,3000,2640,3000)
+   ALIGN 9
+   PARENT 709
+  }
+  VTX  711, 0, 0
+  {
+   COORD (2421,3640)
+  }
+  VTX  712, 0, 0
+  {
+   COORD (2620,3640)
+  }
+  WIRE  713, 0, 0
+  {
+   NET 196
+   VTX 711, 712
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  714, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2520,3640,2520,3640)
+   ALIGN 9
+   PARENT 713
+  }
+  VTX  715, 0, 0
+  {
+   COORD (2660,3020)
+  }
+  VTX  716, 0, 0
+  {
+   COORD (2640,3020)
+  }
+  WIRE  717, 0, 0
+  {
+   NET 194
+   VTX 715, 716
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  718, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2650,3020,2650,3020)
+   ALIGN 9
+   PARENT 717
+  }
+  VTX  719, 0, 0
+  {
+   COORD (2421,3660)
+  }
+  VTX  720, 0, 0
+  {
+   COORD (2640,3660)
+  }
+  WIRE  721, 0, 0
+  {
+   NET 194
+   VTX 719, 720
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  722, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2530,3660,2530,3660)
+   ALIGN 9
+   PARENT 721
+  }
+  VTX  723, 0, 0
+  {
+   COORD (2020,2360)
+  }
+  VTX  724, 0, 0
+  {
+   COORD (880,2360)
+  }
+  WIRE  725, 0, 0
+  {
+   NET 243
+   VTX 723, 724
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  726, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1450,2360,1450,2360)
+   ALIGN 9
+   PARENT 725
+  }
+  VTX  727, 0, 0
+  {
+   COORD (2020,2400)
+  }
+  VTX  728, 0, 0
+  {
+   COORD (880,2400)
+  }
+  WIRE  729, 0, 0
+  {
+   NET 241
+   VTX 727, 728
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  730, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1450,2400,1450,2400)
+   ALIGN 9
+   PARENT 729
+  }
+  VTX  731, 0, 0
+  {
+   COORD (2020,2480)
+  }
+  VTX  732, 0, 0
+  {
+   COORD (880,2480)
+  }
+  WIRE  733, 0, 0
+  {
+   NET 237
+   VTX 731, 732
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  734, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1450,2480,1450,2480)
+   ALIGN 9
+   PARENT 733
+  }
+  VTX  735, 0, 0
+  {
+   COORD (2020,2560)
+  }
+  VTX  736, 0, 0
+  {
+   COORD (880,2560)
+  }
+  WIRE  737, 0, 0
+  {
+   NET 232
+   VTX 735, 736
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  738, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1450,2560,1450,2560)
+   ALIGN 9
+   PARENT 737
+  }
+  VTX  739, 0, 0
+  {
+   COORD (2020,2640)
+  }
+  VTX  740, 0, 0
+  {
+   COORD (880,2640)
+  }
+  WIRE  741, 0, 0
+  {
+   NET 228
+   VTX 739, 740
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  742, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1450,2640,1450,2640)
+   ALIGN 9
+   PARENT 741
+  }
+  VTX  743, 0, 0
+  {
+   COORD (2020,2660)
+  }
+  VTX  744, 0, 0
+  {
+   COORD (1000,2660)
+  }
+  WIRE  745, 0, 0
+  {
+   NET 227
+   VTX 743, 744
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  746, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1510,2660,1510,2660)
+   ALIGN 9
+   PARENT 745
+  }
+  VTX  747, 0, 0
+  {
+   COORD (880,3100)
+  }
+  VTX  748, 0, 0
+  {
+   COORD (1000,3100)
+  }
+  WIRE  749, 0, 0
+  {
+   NET 227
+   VTX 747, 748
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  750, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (940,3100,940,3100)
+   ALIGN 9
+   PARENT 749
+  }
+  VTX  751, 0, 0
+  {
+   COORD (880,3820)
+  }
+  VTX  752, 0, 0
+  {
+   COORD (1000,3820)
+  }
+  WIRE  753, 0, 0
+  {
+   NET 199
+   VTX 751, 752
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  754, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (940,3820,940,3820)
+   ALIGN 9
+   PARENT 753
+  }
+  VTX  755, 0, 0
+  {
+   COORD (2020,3620)
+  }
+  VTX  756, 0, 0
+  {
+   COORD (1000,3620)
+  }
+  WIRE  757, 0, 0
+  {
+   NET 199
+   VTX 755, 756
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  758, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1510,3620,1510,3620)
+   ALIGN 9
+   PARENT 757
+  }
+  VTX  759, 0, 0
+  {
+   COORD (2020,3600)
+  }
+  VTX  760, 0, 0
+  {
+   COORD (1020,3600)
+  }
+  BUS  761, 0, 0
+  {
+   NET 270
+   VTX 759, 760
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  762, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1520,3600,1520,3600)
+   ALIGN 9
+   PARENT 761
+  }
+  VTX  763, 0, 0
+  {
+   COORD (2020,3640)
+  }
+  VTX  764, 0, 0
+  {
+   COORD (1020,3640)
+  }
+  WIRE  765, 0, 0
+  {
+   NET 197
+   VTX 763, 764
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  766, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1520,3640,1520,3640)
+   ALIGN 9
+   PARENT 765
+  }
+  VTX  767, 0, 0
+  {
+   COORD (880,3880)
+  }
+  VTX  768, 0, 0
+  {
+   COORD (1020,3880)
+  }
+  WIRE  769, 0, 0
+  {
+   NET 197
+   VTX 767, 768
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  770, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (950,3880,950,3880)
+   ALIGN 9
+   PARENT 769
+  }
+  VTX  771, 0, 0
+  {
+   COORD (2020,3580)
+  }
+  VTX  772, 0, 0
+  {
+   COORD (1040,3580)
+  }
+  WIRE  773, 0, 0
+  {
+   NET 201
+   VTX 771, 772
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  774, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1530,3580,1530,3580)
+   ALIGN 9
+   PARENT 773
+  }
+  VTX  775, 0, 0
+  {
+   COORD (2020,3660)
+  }
+  VTX  776, 0, 0
+  {
+   COORD (1040,3660)
+  }
+  WIRE  777, 0, 0
+  {
+   NET 195
+   VTX 775, 776
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  778, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1530,3660,1530,3660)
+   ALIGN 9
+   PARENT 777
+  }
+  VTX  779, 0, 0
+  {
+   COORD (880,3940)
+  }
+  VTX  780, 0, 0
+  {
+   COORD (1040,3940)
+  }
+  WIRE  781, 0, 0
+  {
+   NET 195
+   VTX 779, 780
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  782, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (960,3940,960,3940)
+   ALIGN 9
+   PARENT 781
+  }
+  VTX  783, 0, 0
+  {
+   COORD (2020,3560)
+  }
+  VTX  784, 0, 0
+  {
+   COORD (1060,3560)
+  }
+  WIRE  785, 0, 0
+  {
+   NET 202
+   VTX 783, 784
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  786, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1540,3560,1540,3560)
+   ALIGN 9
+   PARENT 785
+  }
+  VTX  787, 0, 0
+  {
+   COORD (2020,3540)
+  }
+  VTX  788, 0, 0
+  {
+   COORD (1080,3540)
+  }
+  WIRE  789, 0, 0
+  {
+   NET 203
+   VTX 787, 788
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  790, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1550,3540,1550,3540)
+   ALIGN 9
+   PARENT 789
+  }
+  VTX  791, 0, 0
+  {
+   COORD (2020,3520)
+  }
+  VTX  792, 0, 0
+  {
+   COORD (1100,3520)
+  }
+  WIRE  793, 0, 0
+  {
+   NET 204
+   VTX 791, 792
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  794, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1560,3520,1560,3520)
+   ALIGN 9
+   PARENT 793
+  }
+  VTX  795, 0, 0
+  {
+   COORD (2020,3500)
+  }
+  VTX  796, 0, 0
+  {
+   COORD (1120,3500)
+  }
+  WIRE  797, 0, 0
+  {
+   NET 205
+   VTX 795, 796
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  798, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1570,3500,1570,3500)
+   ALIGN 9
+   PARENT 797
+  }
+  VTX  799, 0, 0
+  {
+   COORD (2020,3480)
+  }
+  VTX  800, 0, 0
+  {
+   COORD (1140,3480)
+  }
+  WIRE  801, 0, 0
+  {
+   NET 206
+   VTX 799, 800
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  802, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1580,3480,1580,3480)
+   ALIGN 9
+   PARENT 801
+  }
+  VTX  803, 0, 0
+  {
+   COORD (2020,3460)
+  }
+  VTX  804, 0, 0
+  {
+   COORD (1160,3460)
+  }
+  WIRE  805, 0, 0
+  {
+   NET 207
+   VTX 803, 804
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  806, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1590,3460,1590,3460)
+   ALIGN 9
+   PARENT 805
+  }
+  VTX  807, 0, 0
+  {
+   COORD (2020,3440)
+  }
+  VTX  808, 0, 0
+  {
+   COORD (1180,3440)
+  }
+  WIRE  809, 0, 0
+  {
+   NET 208
+   VTX 807, 808
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  810, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1600,3440,1600,3440)
+   ALIGN 9
+   PARENT 809
+  }
+  VTX  811, 0, 0
+  {
+   COORD (2020,3420)
+  }
+  VTX  812, 0, 0
+  {
+   COORD (1200,3420)
+  }
+  WIRE  813, 0, 0
+  {
+   NET 210
+   VTX 811, 812
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  814, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1610,3420,1610,3420)
+   ALIGN 9
+   PARENT 813
+  }
+  VTX  815, 0, 0
+  {
+   COORD (2020,3400)
+  }
+  VTX  816, 0, 0
+  {
+   COORD (1220,3400)
+  }
+  WIRE  817, 0, 0
+  {
+   NET 211
+   VTX 815, 816
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  818, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1620,3400,1620,3400)
+   ALIGN 9
+   PARENT 817
+  }
+  VTX  819, 0, 0
+  {
+   COORD (2020,3380)
+  }
+  VTX  820, 0, 0
+  {
+   COORD (1240,3380)
+  }
+  WIRE  821, 0, 0
+  {
+   NET 212
+   VTX 819, 820
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  822, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1630,3380,1630,3380)
+   ALIGN 9
+   PARENT 821
+  }
+  VTX  823, 0, 0
+  {
+   COORD (2020,3360)
+  }
+  VTX  824, 0, 0
+  {
+   COORD (1260,3360)
+  }
+  WIRE  825, 0, 0
+  {
+   NET 213
+   VTX 823, 824
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  826, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1640,3360,1640,3360)
+   ALIGN 9
+   PARENT 825
+  }
+  VTX  827, 0, 0
+  {
+   COORD (2020,3340)
+  }
+  VTX  828, 0, 0
+  {
+   COORD (1280,3340)
+  }
+  WIRE  829, 0, 0
+  {
+   NET 214
+   VTX 827, 828
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  830, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1650,3340,1650,3340)
+   ALIGN 9
+   PARENT 829
+  }
+  VTX  831, 0, 0
+  {
+   COORD (2020,3320)
+  }
+  VTX  832, 0, 0
+  {
+   COORD (1300,3320)
+  }
+  WIRE  833, 0, 0
+  {
+   NET 215
+   VTX 831, 832
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  834, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1660,3320,1660,3320)
+   ALIGN 9
+   PARENT 833
+  }
+  VTX  835, 0, 0
+  {
+   COORD (2020,3300)
+  }
+  VTX  836, 0, 0
+  {
+   COORD (1320,3300)
+  }
+  WIRE  837, 0, 0
+  {
+   NET 216
+   VTX 835, 836
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  838, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1670,3300,1670,3300)
+   ALIGN 9
+   PARENT 837
+  }
+  VTX  839, 0, 0
+  {
+   COORD (2020,3280)
+  }
+  VTX  840, 0, 0
+  {
+   COORD (1340,3280)
+  }
+  WIRE  841, 0, 0
+  {
+   NET 217
+   VTX 839, 840
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  842, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1680,3280,1680,3280)
+   ALIGN 9
+   PARENT 841
+  }
+  VTX  843, 0, 0
+  {
+   COORD (2020,3260)
+  }
+  VTX  844, 0, 0
+  {
+   COORD (1360,3260)
+  }
+  WIRE  845, 0, 0
+  {
+   NET 190
+   VTX 843, 844
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  846, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1690,3260,1690,3260)
+   ALIGN 9
+   PARENT 845
+  }
+  VTX  847, 0, 0
+  {
+   COORD (2020,3240)
+  }
+  VTX  848, 0, 0
+  {
+   COORD (1380,3240)
+  }
+  WIRE  849, 0, 0
+  {
+   NET 192
+   VTX 847, 848
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  850, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1700,3240,1700,3240)
+   ALIGN 9
+   PARENT 849
+  }
+  VTX  851, 0, 0
+  {
+   COORD (2020,3220)
+  }
+  VTX  852, 0, 0
+  {
+   COORD (1400,3220)
+  }
+  WIRE  853, 0, 0
+  {
+   NET 189
+   VTX 851, 852
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  854, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1710,3220,1710,3220)
+   ALIGN 9
+   PARENT 853
+  }
+  VTX  855, 0, 0
+  {
+   COORD (2020,3200)
+  }
+  VTX  856, 0, 0
+  {
+   COORD (1420,3200)
+  }
+  WIRE  857, 0, 0
+  {
+   NET 188
+   VTX 855, 856
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  858, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1720,3200,1720,3200)
+   ALIGN 9
+   PARENT 857
+  }
+  VTX  859, 0, 0
+  {
+   COORD (2020,3180)
+  }
+  VTX  860, 0, 0
+  {
+   COORD (1440,3180)
+  }
+  WIRE  861, 0, 0
+  {
+   NET 191
+   VTX 859, 860
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  862, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1730,3180,1730,3180)
+   ALIGN 9
+   PARENT 861
+  }
+  VTX  863, 0, 0
+  {
+   COORD (2020,3160)
+  }
+  VTX  864, 0, 0
+  {
+   COORD (1460,3160)
+  }
+  WIRE  865, 0, 0
+  {
+   NET 193
+   VTX 863, 864
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  866, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1740,3160,1740,3160)
+   ALIGN 9
+   PARENT 865
+  }
+  VTX  867, 0, 0
+  {
+   COORD (2020,3140)
+  }
+  VTX  868, 0, 0
+  {
+   COORD (1480,3140)
+  }
+  WIRE  869, 0, 0
+  {
+   NET 244
+   VTX 867, 868
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  870, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1750,3140,1750,3140)
+   ALIGN 9
+   PARENT 869
+  }
+  VTX  871, 0, 0
+  {
+   COORD (2020,3120)
+  }
+  VTX  872, 0, 0
+  {
+   COORD (1500,3120)
+  }
+  WIRE  873, 0, 0
+  {
+   NET 245
+   VTX 871, 872
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  874, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1760,3120,1760,3120)
+   ALIGN 9
+   PARENT 873
+  }
+  VTX  875, 0, 0
+  {
+   COORD (2020,3100)
+  }
+  VTX  876, 0, 0
+  {
+   COORD (1520,3100)
+  }
+  WIRE  877, 0, 0
+  {
+   NET 246
+   VTX 875, 876
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  878, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1770,3100,1770,3100)
+   ALIGN 9
+   PARENT 877
+  }
+  VTX  879, 0, 0
+  {
+   COORD (2020,3080)
+  }
+  VTX  880, 0, 0
+  {
+   COORD (1540,3080)
+  }
+  WIRE  881, 0, 0
+  {
+   NET 247
+   VTX 879, 880
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  882, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1780,3080,1780,3080)
+   ALIGN 9
+   PARENT 881
+  }
+  VTX  883, 0, 0
+  {
+   COORD (2020,3060)
+  }
+  VTX  884, 0, 0
+  {
+   COORD (1560,3060)
+  }
+  WIRE  885, 0, 0
+  {
+   NET 249
+   VTX 883, 884
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  886, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1790,3060,1790,3060)
+   ALIGN 9
+   PARENT 885
+  }
+  VTX  887, 0, 0
+  {
+   COORD (2020,3040)
+  }
+  VTX  888, 0, 0
+  {
+   COORD (1580,3040)
+  }
+  WIRE  889, 0, 0
+  {
+   NET 250
+   VTX 887, 888
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  890, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1800,3040,1800,3040)
+   ALIGN 9
+   PARENT 889
+  }
+  VTX  891, 0, 0
+  {
+   COORD (2020,3020)
+  }
+  VTX  892, 0, 0
+  {
+   COORD (1600,3020)
+  }
+  WIRE  893, 0, 0
+  {
+   NET 251
+   VTX 891, 892
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  894, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1810,3020,1810,3020)
+   ALIGN 9
+   PARENT 893
+  }
+  VTX  895, 0, 0
+  {
+   COORD (2020,3000)
+  }
+  VTX  896, 0, 0
+  {
+   COORD (1620,3000)
+  }
+  WIRE  897, 0, 0
+  {
+   NET 252
+   VTX 895, 896
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  898, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1820,3000,1820,3000)
+   ALIGN 9
+   PARENT 897
+  }
+  VTX  899, 0, 0
+  {
+   COORD (2020,2980)
+  }
+  VTX  900, 0, 0
+  {
+   COORD (1640,2980)
+  }
+  WIRE  901, 0, 0
+  {
+   NET 253
+   VTX 899, 900
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  902, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1830,2980,1830,2980)
+   ALIGN 9
+   PARENT 901
+  }
+  VTX  903, 0, 0
+  {
+   COORD (2020,2960)
+  }
+  VTX  904, 0, 0
+  {
+   COORD (1660,2960)
+  }
+  WIRE  905, 0, 0
+  {
+   NET 254
+   VTX 903, 904
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  906, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1840,2960,1840,2960)
+   ALIGN 9
+   PARENT 905
+  }
+  VTX  907, 0, 0
+  {
+   COORD (2020,2940)
+  }
+  VTX  908, 0, 0
+  {
+   COORD (1680,2940)
+  }
+  WIRE  909, 0, 0
+  {
+   NET 255
+   VTX 907, 908
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  910, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1850,2940,1850,2940)
+   ALIGN 9
+   PARENT 909
+  }
+  VTX  911, 0, 0
+  {
+   COORD (2020,2920)
+  }
+  VTX  912, 0, 0
+  {
+   COORD (1700,2920)
+  }
+  WIRE  913, 0, 0
+  {
+   NET 256
+   VTX 911, 912
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  914, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1860,2920,1860,2920)
+   ALIGN 9
+   PARENT 913
+  }
+  VTX  915, 0, 0
+  {
+   COORD (2020,2900)
+  }
+  VTX  916, 0, 0
+  {
+   COORD (1720,2900)
+  }
+  WIRE  917, 0, 0
+  {
+   NET 257
+   VTX 915, 916
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  918, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1870,2900,1870,2900)
+   ALIGN 9
+   PARENT 917
+  }
+  VTX  919, 0, 0
+  {
+   COORD (2020,2380)
+  }
+  VTX  920, 0, 0
+  {
+   COORD (1740,2380)
+  }
+  WIRE  921, 0, 0
+  {
+   NET 242
+   VTX 919, 920
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  922, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1880,2380,1880,2380)
+   ALIGN 9
+   PARENT 921
+  }
+  VTX  923, 0, 0
+  {
+   COORD (880,2440)
+  }
+  VTX  924, 0, 0
+  {
+   COORD (1740,2440)
+  }
+  WIRE  925, 0, 0
+  {
+   NET 242
+   VTX 923, 924
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  926, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1310,2440,1310,2440)
+   ALIGN 9
+   PARENT 925
+  }
+  VTX  927, 0, 0
+  {
+   COORD (880,2680)
+  }
+  VTX  928, 0, 0
+  {
+   COORD (1740,2680)
+  }
+  WIRE  929, 0, 0
+  {
+   NET 238
+   VTX 927, 928
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  930, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1310,2680,1310,2680)
+   ALIGN 9
+   PARENT 929
+  }
+  VTX  931, 0, 0
+  {
+   COORD (2020,2460)
+  }
+  VTX  932, 0, 0
+  {
+   COORD (1740,2460)
+  }
+  WIRE  933, 0, 0
+  {
+   NET 238
+   VTX 931, 932
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  934, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1880,2460,1880,2460)
+   ALIGN 9
+   PARENT 933
+  }
+  VTX  935, 0, 0
+  {
+   COORD (880,3220)
+  }
+  VTX  936, 0, 0
+  {
+   COORD (1740,3220)
+  }
+  WIRE  937, 0, 0
+  {
+   NET 225
+   VTX 935, 936
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  938, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1310,3220,1310,3220)
+   ALIGN 9
+   PARENT 937
+  }
+  VTX  939, 0, 0
+  {
+   COORD (2020,2700)
+  }
+  VTX  940, 0, 0
+  {
+   COORD (1740,2700)
+  }
+  WIRE  941, 0, 0
+  {
+   NET 225
+   VTX 939, 940
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  942, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1880,2700,1880,2700)
+   ALIGN 9
+   PARENT 941
+  }
+  VTX  943, 0, 0
+  {
+   COORD (2020,2420)
+  }
+  VTX  944, 0, 0
+  {
+   COORD (1760,2420)
+  }
+  WIRE  945, 0, 0
+  {
+   NET 240
+   VTX 943, 944
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  946, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1890,2420,1890,2420)
+   ALIGN 9
+   PARENT 945
+  }
+  VTX  947, 0, 0
+  {
+   COORD (880,2520)
+  }
+  VTX  948, 0, 0
+  {
+   COORD (1760,2520)
+  }
+  WIRE  949, 0, 0
+  {
+   NET 240
+   VTX 947, 948
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  950, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1320,2520,1320,2520)
+   ALIGN 9
+   PARENT 949
+  }
+  VTX  951, 0, 0
+  {
+   COORD (880,2860)
+  }
+  VTX  952, 0, 0
+  {
+   COORD (1760,2860)
+  }
+  WIRE  953, 0, 0
+  {
+   NET 233
+   VTX 951, 952
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  954, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1320,2860,1320,2860)
+   ALIGN 9
+   PARENT 953
+  }
+  VTX  955, 0, 0
+  {
+   COORD (2020,2540)
+  }
+  VTX  956, 0, 0
+  {
+   COORD (1760,2540)
+  }
+  WIRE  957, 0, 0
+  {
+   NET 233
+   VTX 955, 956
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  958, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1890,2540,1890,2540)
+   ALIGN 9
+   PARENT 957
+  }
+  VTX  959, 0, 0
+  {
+   COORD (880,3760)
+  }
+  VTX  960, 0, 0
+  {
+   COORD (1760,3760)
+  }
+  WIRE  961, 0, 0
+  {
+   NET 259
+   VTX 959, 960
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  962, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1320,3760,1320,3760)
+   ALIGN 9
+   PARENT 961
+  }
+  VTX  963, 0, 0
+  {
+   COORD (2020,2880)
+  }
+  VTX  964, 0, 0
+  {
+   COORD (1760,2880)
+  }
+  WIRE  965, 0, 0
+  {
+   NET 259
+   VTX 963, 964
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  966, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1890,2880,1890,2880)
+   ALIGN 9
+   PARENT 965
+  }
+  VTX  967, 0, 0
+  {
+   COORD (2020,2440)
+  }
+  VTX  968, 0, 0
+  {
+   COORD (1780,2440)
+  }
+  WIRE  969, 0, 0
+  {
+   NET 239
+   VTX 967, 968
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  970, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1900,2440,1900,2440)
+   ALIGN 9
+   PARENT 969
+  }
+  VTX  971, 0, 0
+  {
+   COORD (880,2600)
+  }
+  VTX  972, 0, 0
+  {
+   COORD (1780,2600)
+  }
+  WIRE  973, 0, 0
+  {
+   NET 239
+   VTX 971, 972
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  974, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1330,2600,1330,2600)
+   ALIGN 9
+   PARENT 973
+  }
+  VTX  975, 0, 0
+  {
+   COORD (880,3040)
+  }
+  VTX  976, 0, 0
+  {
+   COORD (1780,3040)
+  }
+  WIRE  977, 0, 0
+  {
+   NET 229
+   VTX 975, 976
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  978, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1330,3040,1330,3040)
+   ALIGN 9
+   PARENT 977
+  }
+  VTX  979, 0, 0
+  {
+   COORD (2020,2620)
+  }
+  VTX  980, 0, 0
+  {
+   COORD (1780,2620)
+  }
+  WIRE  981, 0, 0
+  {
+   NET 229
+   VTX 979, 980
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  982, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1900,2620,1900,2620)
+   ALIGN 9
+   PARENT 981
+  }
+  VTX  983, 0, 0
+  {
+   COORD (2020,2500)
+  }
+  VTX  984, 0, 0
+  {
+   COORD (1800,2500)
+  }
+  WIRE  985, 0, 0
+  {
+   NET 236
+   VTX 983, 984
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  986, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1910,2500,1910,2500)
+   ALIGN 9
+   PARENT 985
+  }
+  VTX  987, 0, 0
+  {
+   COORD (880,2740)
+  }
+  VTX  988, 0, 0
+  {
+   COORD (1800,2740)
+  }
+  WIRE  989, 0, 0
+  {
+   NET 236
+   VTX 987, 988
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  990, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1340,2740,1340,2740)
+   ALIGN 9
+   PARENT 989
+  }
+  VTX  991, 0, 0
+  {
+   COORD (880,3400)
+  }
+  VTX  992, 0, 0
+  {
+   COORD (1800,3400)
+  }
+  WIRE  993, 0, 0
+  {
+   NET 219
+   VTX 991, 992
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  994, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1340,3400,1340,3400)
+   ALIGN 9
+   PARENT 993
+  }
+  VTX  995, 0, 0
+  {
+   COORD (2020,2760)
+  }
+  VTX  996, 0, 0
+  {
+   COORD (1800,2760)
+  }
+  WIRE  997, 0, 0
+  {
+   NET 219
+   VTX 995, 996
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  998, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1910,2760,1910,2760)
+   ALIGN 9
+   PARENT 997
+  }
+  VTX  999, 0, 0
+  {
+   COORD (2020,2520)
+  }
+  VTX  1000, 0, 0
+  {
+   COORD (1820,2520)
+  }
+  WIRE  1001, 0, 0
+  {
+   NET 235
+   VTX 999, 1000
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1002, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1920,2520,1920,2520)
+   ALIGN 9
+   PARENT 1001
+  }
+  VTX  1003, 0, 0
+  {
+   COORD (880,2800)
+  }
+  VTX  1004, 0, 0
+  {
+   COORD (1820,2800)
+  }
+  WIRE  1005, 0, 0
+  {
+   NET 235
+   VTX 1003, 1004
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1006, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1350,2800,1350,2800)
+   ALIGN 9
+   PARENT 1005
+  }
+  VTX  1007, 0, 0
+  {
+   COORD (2020,2820)
+  }
+  VTX  1008, 0, 0
+  {
+   COORD (1820,2820)
+  }
+  WIRE  1009, 0, 0
+  {
+   NET 265
+   VTX 1007, 1008
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1010, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1920,2820,1920,2820)
+   ALIGN 9
+   PARENT 1009
+  }
+  VTX  1011, 0, 0
+  {
+   COORD (880,3580)
+  }
+  VTX  1012, 0, 0
+  {
+   COORD (1820,3580)
+  }
+  WIRE  1013, 0, 0
+  {
+   NET 265
+   VTX 1011, 1012
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1014, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1350,3580,1350,3580)
+   ALIGN 9
+   PARENT 1013
+  }
+  VTX  1015, 0, 0
+  {
+   COORD (880,2920)
+  }
+  VTX  1016, 0, 0
+  {
+   COORD (1840,2920)
+  }
+  WIRE  1017, 0, 0
+  {
+   NET 231
+   VTX 1015, 1016
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1018, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1360,2920,1360,2920)
+   ALIGN 9
+   PARENT 1017
+  }
+  VTX  1019, 0, 0
+  {
+   COORD (2020,2580)
+  }
+  VTX  1020, 0, 0
+  {
+   COORD (1840,2580)
+  }
+  WIRE  1021, 0, 0
+  {
+   NET 231
+   VTX 1019, 1020
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1022, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1930,2580,1930,2580)
+   ALIGN 9
+   PARENT 1021
+  }
+  VTX  1023, 0, 0
+  {
+   COORD (2020,2600)
+  }
+  VTX  1024, 0, 0
+  {
+   COORD (1860,2600)
+  }
+  WIRE  1025, 0, 0
+  {
+   NET 230
+   VTX 1023, 1024
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1026, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1940,2600,1940,2600)
+   ALIGN 9
+   PARENT 1025
+  }
+  VTX  1027, 0, 0
+  {
+   COORD (880,2980)
+  }
+  VTX  1028, 0, 0
+  {
+   COORD (1860,2980)
+  }
+  WIRE  1029, 0, 0
+  {
+   NET 230
+   VTX 1027, 1028
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1030, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1370,2980,1370,2980)
+   ALIGN 9
+   PARENT 1029
+  }
+  VTX  1031, 0, 0
+  {
+   COORD (880,3160)
+  }
+  VTX  1032, 0, 0
+  {
+   COORD (1880,3160)
+  }
+  WIRE  1033, 0, 0
+  {
+   NET 226
+   VTX 1031, 1032
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1034, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1380,3160,1380,3160)
+   ALIGN 9
+   PARENT 1033
+  }
+  VTX  1035, 0, 0
+  {
+   COORD (2020,2680)
+  }
+  VTX  1036, 0, 0
+  {
+   COORD (1880,2680)
+  }
+  WIRE  1037, 0, 0
+  {
+   NET 226
+   VTX 1035, 1036
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1038, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1950,2680,1950,2680)
+   ALIGN 9
+   PARENT 1037
+  }
+  VTX  1039, 0, 0
+  {
+   COORD (880,3280)
+  }
+  VTX  1040, 0, 0
+  {
+   COORD (1900,3280)
+  }
+  WIRE  1041, 0, 0
+  {
+   NET 223
+   VTX 1039, 1040
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1042, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1390,3280,1390,3280)
+   ALIGN 9
+   PARENT 1041
+  }
+  VTX  1043, 0, 0
+  {
+   COORD (2020,2720)
+  }
+  VTX  1044, 0, 0
+  {
+   COORD (1900,2720)
+  }
+  WIRE  1045, 0, 0
+  {
+   NET 223
+   VTX 1043, 1044
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1046, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1960,2720,1960,2720)
+   ALIGN 9
+   PARENT 1045
+  }
+  VTX  1047, 0, 0
+  {
+   COORD (2020,2740)
+  }
+  VTX  1048, 0, 0
+  {
+   COORD (1920,2740)
+  }
+  WIRE  1049, 0, 0
+  {
+   NET 221
+   VTX 1047, 1048
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1050, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1970,2740,1970,2740)
+   ALIGN 9
+   PARENT 1049
+  }
+  VTX  1051, 0, 0
+  {
+   COORD (880,3340)
+  }
+  VTX  1052, 0, 0
+  {
+   COORD (1920,3340)
+  }
+  WIRE  1053, 0, 0
+  {
+   NET 221
+   VTX 1051, 1052
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1054, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1400,3340,1400,3340)
+   ALIGN 9
+   PARENT 1053
+  }
+  VTX  1055, 0, 0
+  {
+   COORD (880,3460)
+  }
+  VTX  1056, 0, 0
+  {
+   COORD (1940,3460)
+  }
+  WIRE  1057, 0, 0
+  {
+   NET 269
+   VTX 1055, 1056
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1058, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1410,3460,1410,3460)
+   ALIGN 9
+   PARENT 1057
+  }
+  VTX  1059, 0, 0
+  {
+   COORD (2020,2780)
+  }
+  VTX  1060, 0, 0
+  {
+   COORD (1940,2780)
+  }
+  WIRE  1061, 0, 0
+  {
+   NET 269
+   VTX 1059, 1060
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1062, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1980,2780,1980,2780)
+   ALIGN 9
+   PARENT 1061
+  }
+  VTX  1063, 0, 0
+  {
+   COORD (880,3520)
+  }
+  VTX  1064, 0, 0
+  {
+   COORD (1960,3520)
+  }
+  WIRE  1065, 0, 0
+  {
+   NET 267
+   VTX 1063, 1064
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1066, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1420,3520,1420,3520)
+   ALIGN 9
+   PARENT 1065
+  }
+  VTX  1067, 0, 0
+  {
+   COORD (2020,2800)
+  }
+  VTX  1068, 0, 0
+  {
+   COORD (1960,2800)
+  }
+  WIRE  1069, 0, 0
+  {
+   NET 267
+   VTX 1067, 1068
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1070, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1990,2800,1990,2800)
+   ALIGN 9
+   PARENT 1069
+  }
+  VTX  1071, 0, 0
+  {
+   COORD (2020,2840)
+  }
+  VTX  1072, 0, 0
+  {
+   COORD (1980,2840)
+  }
+  WIRE  1073, 0, 0
+  {
+   NET 263
+   VTX 1071, 1072
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1074, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2000,2840,2000,2840)
+   ALIGN 9
+   PARENT 1073
+  }
+  VTX  1075, 0, 0
+  {
+   COORD (880,3640)
+  }
+  VTX  1076, 0, 0
+  {
+   COORD (1980,3640)
+  }
+  WIRE  1077, 0, 0
+  {
+   NET 263
+   VTX 1075, 1076
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1078, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1430,3640,1430,3640)
+   ALIGN 9
+   PARENT 1077
+  }
+  VTX  1079, 0, 0
+  {
+   COORD (880,3700)
+  }
+  VTX  1080, 0, 0
+  {
+   COORD (2000,3700)
+  }
+  WIRE  1081, 0, 0
+  {
+   NET 261
+   VTX 1079, 1080
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1082, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (1440,3700,1440,3700)
+   ALIGN 9
+   PARENT 1081
+  }
+  VTX  1083, 0, 0
+  {
+   COORD (2020,2860)
+  }
+  VTX  1084, 0, 0
+  {
+   COORD (2000,2860)
+  }
+  WIRE  1085, 0, 0
+  {
+   NET 261
+   VTX 1083, 1084
+   VARIABLES
+   {
+    #NAMED="1"
+   }
+  }
+  TEXT  1086, 0, 1
+  {
+   TEXT "$#NAME"
+   RECT (2010,2860,2010,2860)
+   ALIGN 9
+   PARENT 1085
+  }
+  VTX  1087, 0, 0
+  {
+   COORD (1420,1140)
+  }
+  VTX  1088, 0, 0
+  {
+   COORD (1400,1200)
+  }
+  VTX  1089, 0, 0
+  {
+   COORD (1360,1320)
+  }
+  VTX  1090, 0, 0
+  {
+   COORD (1440,1080)
+  }
+  VTX  1091, 0, 0
+  {
+   COORD (1380,1260)
+  }
+  VTX  1092, 0, 0
+  {
+   COORD (1460,1020)
+  }
+  VTX  1093, 0, 0
+  {
+   COORD (1040,2280)
+  }
+  VTX  1094, 0, 0
+  {
+   COORD (1060,2220)
+  }
+  VTX  1095, 0, 0
+  {
+   COORD (1080,2160)
+  }
+  VTX  1096, 0, 0
+  {
+   COORD (1100,2100)
+  }
+  VTX  1097, 0, 0
+  {
+   COORD (1120,2040)
+  }
+  VTX  1098, 0, 0
+  {
+   COORD (1140,1980)
+  }
+  VTX  1099, 0, 0
+  {
+   COORD (1160,1920)
+  }
+  VTX  1100, 0, 0
+  {
+   COORD (1180,1860)
+  }
+  VTX  1101, 0, 0
+  {
+   COORD (1200,1800)
+  }
+  VTX  1102, 0, 0
+  {
+   COORD (1220,1740)
+  }
+  VTX  1103, 0, 0
+  {
+   COORD (1240,1680)
+  }
+  VTX  1104, 0, 0
+  {
+   COORD (1260,1620)
+  }
+  VTX  1105, 0, 0
+  {
+   COORD (1280,1560)
+  }
+  VTX  1106, 0, 0
+  {
+   COORD (1300,1500)
+  }
+  VTX  1107, 0, 0
+  {
+   COORD (1320,1440)
+  }
+  VTX  1108, 0, 0
+  {
+   COORD (1340,1380)
+  }
+  VTX  1109, 0, 0
+  {
+   COORD (1480,960)
+  }
+  VTX  1110, 0, 0
+  {
+   COORD (1500,900)
+  }
+  VTX  1111, 0, 0
+  {
+   COORD (1520,840)
+  }
+  VTX  1112, 0, 0
+  {
+   COORD (1540,780)
+  }
+  VTX  1113, 0, 0
+  {
+   COORD (1560,720)
+  }
+  VTX  1114, 0, 0
+  {
+   COORD (1580,660)
+  }
+  VTX  1115, 0, 0
+  {
+   COORD (1600,600)
+  }
+  VTX  1116, 0, 0
+  {
+   COORD (1620,540)
+  }
+  VTX  1117, 0, 0
+  {
+   COORD (1640,480)
+  }
+  VTX  1118, 0, 0
+  {
+   COORD (1660,420)
+  }
+  VTX  1119, 0, 0
+  {
+   COORD (1680,360)
+  }
+  VTX  1120, 0, 0
+  {
+   COORD (1700,300)
+  }
+  VTX  1121, 0, 0
+  {
+   COORD (1720,240)
+  }
+  VTX  1122, 0, 0
+  {
+   COORD (3140,2320)
+  }
+  VTX  1123, 0, 0
+  {
+   COORD (1020,2320)
+  }
+  WIRE  1124, 0, 0
+  {
+   NET 188
+   VTX 356, 1087
+  }
+  WIRE  1125, 0, 0
+  {
+   NET 189
+   VTX 352, 1088
+  }
+  WIRE  1126, 0, 0
+  {
+   NET 190
+   VTX 344, 1089
+  }
+  WIRE  1127, 0, 0
+  {
+   NET 191
+   VTX 360, 1090
+  }
+  WIRE  1128, 0, 0
+  {
+   NET 192
+   VTX 348, 1091
+  }
+  WIRE  1129, 0, 0
+  {
+   NET 193
+   VTX 364, 1092
+  }
+  WIRE  1130, 0, 0
+  {
+   NET 201
+   VTX 280, 1093
+  }
+  WIRE  1131, 0, 0
+  {
+   NET 202
+   VTX 284, 1094
+  }
+  WIRE  1132, 0, 0
+  {
+   NET 203
+   VTX 288, 1095
+  }
+  WIRE  1133, 0, 0
+  {
+   NET 204
+   VTX 292, 1096
+  }
+  WIRE  1134, 0, 0
+  {
+   NET 205
+   VTX 296, 1097
+  }
+  WIRE  1135, 0, 0
+  {
+   NET 206
+   VTX 300, 1098
+  }
+  WIRE  1136, 0, 0
+  {
+   NET 207
+   VTX 304, 1099
+  }
+  WIRE  1137, 0, 0
+  {
+   NET 208
+   VTX 308, 1100
+  }
+  WIRE  1138, 0, 0
+  {
+   NET 210
+   VTX 312, 1101
+  }
+  WIRE  1139, 0, 0
+  {
+   NET 211
+   VTX 316, 1102
+  }
+  WIRE  1140, 0, 0
+  {
+   NET 212
+   VTX 320, 1103
+  }
+  WIRE  1141, 0, 0
+  {
+   NET 213
+   VTX 324, 1104
+  }
+  WIRE  1142, 0, 0
+  {
+   NET 214
+   VTX 328, 1105
+  }
+  WIRE  1143, 0, 0
+  {
+   NET 215
+   VTX 332, 1106
+  }
+  WIRE  1144, 0, 0
+  {
+   NET 216
+   VTX 336, 1107
+  }
+  WIRE  1145, 0, 0
+  {
+   NET 217
+   VTX 340, 1108
+  }
+  WIRE  1146, 0, 0
+  {
+   NET 244
+   VTX 368, 1109
+  }
+  WIRE  1147, 0, 0
+  {
+   NET 245
+   VTX 372, 1110
+  }
+  WIRE  1148, 0, 0
+  {
+   NET 246
+   VTX 376, 1111
+  }
+  WIRE  1149, 0, 0
+  {
+   NET 247
+   VTX 380, 1112
+  }
+  WIRE  1150, 0, 0
+  {
+   NET 249
+   VTX 384, 1113
+  }
+  WIRE  1151, 0, 0
+  {
+   NET 250
+   VTX 388, 1114
+  }
+  WIRE  1152, 0, 0
+  {
+   NET 251
+   VTX 392, 1115
+  }
+  WIRE  1153, 0, 0
+  {
+   NET 252
+   VTX 396, 1116
+  }
+  WIRE  1154, 0, 0
+  {
+   NET 253
+   VTX 400, 1117
+  }
+  WIRE  1155, 0, 0
+  {
+   NET 254
+   VTX 404, 1118
+  }
+  WIRE  1156, 0, 0
+  {
+   NET 255
+   VTX 408, 1119
+  }
+  WIRE  1157, 0, 0
+  {
+   NET 256
+   VTX 412, 1120
+  }
+  WIRE  1158, 0, 0
+  {
+   NET 257
+   VTX 416, 1121
+  }
+  BUS  1159, 0, 0
+  {
+   NET 270
+   VTX 1122, 1123
+  }
+  BUS  1160, 0, 0
+  {
+   NET 187
+   VTX 680, 676
+  }
+  WIRE  1161, 0, 0
+  {
+   NET 188
+   VTX 1087, 856
+  }
+  WIRE  1162, 0, 0
+  {
+   NET 189
+   VTX 1088, 852
+  }
+  WIRE  1163, 0, 0
+  {
+   NET 190
+   VTX 1089, 844
+  }
+  WIRE  1164, 0, 0
+  {
+   NET 191
+   VTX 1090, 860
+  }
+  WIRE  1165, 0, 0
+  {
+   NET 192
+   VTX 1091, 848
+  }
+  WIRE  1166, 0, 0
+  {
+   NET 193
+   VTX 1092, 864
+  }
+  WIRE  1167, 0, 0
+  {
+   NET 194
+   VTX 716, 720
+  }
+  WIRE  1168, 0, 0
+  {
+   NET 195
+   VTX 776, 780
+  }
+  WIRE  1169, 0, 0
+  {
+   NET 196
+   VTX 708, 712
+  }
+  WIRE  1170, 0, 0
+  {
+   NET 197
+   VTX 764, 768
+  }
+  WIRE  1171, 0, 0
+  {
+   NET 198
+   VTX 700, 704
+  }
+  WIRE  1172, 0, 0
+  {
+   NET 199
+   VTX 756, 752
+  }
+  BUS  1173, 0, 0
+  {
+   NET 200
+   VTX 692, 696
+  }
+  WIRE  1174, 0, 0
+  {
+   NET 201
+   VTX 1093, 772
+  }
+  WIRE  1175, 0, 0
+  {
+   NET 202
+   VTX 1094, 784
+  }
+  WIRE  1176, 0, 0
+  {
+   NET 203
+   VTX 1095, 788
+  }
+  WIRE  1177, 0, 0
+  {
+   NET 204
+   VTX 1096, 792
+  }
+  WIRE  1178, 0, 0
+  {
+   NET 205
+   VTX 1097, 796
+  }
+  WIRE  1179, 0, 0
+  {
+   NET 206
+   VTX 1098, 800
+  }
+  WIRE  1180, 0, 0
+  {
+   NET 207
+   VTX 1099, 804
+  }
+  WIRE  1181, 0, 0
+  {
+   NET 208
+   VTX 1100, 808
+  }
+  BUS  1182, 0, 0
+  {
+   NET 209
+   VTX 684, 688
+  }
+  WIRE  1183, 0, 0
+  {
+   NET 210
+   VTX 1101, 812
+  }
+  WIRE  1184, 0, 0
+  {
+   NET 211
+   VTX 1102, 816
+  }
+  WIRE  1185, 0, 0
+  {
+   NET 212
+   VTX 1103, 820
+  }
+  WIRE  1186, 0, 0
+  {
+   NET 213
+   VTX 1104, 824
+  }
+  WIRE  1187, 0, 0
+  {
+   NET 214
+   VTX 1105, 828
+  }
+  WIRE  1188, 0, 0
+  {
+   NET 215
+   VTX 1106, 832
+  }
+  WIRE  1189, 0, 0
+  {
+   NET 216
+   VTX 1107, 836
+  }
+  WIRE  1190, 0, 0
+  {
+   NET 217
+   VTX 1108, 840
+  }
+  WIRE  1191, 0, 0
+  {
+   NET 219
+   VTX 996, 992
+  }
+  WIRE  1192, 0, 0
+  {
+   NET 221
+   VTX 1048, 1052
+  }
+  WIRE  1193, 0, 0
+  {
+   NET 223
+   VTX 1044, 1040
+  }
+  WIRE  1194, 0, 0
+  {
+   NET 225
+   VTX 940, 936
+  }
+  WIRE  1195, 0, 0
+  {
+   NET 226
+   VTX 1036, 1032
+  }
+  WIRE  1196, 0, 0
+  {
+   NET 227
+   VTX 744, 748
+  }
+  WIRE  1197, 0, 0
+  {
+   NET 229
+   VTX 980, 976
+  }
+  WIRE  1198, 0, 0
+  {
+   NET 230
+   VTX 1024, 1028
+  }
+  WIRE  1199, 0, 0
+  {
+   NET 231
+   VTX 1020, 1016
+  }
+  WIRE  1200, 0, 0
+  {
+   NET 233
+   VTX 956, 952
+  }
+  BUS  1201, 0, 0
+  {
+   NET 234
+   VTX 652, 656
+  }
+  WIRE  1202, 0, 0
+  {
+   NET 235
+   VTX 1000, 1004
+  }
+  WIRE  1203, 0, 0
+  {
+   NET 236
+   VTX 984, 988
+  }
+  WIRE  1204, 0, 0
+  {
+   NET 238
+   VTX 932, 928
+  }
+  WIRE  1205, 0, 0
+  {
+   NET 239
+   VTX 968, 972
+  }
+  WIRE  1206, 0, 0
+  {
+   NET 240
+   VTX 944, 948
+  }
+  WIRE  1207, 0, 0
+  {
+   NET 242
+   VTX 920, 924
+  }
+  WIRE  1208, 0, 0
+  {
+   NET 244
+   VTX 1109, 868
+  }
+  WIRE  1209, 0, 0
+  {
+   NET 245
+   VTX 1110, 872
+  }
+  WIRE  1210, 0, 0
+  {
+   NET 246
+   VTX 1111, 876
+  }
+  WIRE  1211, 0, 0
+  {
+   NET 247
+   VTX 1112, 880
+  }
+  BUS  1212, 0, 0
+  {
+   NET 248
+   VTX 668, 672
+  }
+  WIRE  1213, 0, 0
+  {
+   NET 249
+   VTX 1113, 884
+  }
+  WIRE  1214, 0, 0
+  {
+   NET 250
+   VTX 1114, 888
+  }
+  WIRE  1215, 0, 0
+  {
+   NET 251
+   VTX 1115, 892
+  }
+  WIRE  1216, 0, 0
+  {
+   NET 252
+   VTX 1116, 896
+  }
+  WIRE  1217, 0, 0
+  {
+   NET 253
+   VTX 1117, 900
+  }
+  WIRE  1218, 0, 0
+  {
+   NET 254
+   VTX 1118, 904
+  }
+  WIRE  1219, 0, 0
+  {
+   NET 255
+   VTX 1119, 908
+  }
+  WIRE  1220, 0, 0
+  {
+   NET 256
+   VTX 1120, 912
+  }
+  WIRE  1221, 0, 0
+  {
+   NET 257
+   VTX 1121, 916
+  }
+  WIRE  1222, 0, 0
+  {
+   NET 258
+   VTX 660, 664
+  }
+  WIRE  1223, 0, 0
+  {
+   NET 259
+   VTX 964, 960
+  }
+  WIRE  1224, 0, 0
+  {
+   NET 260
+   VTX 520, 516
+  }
+  WIRE  1225, 0, 0
+  {
+   NET 261
+   VTX 1084, 1080
+  }
+  WIRE  1226, 0, 0
+  {
+   NET 263
+   VTX 1072, 1076
+  }
+  WIRE  1227, 0, 0
+  {
+   NET 265
+   VTX 1008, 1012
+  }
+  WIRE  1228, 0, 0
+  {
+   NET 267
+   VTX 1068, 1064
+  }
+  WIRE  1229, 0, 0
+  {
+   NET 269
+   VTX 1060, 1056
+  }
+  BUS  1230, 0, 0
+  {
+   NET 270
+   VTX 1122, 272
+  }
+  BUS  1231, 0, 0
+  {
+   NET 270
+   VTX 272, 276
+  }
+  BUS  1232, 0, 0
+  {
+   NET 270
+   VTX 1123, 760
+  }
+ }
+ 
+}
+

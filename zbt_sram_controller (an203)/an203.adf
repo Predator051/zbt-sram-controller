@@ -1,0 +1,112 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=an203
+
+
+[$LibMap$]
+zaz=.
+Active_lib=
+an203=.
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+CSYNTH_TOOL=<none>
+PHYSSYNTH_TOOL=<none>
+FLOWTOOLS=ONLY_IMPL
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+DVM_DISPLAY=NO
+FAMILY=
+
+[IMPLEMENTATION]
+UCF=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=top|rtl|0  
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/addr_ctrl_out.vhd=-1
+/data_inout.vhd=-1
+/idt71v3556.vhd=-1
+/main.vhd=-1
+/pipe_delay.vhd=-1
+/pipe_stage.vhd=-1
+/PLL1.vhd=-1
+/top.vhd=-1
+/zbt_ctrl_top.vhd=-1
+/addr_ctrl_out.bde=-1
+/data_inout.bde=-1
+/idt71v3556.bde=-1
+/pipe_stage.bde=-1
+/pll1.bde=-1
+/top.bde=-1
+/zbt_ctrl_top.bde=-1
+/Waveform Editor 1.awf=-1
+work/gen_utils.vhd=-1
+work/conversions.vhd=-1
+
+[Files.Data]
+.\src\addr_ctrl_out.vhd=VHDL Source Code
+.\src\data_inout.vhd=VHDL Source Code
+.\src\idt71v3556.vhd=VHDL Source Code
+.\src\main.vhd=VHDL Source Code
+.\src\pipe_delay.vhd=VHDL Source Code
+.\src\pipe_stage.vhd=VHDL Source Code
+.\src\PLL1.vhd=VHDL Source Code
+.\src\top.vhd=VHDL Source Code
+.\src\zbt_ctrl_top.vhd=VHDL Source Code
+.\src\addr_ctrl_out.bde=Block Diagram
+.\src\data_inout.bde=Block Diagram
+.\src\idt71v3556.bde=Block Diagram
+.\src\pipe_stage.bde=Block Diagram
+.\src\pll1.bde=Block Diagram
+.\src\top.bde=Block Diagram
+.\src\zbt_ctrl_top.bde=Block Diagram
+.\src\Waveform Editor 1.awf=Waveform File
+.\src\work\gen_utils.vhd=VHDL Source Code
+.\src\work\conversions.vhd=VHDL Source Code
+.\compile\addr_ctrl_out.vhd=VHDL Source Code
+.\compile\data_inout.vhd=VHDL Source Code
+.\compile\idt71v3556.vhd=VHDL Source Code
+.\compile\pipe_delay.vhd=VHDL Source Code
+.\compile\pipe_stage.vhd=VHDL Source Code
+.\compile\pll1.vhd=VHDL Source Code
+.\compile\top.vhd=VHDL Source Code
+.\compile\zbt_ctrl_top.vhd=VHDL Source Code
+
+
+
+
+
+
+
+
+[file_out:/addr_ctrl_out.bde]
+/\compile\addr_ctrl_out.vhd=-1
+[file_out:/data_inout.bde]
+/\compile\data_inout.vhd=-1
+[file_out:/idt71v3556.bde]
+/\compile\idt71v3556.vhd=-1
+[file_out:/pipe_stage.bde]
+/\compile\pipe_stage.vhd=-1
+[file_out:/pll1.bde]
+/\compile\pll1.vhd=-1
+[file_out:/zbt_ctrl_top.bde]
+/\compile\zbt_ctrl_top.vhd=-1
+[file_out:/top.bde]
+/\compile\top.vhd=-1
+[Library]
+an203=.\an203.LIB

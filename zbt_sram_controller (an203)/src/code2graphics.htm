@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Code2Graphics generation results</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Sccss  {color:'#009600';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+.Sccss1 {color:'#009600';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="f:\VHDL\\Flows\Res\default.bmp">
+<FONT FACE="Serif">
+<tt>
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Code2Graphics generation results</H2>
+Created on Thu 2016-05-12 at 23:55:53
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>CODE2GRAPHICS SETTINGS:</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>Multipage block diagrams generation: DISABLED</SPAN><BR>
+<SPAN class=Info1>Hierarchical state diagrams generation: DISABLED</SPAN><BR>
+<SPAN class=Info1>Destination directory: F:\zaza\zaz\src</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>INTERMEDIATE FILES GENERATION:</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>Analyzing intermediate file C:\Users\PARAZZ~1\AppData\Local\Temp\zaz\zaz.erf ...</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\addr_ctrl_out.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;addr_ctrl_out&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;addr_ctrl_out&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\data_inout.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;data_inout&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;data_inout&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\idt71v3556.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;idt71v3556&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;rtl&quot; of Entity &quot;idt71v3556&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\main.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;main&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;main&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\pipe_delay.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;pipe_delay&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;pipe_delay&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\pipe_stage.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;pipe_stage&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;pipe_stage&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\PLL1.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;PLL1&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;SYN&quot; of Entity &quot;pll1&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\top.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;top&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;top&quot;</SPAN><BR>
+<SPAN class=Info1>File: F:\zaza\zaz\src\zbt_ctrl_top.vhd</SPAN><BR>
+<SPAN class=Info1>Checking Entity &quot;zbt_ctrl_top&quot;</SPAN><BR>
+<SPAN class=Info1>Checking Architecture &quot;RTL&quot; of Entity &quot;zbt_ctrl_top&quot;</SPAN><BR>
+<SPAN class=Sccss1>Checking success 0 Errors 0 Warnings&nbsp;Analysis time :&nbsp;1.0 [s]</SPAN><BR>
+<SPAN class=Info1>Finished successfully.</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>DIAGRAM FILES GENERATION:</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>Generating temporary state diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8652E76.tmp ...<BR></SPAN><BR>
+<SPAN class=Warn1>Conversion of the file addr_ctrl_out.vhd to state diagram is not possible. No proper process has been found for component: addr_ctrl_out.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary state diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8672E9D.tmp ...<BR></SPAN><BR>
+<SPAN class=Warn1>Conversion of the file pipe_delay.vhd to state diagram is not possible. No proper process has been found for component: pipe_delay.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\addr_ctrl_out.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\data_inout.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\idt71v3556.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\main.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\pipe_delay.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\pipe_stage.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\PLL1.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\top.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Cannot convert .\src\zbt_ctrl_top.vhd to state diagram because a state machine pattern could not be recognized.<BR></SPAN><BR>
+<SPAN class=Warn1>Port A16 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Port DQA8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Port DQB8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Port DQC8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Port DQD8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Generic tipd_A16 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Generic tipd_DQA8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Generic tipd_DQB8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Generic tipd_DQC8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Warn1>Generic tipd_DQD8 of component idt71v3556 cannot be found in component description from library zaz and is going to be ignored.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8652E75.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8672E86.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8672E88.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8672E8A.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8672E8C.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8682E9E.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8682EA0.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8682EA2.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Generating temporary block diagram file C:\Users\PARAZZ~1\AppData\Local\Temp\8702EB4.tmp ...<BR>Temporary block diagram file has been successfully generated.<BR></SPAN><BR>
+<SPAN class=Info1>Diagram file(s) generation completed in 3.546 seconds.<BR></SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\addr_ctrl_out.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\addr_ctrl_out.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\data_inout.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\data_inout.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\idt71v3556.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\idt71v3556.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\main.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\main.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\pipe_delay.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\pipe_delay.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\pipe_stage.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\pipe_stage.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\pll1.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\pll1.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\top.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\top.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1 onclick="OpenPlugIn('Aldec.BDE.7','0','F:\\zaza\\zaz\\src\\zbt_ctrl_top.bde','','');">File <SPAN class=Info>F:\zaza\zaz\src\zbt_ctrl_top.bde</SPAN> has been successfully generated.</SPAN><BR>
+<SPAN class=Info1> </SPAN><BR>
+<SPAN class=Info1>9 unit(s) converted to Block Diagram(s)</SPAN><BR>
+<SPAN class=Info1>0 unit(s) converted to State Diagram(s)</SPAN><BR>
+</tt>
+</FONT>
+</BODY>
+
+</HTML>

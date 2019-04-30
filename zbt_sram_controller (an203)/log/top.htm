@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>DRC Report File - top.bde</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Sccss  {color:'#009600';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+.Sccss1 {color:'#009600';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\ActivH71\\Flows\Res\default.bmp">
+<FONT FACE="Serif">
+<tt>
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>DRC Report File - top.bde</H2>
+Created on Tue 2019-04-30 at 12:20:36
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>Checking file 'C:\Users\ZpmPower\Desktop\kursovaya\ZBT_SRAM_Controller AN203\zaz\src\top.bde'.</SPAN><BR>
+<SPAN class=Info1>The following differences between symbols and their contents have been found:</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': port 'a16' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': port 'dqa8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': port 'dqb8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': port 'dqc8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': port 'dqd8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': generic 'tipd_a16' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': generic 'tipd_dqa8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': generic 'tipd_dqb8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': generic 'tipd_dqc8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">symbol 'idt71v3556': generic 'tipd_dqd8' is missing on the diagram.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=3');">symbol 'zbt_ctrl_top': generic 'asize' differs in default value.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=3');">symbol 'zbt_ctrl_top': generic 'dsize' differs in default value.</SPAN><BR>
+<SPAN class=Info1>To settle inconsistencies between symbols and their contents apply the Compare Symbol with Contents command to each of the reported symbols.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'CE2'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'CE1Neg'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'CE2Neg'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'CLKENNeg'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'LBONeg'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=9');">Unconnected input port 'OENeg'. Instance 'idt71v3556p'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=46');">Hanging wire 'clkzbt'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=50');">Net 'adv_ld_n_m' is without source.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=46');">Net 'clkzbt' is without source.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=51');">Net 'rw_n_m' is without source.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=61');">Multiple sources connected to net 'ADV_LD_N'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=60');">Multiple sources connected to net 'BW_N(BWSIZE - 1:0)'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=58');">Multiple sources connected to net 'RW_N'.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=46');">Net 'clkzbt' is without load.</SPAN><BR>
+<SPAN class=Warn onclick="OpenPlugIn('Aldec.BDE.7','0','C:\\Users\\ZpmPower\\Desktop\\kursovaya\\ZBT_SRAM_Controller AN203\\zaz\\src\\top.bde','','-errorid=47');">Net 'locked' is without load.</SPAN><BR>
+<SPAN class=Warn1>top.bde - 0 error(s), 27 warning(s)</SPAN><BR>
+<SPAN class=Info1>DRC process completed in 1 second(s).</SPAN><BR>
+</tt>
+</FONT>
+       
+        >
+</BODY>
+</HTML>
